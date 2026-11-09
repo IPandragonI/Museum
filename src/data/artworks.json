@@ -287,7 +287,7 @@
   "yearSpan": 1,
   "dateDisplay": "1882–83",
   "category": "painting",
-  "movement": "American Impressionism",
+  "movement": null,
   "period": "19th Century",
   "medium": "oil on canvas",
   "culture": "United States",
@@ -360,7 +360,7 @@
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 2.6,
   "interestingFacts": [
@@ -5596,7 +5596,7 @@
   "yearSpan": 0,
   "dateDisplay": "1864",
   "category": "painting",
-  "movement": "Realism",
+  "movement": null,
   "period": "19th Century",
   "medium": "oil on fabric",
   "culture": "France",
@@ -5663,13 +5663,13 @@
    "guess": "easy",
    "detail": "intermediate",
    "artist": "easy",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 2.6,
   "interestingFacts": [
@@ -7325,7 +7325,7 @@
   "yearSpan": 0,
   "dateDisplay": "1908",
   "category": "drawing",
-  "movement": "Realism",
+  "movement": null,
   "period": "19th Century",
   "medium": "watercolor with traces of gouache over graphite",
   "culture": "America, late 19th-early 20th Century",
@@ -7392,13 +7392,13 @@
    "guess": "intermediate",
    "detail": "intermediate",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 1.8,
   "interestingFacts": [],
@@ -9286,7 +9286,7 @@
   "yearSpan": 0,
   "dateDisplay": "1858",
   "category": "drawing",
-  "movement": "Realism",
+  "movement": null,
   "period": "19th Century",
   "medium": "graphite, pen and dark brown ink, and watercolor on thick ivory wove paper",
   "culture": "France",
@@ -9353,13 +9353,13 @@
    "guess": "expert",
    "detail": "expert",
    "artist": "easy",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 0.8,
   "interestingFacts": [
@@ -10804,7 +10804,7 @@
   "yearSpan": 0,
   "dateDisplay": "1876",
   "category": "drawing",
-  "movement": "Realism",
+  "movement": null,
   "period": "19th Century",
   "medium": "Pastel with oil on fine-weave canvas",
   "culture": "America",
@@ -10871,13 +10871,13 @@
    "guess": "easy",
    "detail": "easy",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 2.8,
   "interestingFacts": [
@@ -11384,7 +11384,7 @@
   "yearSpan": 0,
   "dateDisplay": "1883",
   "category": "drawing",
-  "movement": "Realism",
+  "movement": null,
   "period": "19th Century",
   "medium": "watercolor and opaque watercolor with black chalk on cream paper",
   "culture": "Netherlands",
@@ -11451,13 +11451,13 @@
    "guess": "expert",
    "detail": "expert",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 1,
   "interestingFacts": [
@@ -11681,7 +11681,7 @@
   "yearSpan": 1,
   "dateDisplay": "c. 1871–72",
   "category": "painting",
-  "movement": "Realism",
+  "movement": null,
   "period": "19th Century",
   "medium": "oil on canvas",
   "culture": "France",
@@ -11748,13 +11748,13 @@
    "guess": "easy",
    "detail": "easy",
    "artist": "easy",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 2.8,
   "interestingFacts": [
@@ -14212,7 +14212,7 @@
   "yearSpan": 1,
   "dateDisplay": "c. 1830–31",
   "category": "painting",
-  "movement": "Barbizon school",
+  "movement": null,
   "period": "19th Century",
   "medium": "oil on fabric",
   "culture": "France",
@@ -14279,13 +14279,13 @@
    "guess": "intermediate",
    "detail": "intermediate",
    "artist": "intermediate",
-   "movement": "intermediate"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 1.8,
   "interestingFacts": [
@@ -18055,7 +18055,7 @@
   "yearSpan": 0,
   "dateDisplay": "1866",
   "category": "printmaking",
-  "movement": "Impressionism",
+  "movement": null,
   "period": "19th Century",
   "medium": "etching",
   "culture": "France",
@@ -18122,13 +18122,13 @@
    "guess": "easy",
    "detail": "intermediate",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 2.5,
   "interestingFacts": [
@@ -21244,7 +21244,7 @@
   "yearSpan": 0,
   "dateDisplay": "1918–19",
   "category": "drawing",
-  "movement": "Realism",
+  "movement": null,
   "period": "Modern",
   "medium": "charcoal (stumped in places) (left figures) and graphite (right figure); squared in graphite (right figure)",
   "culture": "America",
@@ -21311,13 +21311,13 @@
    "guess": "intermediate",
    "detail": "expert",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 1.4,
   "interestingFacts": [],
@@ -21434,7 +21434,7 @@
   "yearSpan": 0,
   "dateDisplay": "1898",
   "category": "painting",
-  "movement": "Realism",
+  "movement": null,
   "period": "19th Century",
   "medium": "oil on canvas",
   "culture": "United States",
@@ -21501,13 +21501,13 @@
    "guess": "intermediate",
    "detail": "intermediate",
    "artist": "easy",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": false,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 2.1,
   "interestingFacts": [
@@ -21626,7 +21626,7 @@
   "yearSpan": 10,
   "dateDisplay": "c. 1768",
   "category": "drawing",
-  "movement": "Sentimentalism",
+  "movement": null,
   "period": "Enlightenment",
   "medium": "Red chalk on cream laid paper",
   "culture": "France",
@@ -21699,7 +21699,7 @@
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 0.8,
   "interestingFacts": [],
@@ -22187,7 +22187,7 @@
   "yearSpan": 0,
   "dateDisplay": "1857",
   "category": "printmaking",
-  "movement": "Realism",
+  "movement": null,
   "period": "19th Century",
   "medium": "etching and drypoint",
   "culture": "France",
@@ -22254,13 +22254,13 @@
    "guess": "intermediate",
    "detail": "expert",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": false,
    "detail": false,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 1.4,
   "interestingFacts": [
@@ -23249,7 +23249,7 @@
   "yearSpan": 0,
   "dateDisplay": "1873",
   "category": "painting",
-  "movement": "Luminism",
+  "movement": null,
   "period": "19th Century",
   "medium": "oil on canvas",
   "culture": "United States",
@@ -23322,7 +23322,7 @@
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 0.8,
   "interestingFacts": [
@@ -23443,7 +23443,7 @@
   "yearSpan": 0,
   "dateDisplay": "1874",
   "category": "printmaking",
-  "movement": "Realism",
+  "movement": null,
   "period": "19th Century",
   "medium": "gillotage",
   "culture": "France",
@@ -23510,13 +23510,13 @@
    "guess": "easy",
    "detail": "easy",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 2.8,
   "interestingFacts": [
@@ -23542,7 +23542,7 @@
   "yearSpan": 0,
   "dateDisplay": "1907",
   "category": "photography",
-  "movement": "Pictorialism",
+  "movement": null,
   "period": "Modern",
   "medium": "photogravure",
   "culture": "America",
@@ -23609,13 +23609,13 @@
    "guess": "easy",
    "detail": "easy",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "intermediate"
   },
   "quiz": {
    "guess": true,
    "detail": true,
    "artist": true,
-   "movement": true
+   "movement": false
   },
   "recognizability": 4,
   "interestingFacts": [
@@ -27113,6 +27113,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q1132723",
+  "title": "Prisoners' Round",
+  "alternativeTitles": [],
+  "artist": "Vincent van Gogh",
+  "artistNationality": null,
+  "artistBirthYear": 1853,
+  "artistDeathYear": 1890,
+  "artistBio": "Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life.",
+  "artistBioSource": {
+   "name": "Wikipedia — Vincent van Gogh",
+   "url": "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1890,
+  "yearSpan": 0,
+  "dateDisplay": "1890",
+  "category": "painting",
+  "movement": "Post-Impressionism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q1132723/1280.webp",
+  "imageWidth": 1015,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_Prison_Courtyard_(1890).jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q1132723/detail.webp",
+   "width": 720,
+   "height": 681,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 162640
+  },
+  "description": "Prisoners' Round, also known as The Prisoners' Round, or Prisoners Exercising, or The Prison Courtyard, (F669) is an oil painting of February 1890 by Vincent van Gogh.",
+  "descriptionSource": {
+   "name": "Wikipedia — Prisoners' Round (after Gustave Doré)",
+   "url": "https://en.wikipedia.org/wiki/Prisoners'_Round_(after_Gustave_Dor%C3%A9)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Pushkin Museum of Fine Arts",
+  "museumUrl": "https://www.wikidata.org/wiki/Q4872",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Prisoners'_Round_(after_Gustave_Dor%C3%A9)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q1132723"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q1132723/480.webp",
+     "w": 380,
+     "h": 480,
+     "bytes": 46222
+    },
+    {
+     "url": "/art/wd-Q1132723/960.webp",
+     "w": 761,
+     "h": 960,
+     "bytes": 196146
+    },
+    {
+     "url": "/art/wd-Q1132723/1280.webp",
+     "w": 1015,
+     "h": 1280,
+     "bytes": 386940
+    }
+   ],
+   "original": {
+    "w": 9048,
+    "h": 11409,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.2,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q1133420",
   "title": "The Surrender of Breda",
   "alternativeTitles": [],
@@ -27210,7 +27306,7 @@
  },
  {
   "id": "wd-Q1133821",
-  "title": "Death of Sardanapalus",
+  "title": "The Death of Sardanapalus",
   "alternativeTitles": [],
   "artist": "Eugène Delacroix",
   "artistNationality": null,
@@ -27593,6 +27689,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q1170480",
+  "title": "Syndics of the Drapers' Guild",
+  "alternativeTitles": [],
+  "artist": "Rembrandt",
+  "artistNationality": null,
+  "artistBirthYear": 1606,
+  "artistDeathYear": 1669,
+  "artistBio": "Rembrandt Harmenszoon van Rijn, known mononymously as Rembrandt, was a Dutch Golden Age painter, printmaker, and draughtsman. He is generally considered one of the greatest visual artists in the history of Western art.",
+  "artistBioSource": {
+   "name": "Wikipedia — Rembrandt",
+   "url": "https://en.wikipedia.org/wiki/Rembrandt",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1662,
+  "yearSpan": 0,
+  "dateDisplay": "1662",
+  "category": "painting",
+  "movement": "Baroque",
+  "period": "Baroque",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q1170480/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 865,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_De_Staalmeesters-_het_college_van_staalmeesters_(waardijns)_van_het_Amsterdamse_lakenbereidersgilde_-_Google_Art_Project.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q1170480/detail.webp",
+   "width": 720,
+   "height": 365,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 35498
+  },
+  "description": "The Sampling Officials, also called Syndics of the Drapers' Guild, is a 1662 oil painting by Rembrandt. It is now in the Rijksmuseum in Amsterdam. It has been described as his \"last great collective portrait\".",
+  "descriptionSource": {
+   "name": "Wikipedia — Syndics of the Drapers' Guild",
+   "url": "https://en.wikipedia.org/wiki/Syndics_of_the_Drapers'_Guild",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Staalhof",
+  "museumUrl": "https://www.wikidata.org/wiki/Q2352274",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Syndics_of_the_Drapers'_Guild",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q1170480"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q1170480/480.webp",
+     "w": 480,
+     "h": 324,
+     "bytes": 12162
+    },
+    {
+     "url": "/art/wd-Q1170480/960.webp",
+     "w": 960,
+     "h": 649,
+     "bytes": 47978
+    },
+    {
+     "url": "/art/wd-Q1170480/1280.webp",
+     "w": 1280,
+     "h": 865,
+     "bytes": 96650
+    }
+   ],
+   "original": {
+    "w": 5918,
+    "h": 4000,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.6,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q1206860",
   "title": "Bacchus and Ariadne",
   "alternativeTitles": [],
@@ -27690,7 +27882,7 @@
  },
  {
   "id": "wd-Q1212737",
-  "title": "The Women of Algiers",
+  "title": "Women of Algiers",
   "alternativeTitles": [],
   "artist": "Eugène Delacroix",
   "artistNationality": null,
@@ -27862,6 +28054,102 @@
    "original": {
     "w": 30000,
     "h": 29560,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3.2,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q1213453",
+  "title": "The Execution of Lady Jane Grey",
+  "alternativeTitles": [],
+  "artist": "Paul Delaroche",
+  "artistNationality": null,
+  "artistBirthYear": 1797,
+  "artistDeathYear": 1856,
+  "artistBio": "Hippolyte-Paul Delaroche was a French painter known for his depiction of scenes from English and French history. The emotions emphasised in Delaroche's paintings appeal to Romanticism while the detail of his work along with the deglorified portrayal of historic figures follow the trends of Academicism and Neoclassicism.",
+  "artistBioSource": {
+   "name": "Wikipedia — Paul Delaroche",
+   "url": "https://en.wikipedia.org/wiki/Paul_Delaroche",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1833,
+  "yearSpan": 0,
+  "dateDisplay": "1833",
+  "category": "painting",
+  "movement": "Academic art",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q1213453/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 1069,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:PAUL_DELAROCHE_-_Ejecuci%C3%B3n_de_Lady_Jane_Grey_(National_Gallery_de_Londres%2C_1834).jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q1213453/detail.webp",
+   "width": 720,
+   "height": 451,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 26452
+  },
+  "description": "The Execution of Lady Jane Grey is an oil painting by Paul Delaroche, completed in 1833, which is now in the National Gallery in London. It was enormously popular in the decades after it was painted, but in the 20th century realist historical paintings fell from critical favour and it was kept in storage for many decades, for much of which it was thought lost.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Execution of Lady Jane Grey",
+   "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "National Gallery",
+  "museumUrl": "https://www.wikidata.org/wiki/Q180788",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q1213453"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q1213453/480.webp",
+     "w": 480,
+     "h": 401,
+     "bytes": 16268
+    },
+    {
+     "url": "/art/wd-Q1213453/960.webp",
+     "w": 960,
+     "h": 802,
+     "bytes": 55638
+    },
+    {
+     "url": "/art/wd-Q1213453/1280.webp",
+     "w": 1280,
+     "h": 1069,
+     "bytes": 96276
+    }
+   ],
+   "original": {
+    "w": 3936,
+    "h": 3288,
     "format": "jpeg"
    }
   },
@@ -28553,6 +28841,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q1327676",
+  "title": "Madonna Litta",
+  "alternativeTitles": [],
+  "artist": "Leonardo da Vinci",
+  "artistNationality": null,
+  "artistBirthYear": 1452,
+  "artistDeathYear": 1519,
+  "artistBio": "Leonardo di ser Piero da Vinci, better known as Leonardo da Vinci, was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and architect.",
+  "artistBioSource": {
+   "name": "Wikipedia — Leonardo da Vinci",
+   "url": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1490,
+  "yearSpan": 0,
+  "dateDisplay": "1490",
+  "category": "painting",
+  "movement": "High Renaissance",
+  "period": "Renaissance",
+  "medium": "tempera on panel",
+  "culture": null,
+  "imageUrl": "/art/wd-Q1327676/1280.webp",
+  "imageWidth": 1003,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_attributed_-_Madonna_Litta.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q1327676/detail.webp",
+   "width": 720,
+   "height": 689,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 112282
+  },
+  "description": "The Madonna Litta is a late 15th-century painting, by Leonardo da Vinci, in the Hermitage Museum, Saint Petersburg. It depicts the Virgin Mary breastfeeding the Christ child, a devotional subject known as the Madonna lactans. The figures are set in a dark interior with two arched openings, as in Leonardo's earlier Madonna of the Carnation, and a mountainous landscape in aerial perspective can be seen beyond.",
+  "descriptionSource": {
+   "name": "Wikipedia — Madonna Litta",
+   "url": "https://en.wikipedia.org/wiki/Madonna_Litta",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Hermitage Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q132783",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Madonna_Litta",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q1327676"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q1327676/480.webp",
+     "w": 376,
+     "h": 480,
+     "bytes": 22804
+    },
+    {
+     "url": "/art/wd-Q1327676/960.webp",
+     "w": 752,
+     "h": 960,
+     "bytes": 108376
+    },
+    {
+     "url": "/art/wd-Q1327676/1280.webp",
+     "w": 1003,
+     "h": 1280,
+     "bytes": 230784
+    }
+   ],
+   "original": {
+    "w": 6346,
+    "h": 8096,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.2,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q1368055",
   "title": "The Gleaners",
   "alternativeTitles": [],
@@ -28646,6 +29030,102 @@
    "movement": true
   },
   "recognizability": 3,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q1452762",
+  "title": "Paris Street; Rainy Day",
+  "alternativeTitles": [],
+  "artist": "Gustave Caillebotte",
+  "artistNationality": null,
+  "artistBirthYear": 1848,
+  "artistDeathYear": 1894,
+  "artistBio": "Gustave Caillebotte was a French painter who was a member and patron of the Impressionists, although he painted in a more realistic manner than many others in the group. Caillebotte was known for his early interest in photography as an art form.",
+  "artistBioSource": {
+   "name": "Wikipedia — Gustave Caillebotte",
+   "url": "https://en.wikipedia.org/wiki/Gustave_Caillebotte",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1877,
+  "yearSpan": 0,
+  "dateDisplay": "1877",
+  "category": "painting",
+  "movement": "Impressionism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q1452762/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 994,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street%2C_Rainy_Day_-_1964.336_-_Art_Institute_of_Chicago.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q1452762/detail.webp",
+   "width": 720,
+   "height": 420,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 46900
+  },
+  "description": "Paris Street; Rainy Day is a large 1877 oil painting by the French artist Gustave Caillebotte, now at the Art Institute of Chicago in Chicago, Illinois. The work shows a Parisian street scene of pedestrians in rainy weather crossing a boulevard intersection in the present-day Place de Dublin, a square in the eighth arrondissement.",
+  "descriptionSource": {
+   "name": "Wikipedia — Paris Street; Rainy Day",
+   "url": "https://en.wikipedia.org/wiki/Paris_Street%3B_Rainy_Day",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Art Institute of Chicago",
+  "museumUrl": "https://www.wikidata.org/wiki/Q239303",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Paris_Street%3B_Rainy_Day",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q1452762"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q1452762/480.webp",
+     "w": 480,
+     "h": 372,
+     "bytes": 20636
+    },
+    {
+     "url": "/art/wd-Q1452762/960.webp",
+     "w": 960,
+     "h": 745,
+     "bytes": 73158
+    },
+    {
+     "url": "/art/wd-Q1452762/1280.webp",
+     "w": 1280,
+     "h": 994,
+     "bytes": 147910
+    }
+   ],
+   "original": {
+    "w": 2898,
+    "h": 2250,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3.6,
   "interestingFacts": []
  },
  {
@@ -29034,7 +29514,7 @@
  },
  {
   "id": "wd-Q152509",
-  "title": "Luncheon on the Grass",
+  "title": "Le Déjeuner sur l'herbe",
   "alternativeTitles": [],
   "artist": "Édouard Manet",
   "artistNationality": null,
@@ -29417,8 +29897,104 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q1619527",
+  "title": "Mr and Mrs Andrews",
+  "alternativeTitles": [],
+  "artist": "Thomas Gainsborough",
+  "artistNationality": null,
+  "artistBirthYear": 1727,
+  "artistDeathYear": 1788,
+  "artistBio": "Thomas Gainsborough was an English painter, draughtsman and printmaker who specialised in portrait and landscape painting. Along with his rival Sir Joshua Reynolds, he was one of the most important British artists of the 18th century.",
+  "artistBioSource": {
+   "name": "Wikipedia — Thomas Gainsborough",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Gainsborough",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1748,
+  "yearSpan": 0,
+  "dateDisplay": "1748",
+  "category": "painting",
+  "movement": "Rococo",
+  "period": "Enlightenment",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q1619527/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 750,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Thomas_Gainsborough_-_Mr._und_Mrs._Andrews_(c._1750).jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q1619527/detail.webp",
+   "width": 720,
+   "height": 316,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 23804
+  },
+  "description": "Mr and Mrs Andrews is an oil on canvas portrait of about 1750 by Thomas Gainsborough, now in the National Gallery, London.",
+  "descriptionSource": {
+   "name": "Wikipedia — Mr and Mrs Andrews",
+   "url": "https://en.wikipedia.org/wiki/Mr_and_Mrs_Andrews",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "National Gallery",
+  "museumUrl": "https://www.wikidata.org/wiki/Q180788",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Mr_and_Mrs_Andrews",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q1619527"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q1619527/480.webp",
+     "w": 480,
+     "h": 281,
+     "bytes": 11338
+    },
+    {
+     "url": "/art/wd-Q1619527/960.webp",
+     "w": 960,
+     "h": 562,
+     "bytes": 42122
+    },
+    {
+     "url": "/art/wd-Q1619527/1280.webp",
+     "w": 1280,
+     "h": 750,
+     "bytes": 83300
+    }
+   ],
+   "original": {
+    "w": 6000,
+    "h": 3515,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q16333797",
-  "title": "Rudolf II as Vertumnus",
+  "title": "Vertumnus",
   "alternativeTitles": [],
   "artist": "Giuseppe Arcimboldo",
   "artistNationality": null,
@@ -29609,6 +30185,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q17001535",
+  "title": "Death and Life",
+  "alternativeTitles": [],
+  "artist": "Gustav Klimt",
+  "artistNationality": null,
+  "artistBirthYear": 1862,
+  "artistDeathYear": 1918,
+  "artistBio": "Gustav Klimt was an Austrian symbolist painter and a founding member of the Vienna Secession movement. His work helped define the Art Nouveau style in Europe.",
+  "artistBioSource": {
+   "name": "Wikipedia — Gustav Klimt",
+   "url": "https://en.wikipedia.org/wiki/Gustav_Klimt",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1910,
+  "yearSpan": 0,
+  "dateDisplay": "1910",
+  "category": "painting",
+  "movement": "Symbolism",
+  "period": "Modern",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q17001535/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 1114,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q17001535/detail.webp",
+   "width": 720,
+   "height": 470,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 53300
+  },
+  "description": "Death and Life is an oil-on-canvas painting by Austrian painter Gustav Klimt. The painting was started in 1908 and completed in 1915. It depicts an allegorical subject in Art Nouveau style.",
+  "descriptionSource": {
+   "name": "Wikipedia — Death and Life",
+   "url": "https://en.wikipedia.org/wiki/Death_and_Life",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Leopold Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q59435",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_and_Life",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q17001535"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q17001535/480.webp",
+     "w": 480,
+     "h": 417,
+     "bytes": 37514
+    },
+    {
+     "url": "/art/wd-Q17001535/960.webp",
+     "w": 960,
+     "h": 836,
+     "bytes": 137578
+    },
+    {
+     "url": "/art/wd-Q17001535/1280.webp",
+     "w": 1280,
+     "h": 1114,
+     "bytes": 247774
+    }
+   ],
+   "original": {
+    "w": 4059,
+    "h": 3533,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.6,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q17277950",
   "title": "The Card Players",
   "alternativeTitles": [],
@@ -29702,6 +30374,102 @@
    "movement": true
   },
   "recognizability": 3.4,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q175628",
+  "title": "Barge Haulers on the Volga",
+  "alternativeTitles": [],
+  "artist": "Ilya Repin",
+  "artistNationality": null,
+  "artistBirthYear": 1844,
+  "artistDeathYear": 1930,
+  "artistBio": "Ilya Yefimovich Repin was a Ukrainian-born Russian painter. He became one of the most renowned artists in Russia in the 19th century.",
+  "artistBioSource": {
+   "name": "Wikipedia — Ilya Repin",
+   "url": "https://en.wikipedia.org/wiki/Ilya_Repin",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1870,
+  "yearSpan": 0,
+  "dateDisplay": "1870",
+  "category": "painting",
+  "movement": "Russian Realism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q175628/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 599,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Ilya_Repin_-_Barge_Haulers_on_the_Volga_-_Google_Art_Project.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q175628/detail.webp",
+   "width": 720,
+   "height": 253,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 46040
+  },
+  "description": "Barge Haulers on the Volga or Burlaki is an 1870–1873 oil-on-canvas painting by Russian realist artist Ilya Repin. It depicts 11 men (burlaki) hauling a barge along the banks of the Volga River. They are at the point of collapse from exhaustion, oppressed by heavy, hot weather.",
+  "descriptionSource": {
+   "name": "Wikipedia — Barge Haulers on the Volga",
+   "url": "https://en.wikipedia.org/wiki/Barge_Haulers_on_the_Volga",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Russian Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q211043",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Barge_Haulers_on_the_Volga",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q175628"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q175628/480.webp",
+     "w": 480,
+     "h": 224,
+     "bytes": 13548
+    },
+    {
+     "url": "/art/wd-Q175628/960.webp",
+     "w": 960,
+     "h": 449,
+     "bytes": 55238
+    },
+    {
+     "url": "/art/wd-Q175628/1280.webp",
+     "w": 1280,
+     "h": 599,
+     "bytes": 112100
+    }
+   ],
+   "original": {
+    "w": 5734,
+    "h": 2684,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "expert"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3,
   "interestingFacts": []
  },
  {
@@ -29897,6 +30665,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q18208623",
+  "title": "Anxiety",
+  "alternativeTitles": [],
+  "artist": "Edvard Munch",
+  "artistNationality": null,
+  "artistBirthYear": 1863,
+  "artistDeathYear": 1944,
+  "artistBio": "Edvard Munch was a Norwegian painter. His 1893 work The Scream has become one of the iconic and acclaimed images in all of Western art.",
+  "artistBioSource": {
+   "name": "Wikipedia — Edvard Munch",
+   "url": "https://en.wikipedia.org/wiki/Edvard_Munch",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1894,
+  "yearSpan": 0,
+  "dateDisplay": "1894",
+  "category": "painting",
+  "movement": "Expressionism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q18208623/1280.webp",
+  "imageWidth": 992,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_Anxiety_-_Google_Art_Project.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q18208623/detail.webp",
+   "width": 720,
+   "height": 697,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 127806
+  },
+  "description": "Anxiety is an 1894 painting by the Norwegian painter Edvard Munch. It shows a group of people walking towards the viewer under a blood-red sky. The painting is a synthesis of the earlier motifs Evening on Karl Johan (1892) and The Scream (1893).",
+  "descriptionSource": {
+   "name": "Wikipedia — Anxiety (Munch)",
+   "url": "https://en.wikipedia.org/wiki/Anxiety_(Munch)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Munch Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q844926",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Anxiety_(Munch)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q18208623"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q18208623/480.webp",
+     "w": 371,
+     "h": 480,
+     "bytes": 25018
+    },
+    {
+     "url": "/art/wd-Q18208623/960.webp",
+     "w": 744,
+     "h": 960,
+     "bytes": 144946
+    },
+    {
+     "url": "/art/wd-Q18208623/1280.webp",
+     "w": 992,
+     "h": 1280,
+     "bytes": 304372
+    }
+   ],
+   "original": {
+    "w": 5221,
+    "h": 6735,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q185372",
   "title": "Girl with a Pearl Earring",
   "alternativeTitles": [],
@@ -30086,6 +30950,294 @@
    "movement": true
   },
   "recognizability": 3.8,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q18719540",
+  "title": "Self-Portrait in a Straw Hat",
+  "alternativeTitles": [],
+  "artist": "Élisabeth Louise Vigée Le Brun",
+  "artistNationality": null,
+  "artistBirthYear": 1755,
+  "artistDeathYear": 1842,
+  "artistBio": "Élisabeth Louise Vigée Le Brun, also known as Louise Élisabeth Vigée Le Brun or simply Madame Le Brun, was a French painter who mostly specialized in portrait painting, in the late 18th and early 19th centuries.",
+  "artistBioSource": {
+   "name": "Wikipedia — Élisabeth Vigée Le Brun",
+   "url": "https://en.wikipedia.org/wiki/%C3%89lisabeth_Vig%C3%A9e_Le_Brun",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1782,
+  "yearSpan": 0,
+  "dateDisplay": "1782",
+  "category": "painting",
+  "movement": "Neoclassicism",
+  "period": "Enlightenment",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q18719540/1280.webp",
+  "imageWidth": 922,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Self-portrait_in_a_Straw_Hat_by_Elisabeth-Louise_Vig%C3%A9e-Lebrun.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q18719540/detail.webp",
+   "width": 720,
+   "height": 750,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 52574
+  },
+  "description": "Self-Portrait in a Straw Hat is a self-portrait by the French painter Élisabeth Vigée Le Brun, painted after 1782, in oil on linen, measuring 97.8 by 70.5 centimetres. It has belonged to the collection of the National Gallery, in London, since 1897.",
+  "descriptionSource": {
+   "name": "Wikipedia — Self-Portrait in a Straw Hat",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_in_a_Straw_Hat",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "National Gallery",
+  "museumUrl": "https://www.wikidata.org/wiki/Q180788",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Self-Portrait_in_a_Straw_Hat",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q18719540"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q18719540/480.webp",
+     "w": 346,
+     "h": 480,
+     "bytes": 12304
+    },
+    {
+     "url": "/art/wd-Q18719540/960.webp",
+     "w": 691,
+     "h": 960,
+     "bytes": 39986
+    },
+    {
+     "url": "/art/wd-Q18719540/1280.webp",
+     "w": 922,
+     "h": 1280,
+     "bytes": 74758
+    }
+   ],
+   "original": {
+    "w": 4320,
+    "h": 6000,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.2,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q1899740",
+  "title": "Assumption of the Virgin",
+  "alternativeTitles": [],
+  "artist": "Titian",
+  "artistNationality": null,
+  "artistBirthYear": 1488,
+  "artistDeathYear": 1576,
+  "artistBio": "Tiziano Vecellio, Latinized as Titianus, hence known in English as Titian, was an Italian Renaissance painter. The most important artist of Renaissance Venetian painting, he was born in Pieve di Cadore, near Belluno.",
+  "artistBioSource": {
+   "name": "Wikipedia — Titian",
+   "url": "https://en.wikipedia.org/wiki/Titian",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1517,
+  "yearSpan": 10,
+  "dateDisplay": "1510s",
+  "category": "painting",
+  "movement": "Venetian Renaissance",
+  "period": "Renaissance",
+  "medium": "oil on panel",
+  "culture": null,
+  "imageUrl": "/art/wd-Q1899740/1280.webp",
+  "imageWidth": 696,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Tizian_041.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q1899740/detail.webp",
+   "width": 420,
+   "height": 580,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 53874
+  },
+  "description": "The Assumption of the Virgin or Frari Assumption, popularly known as the Assunta, is a large altarpiece panel painting in oils by the Italian Renaissance artist Titian, painted in 1515–1518. It remains in the position it was designed for, on the high altar of the Basilica di Santa Maria Gloriosa dei Frari or Frari church in Venice.",
+  "descriptionSource": {
+   "name": "Wikipedia — Assumption of the Virgin (Titian)",
+   "url": "https://en.wikipedia.org/wiki/Assumption_of_the_Virgin_(Titian)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Santa Maria Gloriosa dei Frari",
+  "museumUrl": "https://www.wikidata.org/wiki/Q224961",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Assumption_of_the_Virgin_(Titian)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q1899740"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q1899740/480.webp",
+     "w": 261,
+     "h": 480,
+     "bytes": 33520
+    },
+    {
+     "url": "/art/wd-Q1899740/960.webp",
+     "w": 522,
+     "h": 960,
+     "bytes": 141316
+    },
+    {
+     "url": "/art/wd-Q1899740/1280.webp",
+     "w": 696,
+     "h": 1280,
+     "bytes": 264764
+    }
+   ],
+   "original": {
+    "w": 1050,
+    "h": 1932,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q1926628",
+  "title": "The Red Vineyard",
+  "alternativeTitles": [],
+  "artist": "Vincent van Gogh",
+  "artistNationality": null,
+  "artistBirthYear": 1853,
+  "artistDeathYear": 1890,
+  "artistBio": "Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life.",
+  "artistBioSource": {
+   "name": "Wikipedia — Vincent van Gogh",
+   "url": "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1888,
+  "yearSpan": 0,
+  "dateDisplay": "1888",
+  "category": "painting",
+  "movement": "Post-Impressionism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q1926628/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 1021,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Red_Vineyard_at_Arles_(1888).jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q1926628/detail.webp",
+   "width": 720,
+   "height": 431,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 126332
+  },
+  "description": "The Red Vineyards near Arles is an oil painting by the Dutch painter Vincent van Gogh, executed on a privately primed Toile de 30 piece of burlap in early November 1888. It depicts workers in a vineyard, and it is the only painting known by name that van Gogh sold in his lifetime.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Red Vineyard",
+   "url": "https://en.wikipedia.org/wiki/The_Red_Vineyard",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Pushkin Museum of Fine Arts",
+  "museumUrl": "https://www.wikidata.org/wiki/Q4872",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Red_Vineyard",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q1926628"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q1926628/480.webp",
+     "w": 480,
+     "h": 383,
+     "bytes": 57242
+    },
+    {
+     "url": "/art/wd-Q1926628/960.webp",
+     "w": 960,
+     "h": 765,
+     "bytes": 245004
+    },
+    {
+     "url": "/art/wd-Q1926628/1280.webp",
+     "w": 1280,
+     "h": 1021,
+     "bytes": 472660
+    }
+   ],
+   "original": {
+    "w": 11406,
+    "h": 9092,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.6,
   "interestingFacts": []
  },
  {
@@ -31433,6 +32585,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q2265370",
+  "title": "The Battle of San Romano",
+  "alternativeTitles": [],
+  "artist": "Paolo Uccello",
+  "artistNationality": null,
+  "artistBirthYear": 1397,
+  "artistDeathYear": 1475,
+  "artistBio": "Paolo Uccello, born Paolo di Dono, was an Italian Renaissance painter and mathematician from Florence who was notable for his pioneering work on visual perspective in art.",
+  "artistBioSource": {
+   "name": "Wikipedia — Paolo Uccello",
+   "url": "https://en.wikipedia.org/wiki/Paolo_Uccello",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1456,
+  "yearSpan": 0,
+  "dateDisplay": "1456",
+  "category": "painting",
+  "movement": "Early Renaissance",
+  "period": "Renaissance",
+  "medium": null,
+  "culture": null,
+  "imageUrl": "/art/wd-Q2265370/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 719,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Uccello_%E2%80%94_the_Battle_of_San_Romano.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q2265370/detail.webp",
+   "width": 720,
+   "height": 303,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 53130
+  },
+  "description": "The Battle of San Romano is a set of three paintings by the Florentine painter Paolo Uccello depicting events that took place at the Battle of San Romano between Florentine and Sienese forces in 1432. They are significant as revealing the development of linear perspective in early Italian Renaissance painting, and are unusual as a major secular commission.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Battle of San Romano",
+   "url": "https://en.wikipedia.org/wiki/The_Battle_of_San_Romano",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Public collection",
+  "museumUrl": "https://www.wikidata.org",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Battle_of_San_Romano",
+  "license": "Image: CC0 (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q2265370"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q2265370/480.webp",
+     "w": 480,
+     "h": 270,
+     "bytes": 26892
+    },
+    {
+     "url": "/art/wd-Q2265370/960.webp",
+     "w": 960,
+     "h": 539,
+     "bytes": 94264
+    },
+    {
+     "url": "/art/wd-Q2265370/1280.webp",
+     "w": 1280,
+     "h": 719,
+     "bytes": 175278
+    }
+   ],
+   "original": {
+    "w": 11305,
+    "h": 6351,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q2267579",
   "title": "The Sick Child",
   "alternativeTitles": [],
@@ -31526,6 +32774,102 @@
    "movement": true
   },
   "recognizability": 2.6,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q2275610",
+  "title": "The Circus",
+  "alternativeTitles": [],
+  "artist": "Georges Seurat",
+  "artistNationality": null,
+  "artistBirthYear": 1859,
+  "artistDeathYear": 1891,
+  "artistBio": "Georges Pierre Seurat was a French post-Impressionist artist. He devised the painting techniques known as chromoluminarism and pointillism and used conté crayon for drawings on paper with a rough surface.",
+  "artistBioSource": {
+   "name": "Wikipedia — Georges Seurat",
+   "url": "https://en.wikipedia.org/wiki/Georges_Seurat",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1891,
+  "yearSpan": 0,
+  "dateDisplay": "1891",
+  "category": "painting",
+  "movement": "Neo-Impressionism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q2275610/1280.webp",
+  "imageWidth": 1033,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_The_Circus_-_Google_Art_Project.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q2275610/detail.webp",
+   "width": 720,
+   "height": 669,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 161398
+  },
+  "description": "The Circus is an oil on canvas painting by Georges Seurat. It was his last painting, made in a Neo-Impressionist style in 1890–91, and remained unfinished at his death in March 1891. The painting is located at the Musée d'Orsay in Paris.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Circus (Seurat)",
+   "url": "https://en.wikipedia.org/wiki/The_Circus_(Seurat)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Musée d'Orsay",
+  "museumUrl": "https://www.wikidata.org/wiki/Q23402",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Circus_(Seurat)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q2275610"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q2275610/480.webp",
+     "w": 387,
+     "h": 480,
+     "bytes": 43626
+    },
+    {
+     "url": "/art/wd-Q2275610/960.webp",
+     "w": 775,
+     "h": 960,
+     "bytes": 249062
+    },
+    {
+     "url": "/art/wd-Q2275610/1280.webp",
+     "w": 1033,
+     "h": 1280,
+     "bytes": 486336
+    }
+   ],
+   "original": {
+    "w": 3918,
+    "h": 4855,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
   "interestingFacts": []
  },
  {
@@ -31814,6 +33158,102 @@
    "movement": true
   },
   "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q2324840",
+  "title": "The Ancient of Days",
+  "alternativeTitles": [],
+  "artist": "William Blake",
+  "artistNationality": null,
+  "artistBirthYear": 1757,
+  "artistDeathYear": 1827,
+  "artistBio": "William Blake was an English poet, painter and printmaker. Largely unrecognised during his life, Blake has become a seminal figure in the history of the poetry and visual art of the Romantic Age.",
+  "artistBioSource": {
+   "name": "Wikipedia — William Blake",
+   "url": "https://en.wikipedia.org/wiki/William_Blake",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1794,
+  "yearSpan": 0,
+  "dateDisplay": "1794",
+  "category": "printmaking",
+  "movement": "Romanticism",
+  "period": "Enlightenment",
+  "medium": "ink on paper",
+  "culture": null,
+  "imageUrl": "/art/wd-Q2324840/1280.webp",
+  "imageWidth": 945,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Europe_a_Prophecy_copy_K_plate_01.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q2324840/detail.webp",
+   "width": 720,
+   "height": 731,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 165462
+  },
+  "description": "The Ancient of Days is a design by William Blake, originally published as the frontispiece to the 1794 work Europe a Prophecy. It draws its name from one of God's titles in the Book of Daniel and shows Urizen crouching in a circular design with a cloud-like background. His outstretched hand holds a compass over the darker void below.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Ancient of Days",
+   "url": "https://en.wikipedia.org/wiki/The_Ancient_of_Days",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "British Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q6373",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Ancient_of_Days",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q2324840"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q2324840/480.webp",
+     "w": 354,
+     "h": 480,
+     "bytes": 25152
+    },
+    {
+     "url": "/art/wd-Q2324840/960.webp",
+     "w": 709,
+     "h": 960,
+     "bytes": 126594
+    },
+    {
+     "url": "/art/wd-Q2324840/1280.webp",
+     "w": 945,
+     "h": 1280,
+     "bytes": 270818
+    }
+   ],
+   "original": {
+    "w": 2217,
+    "h": 3004,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3,
   "interestingFacts": []
  },
  {
@@ -32297,6 +33737,294 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q2592400",
+  "title": "Blue Horse I",
+  "alternativeTitles": [],
+  "artist": "Franz Marc",
+  "artistNationality": null,
+  "artistBirthYear": 1880,
+  "artistDeathYear": 1916,
+  "artistBio": "Franz Moritz Wilhelm Marc was a German painter and printmaker, one of the key figures of German Expressionism. He was a founding member of Der Blaue Reiter, a journal whose name later became synonymous with the circle of artists collaborating in it.",
+  "artistBioSource": {
+   "name": "Wikipedia — Franz Marc",
+   "url": "https://en.wikipedia.org/wiki/Franz_Marc",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1911,
+  "yearSpan": 0,
+  "dateDisplay": "1911",
+  "category": "painting",
+  "movement": "Expressionism",
+  "period": "Modern",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q2592400/1280.webp",
+  "imageWidth": 956,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Franz_Marc_Blaues_Pferd_1911.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q2592400/detail.webp",
+   "width": 720,
+   "height": 723,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 121698
+  },
+  "description": "Blue Horse I is an oil painting by Franz Marc completed in 1911. It is one of the painter's most famous works and is part of the collection of the Städtische Galerie im Lenbachhaus in Munich. The painting was part of several exhibitions that Franz Marc and fellow Russian painter Wassily Kandinsky presented to the public under the name Der Blaue Reiter from late 1911 until 1914.",
+  "descriptionSource": {
+   "name": "Wikipedia — Blue Horse I",
+   "url": "https://en.wikipedia.org/wiki/Blue_Horse_I",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Lenbachhaus",
+  "museumUrl": "https://www.wikidata.org/wiki/Q262234",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Blue_Horse_I",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q2592400"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q2592400/480.webp",
+     "w": 358,
+     "h": 480,
+     "bytes": 21674
+    },
+    {
+     "url": "/art/wd-Q2592400/960.webp",
+     "w": 717,
+     "h": 960,
+     "bytes": 96644
+    },
+    {
+     "url": "/art/wd-Q2592400/1280.webp",
+     "w": 956,
+     "h": 1280,
+     "bytes": 259090
+    }
+   ],
+   "original": {
+    "w": 2000,
+    "h": 2678,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q2610675",
+  "title": "The Fortune Teller",
+  "alternativeTitles": [],
+  "artist": "Caravaggio",
+  "artistNationality": null,
+  "artistBirthYear": 1571,
+  "artistDeathYear": 1610,
+  "artistBio": "Michelangelo Merisi da Caravaggio, known mononymously as Caravaggio, was an Italian painter active in Rome for a significant portion of his artistic life. He began his apprenticeship in Milan in 1584, and during the final four years of his life, he moved between Naples, Malta, and Sicily.",
+  "artistBioSource": {
+   "name": "Wikipedia — Caravaggio",
+   "url": "https://en.wikipedia.org/wiki/Caravaggio",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1594,
+  "yearSpan": 0,
+  "dateDisplay": "1594",
+  "category": "painting",
+  "movement": "Baroque",
+  "period": "Renaissance",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q2610675/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 967,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:The_Fortune_Teller-Caravaggio_(Louvre).jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q2610675/detail.webp",
+   "width": 720,
+   "height": 408,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 97356
+  },
+  "description": "The Fortune Teller is a painting by Italian Baroque artist Michelangelo Merisi da Caravaggio. It exists in two versions, both by Caravaggio, the first from c. 1594, the second from c. 1595. The dates in both cases are disputed.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Fortune Teller (Caravaggio)",
+   "url": "https://en.wikipedia.org/wiki/The_Fortune_Teller_(Caravaggio)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Louvre Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q19675",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Fortune_Teller_(Caravaggio)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q2610675"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q2610675/480.webp",
+     "w": 480,
+     "h": 363,
+     "bytes": 20928
+    },
+    {
+     "url": "/art/wd-Q2610675/960.webp",
+     "w": 960,
+     "h": 726,
+     "bytes": 109756
+    },
+    {
+     "url": "/art/wd-Q2610675/1280.webp",
+     "w": 1280,
+     "h": 967,
+     "bytes": 254212
+    }
+   ],
+   "original": {
+    "w": 7683,
+    "h": 5806,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.2,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q2610936",
+  "title": "Boy with a Basket of Fruit",
+  "alternativeTitles": [],
+  "artist": "Caravaggio",
+  "artistNationality": null,
+  "artistBirthYear": 1571,
+  "artistDeathYear": 1610,
+  "artistBio": "Michelangelo Merisi da Caravaggio, known mononymously as Caravaggio, was an Italian painter active in Rome for a significant portion of his artistic life. He began his apprenticeship in Milan in 1584, and during the final four years of his life, he moved between Naples, Malta, and Sicily.",
+  "artistBioSource": {
+   "name": "Wikipedia — Caravaggio",
+   "url": "https://en.wikipedia.org/wiki/Caravaggio",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1594,
+  "yearSpan": 10,
+  "dateDisplay": "1590s",
+  "category": "painting",
+  "movement": "Baroque",
+  "period": "Renaissance",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q2610936/1280.webp",
+  "imageWidth": 1225,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Boy_with_a_Basket_of_Fruit-Caravaggio_(1593).jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q2610936/detail.webp",
+   "width": 720,
+   "height": 564,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 117850
+  },
+  "description": "Boy with a Basket of Fruit is an oil on canvas painting generally ascribed to Italian Baroque master Michelangelo Merisi da Caravaggio, created c. 1593. It is currently held in the Galleria Borghese in Rome.",
+  "descriptionSource": {
+   "name": "Wikipedia — Boy with a Basket of Fruit",
+   "url": "https://en.wikipedia.org/wiki/Boy_with_a_Basket_of_Fruit",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Galleria Borghese",
+  "museumUrl": "https://www.wikidata.org/wiki/Q841506",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Boy_with_a_Basket_of_Fruit",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q2610936"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q2610936/480.webp",
+     "w": 459,
+     "h": 480,
+     "bytes": 25522
+    },
+    {
+     "url": "/art/wd-Q2610936/960.webp",
+     "w": 919,
+     "h": 960,
+     "bytes": 128398
+    },
+    {
+     "url": "/art/wd-Q2610936/1280.webp",
+     "w": 1225,
+     "h": 1280,
+     "bytes": 306298
+    }
+   ],
+   "original": {
+    "w": 3957,
+    "h": 4134,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.2,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q2629559",
   "title": "The Swing",
   "alternativeTitles": [],
@@ -32489,8 +34217,104 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q2717022",
+  "title": "The Dream of the Fisherman's Wife",
+  "alternativeTitles": [],
+  "artist": "Katsushika Hokusai",
+  "artistNationality": null,
+  "artistBirthYear": 1760,
+  "artistDeathYear": 1849,
+  "artistBio": "Katsushika Hokusai was a Japanese ukiyo-e artist of the Edo period, active as a painter and printmaker. His woodblock print series Thirty-Six Views of Mount Fuji includes the iconic print The Great Wave off Kanagawa.",
+  "artistBioSource": {
+   "name": "Wikipedia — Hokusai",
+   "url": "https://en.wikipedia.org/wiki/Hokusai",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1820,
+  "yearSpan": 0,
+  "dateDisplay": "1820",
+  "category": "printmaking",
+  "movement": "Ukiyo-e",
+  "period": "19th Century",
+  "medium": "wood, paper",
+  "culture": null,
+  "imageUrl": "/art/wd-Q2717022/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 893,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Tako_to_ama_retouched.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q2717022/detail.webp",
+   "width": 640,
+   "height": 335,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 50734
+  },
+  "description": "The Dream of the Fisherman's Wife, also known as Girl Diver and Octopi, Diver and Two Octopi, etc., is a woodblock-printed design by the Japanese artist Hokusai. It is included in Kinoe no Komatsu, a three-volume book of shunga erotica first published in 1814, and has become Hokusai's most famous shunga design. Playing with themes popular in Japanese art, it depicts a young ama diver entwined sexually with a pair of octopuses.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Dream of the Fisherman's Wife",
+   "url": "https://en.wikipedia.org/wiki/The_Dream_of_the_Fisherman's_Wife",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Public collection",
+  "museumUrl": "https://www.wikidata.org",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Dream_of_the_Fisherman's_Wife",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q2717022"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q2717022/480.webp",
+     "w": 480,
+     "h": 335,
+     "bytes": 47466
+    },
+    {
+     "url": "/art/wd-Q2717022/960.webp",
+     "w": 960,
+     "h": 670,
+     "bytes": 170102
+    },
+    {
+     "url": "/art/wd-Q2717022/1280.webp",
+     "w": 1280,
+     "h": 893,
+     "bytes": 294180
+    }
+   ],
+   "original": {
+    "w": 1600,
+    "h": 1116,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q2735507",
-  "title": "The Clothed Maja",
+  "title": "La maja vestida",
   "alternativeTitles": [],
   "artist": "Francisco Goya",
   "artistNationality": null,
@@ -32678,6 +34502,102 @@
    "movement": true
   },
   "recognizability": 2.8,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q276174",
+  "title": "The Roses of Heliogabalus",
+  "alternativeTitles": [],
+  "artist": "Lawrence Alma-Tadema",
+  "artistNationality": null,
+  "artistBirthYear": 1836,
+  "artistDeathYear": 1912,
+  "artistBio": "Sir Lawrence Alma-Tadema was a Dutch painter who later settled in the United Kingdom, becoming the last officially recognised denizen in 1873. Born in Dronryp, the Netherlands (Fryslân), and trained at the Royal Academy of Antwerp, Belgium, he settled in London, England in 1870 and spent the rest of his life there.",
+  "artistBioSource": {
+   "name": "Wikipedia — Lawrence Alma-Tadema",
+   "url": "https://en.wikipedia.org/wiki/Lawrence_Alma-Tadema",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1888,
+  "yearSpan": 0,
+  "dateDisplay": "1888",
+  "category": "painting",
+  "movement": "Academic art",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q276174/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 788,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:The_Roses_of_Heliogabalus.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q276174/detail.webp",
+   "width": 720,
+   "height": 332,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 76946
+  },
+  "description": "The Roses of Heliogabalus is an oil painting by the Anglo-Dutch artist Sir Lawrence Alma-Tadema, from 1888. It depicts the young Roman emperor Elagabalus hosting a banquet. It is held in a private collection.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Roses of Heliogabalus",
+   "url": "https://en.wikipedia.org/wiki/The_Roses_of_Heliogabalus",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Pérez Simón Collection",
+  "museumUrl": "https://www.wikidata.org/wiki/Q66481459",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Roses_of_Heliogabalus",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q276174"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q276174/480.webp",
+     "w": 480,
+     "h": 295,
+     "bytes": 40194
+    },
+    {
+     "url": "/art/wd-Q276174/960.webp",
+     "w": 960,
+     "h": 591,
+     "bytes": 155842
+    },
+    {
+     "url": "/art/wd-Q276174/1280.webp",
+     "w": 1280,
+     "h": 788,
+     "bytes": 280506
+    }
+   ],
+   "original": {
+    "w": 6000,
+    "h": 3694,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
   "interestingFacts": []
  },
  {
@@ -32873,8 +34793,104 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q3080509",
+  "title": "The Valpinçon Bather",
+  "alternativeTitles": [],
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "artistNationality": null,
+  "artistBirthYear": 1780,
+  "artistDeathYear": 1867,
+  "artistBio": "Jean-Auguste-Dominique Ingres was a French Neoclassical painter. Ingres was profoundly influenced by past artistic traditions and aspired to become the guardian of academic orthodoxy against the ascendant Romantic style.",
+  "artistBioSource": {
+   "name": "Wikipedia — Jean-Auguste-Dominique Ingres",
+   "url": "https://en.wikipedia.org/wiki/Jean-Auguste-Dominique_Ingres",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1808,
+  "yearSpan": 0,
+  "dateDisplay": "1808",
+  "category": "painting",
+  "movement": "Neoclassicism",
+  "period": "Enlightenment",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q3080509/1280.webp",
+  "imageWidth": 858,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Jean-Auguste-Dominique_Ingres_-_La_Baigneuse_Valpin%C3%A7on.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q3080509/detail.webp",
+   "width": 697,
+   "height": 780,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 29528
+  },
+  "description": "The Valpinçon Bather is an 1808 painting by the French Neoclassical artist Jean-Auguste-Dominique Ingres, held in the Louvre since 1879. Painted while the artist was studying at the French Academy in Rome, it was originally titled Seated Woman but later became known after one of its nineteenth-century owners.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Valpinçon Bather",
+   "url": "https://en.wikipedia.org/wiki/The_Valpin%C3%A7on_Bather",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Room 940",
+  "museumUrl": "https://www.wikidata.org/wiki/Q19018981",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Valpin%C3%A7on_Bather",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q3080509"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q3080509/480.webp",
+     "w": 321,
+     "h": 480,
+     "bytes": 13924
+    },
+    {
+     "url": "/art/wd-Q3080509/960.webp",
+     "w": 644,
+     "h": 960,
+     "bytes": 45418
+    },
+    {
+     "url": "/art/wd-Q3080509/1280.webp",
+     "w": 858,
+     "h": 1280,
+     "bytes": 83440
+    }
+   ],
+   "original": {
+    "w": 2890,
+    "h": 4312,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q311243",
-  "title": "Wanderer above the Sea of Fog",
+  "title": "Wanderer Above the Sea of Fog",
   "alternativeTitles": [],
   "artist": "Caspar David Friedrich",
   "artistNationality": null,
@@ -32970,7 +34986,7 @@
  },
  {
   "id": "wd-Q3137278",
-  "title": "Madame Moitessier",
+  "title": "Portrait of Madame Moitessier",
   "alternativeTitles": [],
   "artist": "Jean-Auguste-Dominique Ingres",
   "artistNationality": null,
@@ -33062,6 +35078,198 @@
    "movement": true
   },
   "recognizability": 2.2,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q3172226",
+  "title": "The Child's Bath",
+  "alternativeTitles": [],
+  "artist": "Mary Cassatt",
+  "artistNationality": null,
+  "artistBirthYear": 1844,
+  "artistDeathYear": 1926,
+  "artistBio": "Mary Stevenson Cassatt was an American painter and printmaker. She was born in Allegheny, Pennsylvania, but lived most of her adult life in France, where she befriended Edgar Degas and exhibited with the Impressionists.",
+  "artistBioSource": {
+   "name": "Wikipedia — Mary Cassatt",
+   "url": "https://en.wikipedia.org/wiki/Mary_Cassatt",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1893,
+  "yearSpan": 0,
+  "dateDisplay": "1893",
+  "category": "painting",
+  "movement": "Impressionism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q3172226/1280.webp",
+  "imageWidth": 839,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:The_Child's_Bath_by_Mary_Cassatt_1893.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q3172226/detail.webp",
+   "width": 590,
+   "height": 675,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 49386
+  },
+  "description": "The Child's Bath is an 1893 oil painting by American artist Mary Cassatt. The painting continues her interest in depicting bathing and motherhood, but it is distinct in its angle of vision. Both the subject matter and the overhead perspective were inspired by Japanese Woodcut prints and Edgar Degas.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Child's Bath",
+   "url": "https://en.wikipedia.org/wiki/The_Child's_Bath",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Art Institute of Chicago",
+  "museumUrl": "https://www.wikidata.org/wiki/Q239303",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Child's_Bath",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q3172226"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q3172226/480.webp",
+     "w": 314,
+     "h": 480,
+     "bytes": 19748
+    },
+    {
+     "url": "/art/wd-Q3172226/960.webp",
+     "w": 629,
+     "h": 960,
+     "bytes": 74664
+    },
+    {
+     "url": "/art/wd-Q3172226/1280.webp",
+     "w": 839,
+     "h": 1280,
+     "bytes": 143472
+    }
+   ],
+   "original": {
+    "w": 1475,
+    "h": 2250,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.6,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q3203172",
+  "title": "Christ's Entry Into Brussels in 1889",
+  "alternativeTitles": [],
+  "artist": "James Ensor",
+  "artistNationality": null,
+  "artistBirthYear": 1860,
+  "artistDeathYear": 1949,
+  "artistBio": "James Sidney Edouard, Baron Ensor was a Belgian painter and printmaker, an important influence on expressionism and surrealism who lived in Ostend for most of his life. He was associated with the artistic group Les XX.",
+  "artistBioSource": {
+   "name": "Wikipedia — James Ensor",
+   "url": "https://en.wikipedia.org/wiki/James_Ensor",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1888,
+  "yearSpan": 0,
+  "dateDisplay": "1888",
+  "category": "painting",
+  "movement": "Symbolism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q3203172/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 730,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Christ's_Entry_into_Brussels_in_1889.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q3203172/detail.webp",
+   "width": 720,
+   "height": 308,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 85776
+  },
+  "description": "Christ's Entry Into Brussels in 1889 is an 1888 painting by the Belgian artist James Ensor. The post-Impressionist work, parodying Jesus' triumphal entry into Jerusalem celebrated on Palm Sunday, is considered Ensor's most famous composition and a precursor to Expressionism. It has been held by the Getty Center in Los Angeles since 1987.",
+  "descriptionSource": {
+   "name": "Wikipedia — Christ's Entry Into Brussels in 1889",
+   "url": "https://en.wikipedia.org/wiki/Christ's_Entry_Into_Brussels_in_1889",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Getty Center",
+  "museumUrl": "https://www.wikidata.org/wiki/Q29247",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Christ's_Entry_Into_Brussels_in_1889",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q3203172"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q3203172/480.webp",
+     "w": 480,
+     "h": 273,
+     "bytes": 38970
+    },
+    {
+     "url": "/art/wd-Q3203172/960.webp",
+     "w": 960,
+     "h": 547,
+     "bytes": 162126
+    },
+    {
+     "url": "/art/wd-Q3203172/1280.webp",
+     "w": 1280,
+     "h": 730,
+     "bytes": 310788
+    }
+   ],
+   "original": {
+    "w": 12900,
+    "h": 7352,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.8,
   "interestingFacts": []
  },
  {
@@ -33257,6 +35465,198 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q334360",
+  "title": "The Abbey in the Oakwood",
+  "alternativeTitles": [],
+  "artist": "Caspar David Friedrich",
+  "artistNationality": null,
+  "artistBirthYear": 1774,
+  "artistDeathYear": 1840,
+  "artistBio": "Caspar David Friedrich was a German Romantic landscape painter, generally considered the most important German artist of his generation, whose often symbolic, and anti-classical work, conveys a subjective, emotional response to the natural world.",
+  "artistBioSource": {
+   "name": "Wikipedia — Caspar David Friedrich",
+   "url": "https://en.wikipedia.org/wiki/Caspar_David_Friedrich",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1809,
+  "yearSpan": 10,
+  "dateDisplay": "1800s",
+  "category": "painting",
+  "movement": "Romanticism",
+  "period": "Enlightenment",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q334360/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 820,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q334360/detail.webp",
+   "width": 720,
+   "height": 346,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 44304
+  },
+  "description": "The Abbey in the Oakwood is an oil painting by the German Romantic artist Caspar David Friedrich. It was painted between 1809 and 1810 in Dresden and was first shown together with the painting The Monk by the Sea in the Prussian Academy of Arts exhibition of 1810. On Friedrich's request The Abbey in the Oakwood was hung beneath The Monk by the Sea.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Abbey in the Oakwood",
+   "url": "https://en.wikipedia.org/wiki/The_Abbey_in_the_Oakwood",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Alte Nationalgalerie",
+  "museumUrl": "https://www.wikidata.org/wiki/Q162111",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Abbey_in_the_Oakwood",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q334360"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q334360/480.webp",
+     "w": 480,
+     "h": 307,
+     "bytes": 9502
+    },
+    {
+     "url": "/art/wd-Q334360/960.webp",
+     "w": 960,
+     "h": 615,
+     "bytes": 37400
+    },
+    {
+     "url": "/art/wd-Q334360/1280.webp",
+     "w": 1280,
+     "h": 820,
+     "bytes": 78708
+    }
+   ],
+   "original": {
+    "w": 4000,
+    "h": 2563,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.2,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q334604",
+  "title": "The Heart of the Andes",
+  "alternativeTitles": [],
+  "artist": "Frederic Edwin Church",
+  "artistNationality": null,
+  "artistBirthYear": 1826,
+  "artistDeathYear": 1900,
+  "artistBio": "Frederic Edwin Church was an American landscape painter born in Hartford, Connecticut. He was a central figure in the Hudson River School of American landscape painters, best known for painting large landscapes, often depicting mountains, waterfalls, and sunsets.",
+  "artistBioSource": {
+   "name": "Wikipedia — Frederic Edwin Church",
+   "url": "https://en.wikipedia.org/wiki/Frederic_Edwin_Church",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1859,
+  "yearSpan": 0,
+  "dateDisplay": "1859",
+  "category": "painting",
+  "movement": "Hudson River School",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q334604/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 701,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Church_Heart_of_the_Andes.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q334604/detail.webp",
+   "width": 720,
+   "height": 296,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 36316
+  },
+  "description": "The Heart of the Andes is a large oil-on-canvas landscape painting by the American artist Frederic Edwin Church. It depicts an idealized landscape in the South American Andes, where Church traveled on two occasions. Measuring more than five feet high and almost ten feet wide, its New York City exhibition in 1859 was a sensation, establishing Church as the foremost landscape painter in the United States.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Heart of the Andes",
+   "url": "https://en.wikipedia.org/wiki/The_Heart_of_the_Andes",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Metropolitan Museum of Art",
+  "museumUrl": "https://www.wikidata.org/wiki/Q160236",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Heart_of_the_Andes",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q334604"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q334604/480.webp",
+     "w": 480,
+     "h": 262,
+     "bytes": 22294
+    },
+    {
+     "url": "/art/wd-Q334604/960.webp",
+     "w": 960,
+     "h": 525,
+     "bytes": 99724
+    },
+    {
+     "url": "/art/wd-Q334604/1280.webp",
+     "w": 1280,
+     "h": 701,
+     "bytes": 200904
+    }
+   ],
+   "original": {
+    "w": 6400,
+    "h": 3503,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q3387944",
   "title": "Pierrot",
   "alternativeTitles": [],
@@ -33353,6 +35753,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q3633419",
+  "title": "Blue Dancers",
+  "alternativeTitles": [],
+  "artist": "Edgar Degas",
+  "artistNationality": null,
+  "artistBirthYear": 1834,
+  "artistDeathYear": 1917,
+  "artistBio": "Edgar Degas was a French Impressionist artist famous for his pastel drawings and oil paintings.",
+  "artistBioSource": {
+   "name": "Wikipedia — Edgar Degas",
+   "url": "https://en.wikipedia.org/wiki/Edgar_Degas",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1898,
+  "yearSpan": 0,
+  "dateDisplay": "1898",
+  "category": "painting",
+  "movement": "Impressionism",
+  "period": "19th Century",
+  "medium": "pastel on paper",
+  "culture": null,
+  "imageUrl": "/art/wd-Q3633419/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 1259,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_Blue_Dancers_(1898_Pushkin_Museum).jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q3633419/detail.webp",
+   "width": 720,
+   "height": 531,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 137078
+  },
+  "description": "Blue Dancers is a c. 1898 pastel by Edgar Degas. It is held in the Pushkin Museum, in Moscow, which it entered in 1948 from the State Museum of Modern Western Art. It was in Durand-Ruel's collection and then until 1918 in Sergei Shchukin's collection in Moscow.",
+  "descriptionSource": {
+   "name": "Wikipedia — Blue Dancers",
+   "url": "https://en.wikipedia.org/wiki/Blue_Dancers",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Pushkin Museum of Fine Arts",
+  "museumUrl": "https://www.wikidata.org/wiki/Q4872",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Blue_Dancers",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q3633419"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q3633419/480.webp",
+     "w": 480,
+     "h": 472,
+     "bytes": 48894
+    },
+    {
+     "url": "/art/wd-Q3633419/960.webp",
+     "w": 960,
+     "h": 944,
+     "bytes": 245726
+    },
+    {
+     "url": "/art/wd-Q3633419/1280.webp",
+     "w": 1280,
+     "h": 1259,
+     "bytes": 521554
+    }
+   ],
+   "original": {
+    "w": 6256,
+    "h": 6151,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.2,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q3808227",
   "title": "Girls at the Piano",
   "alternativeTitles": [],
@@ -33446,6 +35942,486 @@
    "movement": true
   },
   "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q3821820",
+  "title": "The Ballet Class",
+  "alternativeTitles": [],
+  "artist": "Edgar Degas",
+  "artistNationality": null,
+  "artistBirthYear": 1834,
+  "artistDeathYear": 1917,
+  "artistBio": "Edgar Degas was a French Impressionist artist famous for his pastel drawings and oil paintings.",
+  "artistBioSource": {
+   "name": "Wikipedia — Edgar Degas",
+   "url": "https://en.wikipedia.org/wiki/Edgar_Degas",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1871,
+  "yearSpan": 0,
+  "dateDisplay": "1871",
+  "category": "painting",
+  "movement": "Impressionism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q3821820/1280.webp",
+  "imageWidth": 1115,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_The_Ballet_Class_-_Google_Art_Project.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q3821820/detail.webp",
+   "width": 720,
+   "height": 620,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 104164
+  },
+  "description": "The Ballet Class is an oil painting on canvas created between 1874 and 1876 by the French artist Edgar Degas. The painting depicts a group of ballet dancers at the end of a lesson, led by ballet master Jules Perrot. Known for portraying dancers, Degas captured the grace and the rigorous nature of ballet as a profession.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Ballet Class (Degas, Musée d'Orsay)",
+   "url": "https://en.wikipedia.org/wiki/The_Ballet_Class_(Degas%2C_Mus%C3%A9e_d'Orsay)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Musée d'Orsay",
+  "museumUrl": "https://www.wikidata.org/wiki/Q23402",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Ballet_Class_(Degas%2C_Mus%C3%A9e_d'Orsay)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q3821820"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q3821820/480.webp",
+     "w": 418,
+     "h": 480,
+     "bytes": 21716
+    },
+    {
+     "url": "/art/wd-Q3821820/960.webp",
+     "w": 836,
+     "h": 960,
+     "bytes": 96752
+    },
+    {
+     "url": "/art/wd-Q3821820/1280.webp",
+     "w": 1115,
+     "h": 1280,
+     "bytes": 215760
+    }
+   ],
+   "original": {
+    "w": 3950,
+    "h": 4535,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.8,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q3937621",
+  "title": "Marie Antoinette and Her Children",
+  "alternativeTitles": [],
+  "artist": "Élisabeth Louise Vigée Le Brun",
+  "artistNationality": null,
+  "artistBirthYear": 1755,
+  "artistDeathYear": 1842,
+  "artistBio": "Élisabeth Louise Vigée Le Brun, also known as Louise Élisabeth Vigée Le Brun or simply Madame Le Brun, was a French painter who mostly specialized in portrait painting, in the late 18th and early 19th centuries.",
+  "artistBioSource": {
+   "name": "Wikipedia — Élisabeth Vigée Le Brun",
+   "url": "https://en.wikipedia.org/wiki/%C3%89lisabeth_Vig%C3%A9e_Le_Brun",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1787,
+  "yearSpan": 0,
+  "dateDisplay": "1787",
+  "category": "painting",
+  "movement": "Neoclassicism",
+  "period": "Enlightenment",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q3937621/1280.webp",
+  "imageWidth": 1000,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_de_Lorraine-Habsbourg%2C_reine_de_France_et_ses_enfants_-_Google_Art_Project.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q3937621/detail.webp",
+   "width": 720,
+   "height": 692,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 64758
+  },
+  "description": "Marie Antoinette and Her Children, also known as Marie Antoinette of Lorraine-Habsburg, Queen of France, and Her Children is an oil painting by the French artist Élisabeth Vigée Le Brun, painted in 1787, and currently displayed at the Palace of Versailles. Its dimensions are 275 by 216.5 cm.",
+  "descriptionSource": {
+   "name": "Wikipedia — Marie Antoinette and Her Children",
+   "url": "https://en.wikipedia.org/wiki/Marie_Antoinette_and_Her_Children",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Antichambre de la reine du Château de Versailles",
+  "museumUrl": "https://www.wikidata.org/wiki/Q2853149",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Marie_Antoinette_and_Her_Children",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q3937621"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q3937621/480.webp",
+     "w": 374,
+     "h": 480,
+     "bytes": 18036
+    },
+    {
+     "url": "/art/wd-Q3937621/960.webp",
+     "w": 750,
+     "h": 960,
+     "bytes": 64802
+    },
+    {
+     "url": "/art/wd-Q3937621/1280.webp",
+     "w": 1000,
+     "h": 1280,
+     "bytes": 122762
+    }
+   ],
+   "original": {
+    "w": 23427,
+    "h": 30000,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.8,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q40432",
+  "title": "The Horse Fair",
+  "alternativeTitles": [],
+  "artist": "Rosa Bonheur",
+  "artistNationality": null,
+  "artistBirthYear": 1822,
+  "artistDeathYear": 1899,
+  "artistBio": "Rosa Bonheur was a French painter, sculptor and animalier. Her paintings include Ploughing in the Nivernais, first exhibited at the Salon of 1849, and now in the Musée d'Orsay in Paris, and The Horse Fair, which was exhibited at the Salon of 1853 and is now in the Metropolitan Museum of Art in New York City.",
+  "artistBioSource": {
+   "name": "Wikipedia — Rosa Bonheur",
+   "url": "https://en.wikipedia.org/wiki/Rosa_Bonheur",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1853,
+  "yearSpan": 10,
+  "dateDisplay": "1850s",
+  "category": "painting",
+  "movement": "Realism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q40432/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 607,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Rosa_Bonheur%2C_The_Horse_Fair%2C_1852%E2%80%9355.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q40432/detail.webp",
+   "width": 720,
+   "height": 256,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 32788
+  },
+  "description": "The Horse Fair is an oil-on-canvas painting by French artist Rosa Bonheur, begun in 1852 and first exhibited at the Paris Salon of 1853. Bonheur added some finishing touches in 1855. The large work measures 96.25 in × 199.5 in.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Horse Fair",
+   "url": "https://en.wikipedia.org/wiki/The_Horse_Fair",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Metropolitan Museum of Art",
+  "museumUrl": "https://www.wikidata.org/wiki/Q160236",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Horse_Fair",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q40432"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q40432/480.webp",
+     "w": 480,
+     "h": 227,
+     "bytes": 14826
+    },
+    {
+     "url": "/art/wd-Q40432/960.webp",
+     "w": 960,
+     "h": 455,
+     "bytes": 56744
+    },
+    {
+     "url": "/art/wd-Q40432/1280.webp",
+     "w": 1280,
+     "h": 607,
+     "bytes": 106824
+    }
+   ],
+   "original": {
+    "w": 6324,
+    "h": 2995,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q4195595",
+  "title": "Ivan the Terrible and His Son Ivan",
+  "alternativeTitles": [],
+  "artist": "Ilya Repin",
+  "artistNationality": null,
+  "artistBirthYear": 1844,
+  "artistDeathYear": 1930,
+  "artistBio": "Ilya Yefimovich Repin was a Ukrainian-born Russian painter. He became one of the most renowned artists in Russia in the 19th century.",
+  "artistBioSource": {
+   "name": "Wikipedia — Ilya Repin",
+   "url": "https://en.wikipedia.org/wiki/Ilya_Repin",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1883,
+  "yearSpan": 0,
+  "dateDisplay": "1883",
+  "category": "painting",
+  "movement": "Russian Realism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q4195595/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 1005,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Iv%C3%A1n_el_Terrible_y_su_hijo%2C_por_Ili%C3%A1_Repin.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q4195595/detail.webp",
+   "width": 720,
+   "height": 425,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 56654
+  },
+  "description": "Ivan the Terrible and His Son Ivan on 16 November 1581 is a painting by Russian realist artist Ilya Repin made between 1883 and 1885. It depicts the grief-stricken Russian tsar Ivan the Terrible cradling his dying son, the Tsarevich Ivan Ivanovich, shortly after Ivan the Terrible had dealt a fatal blow to his son's head in a fit of anger.",
+  "descriptionSource": {
+   "name": "Wikipedia — Ivan the Terrible and His Son Ivan",
+   "url": "https://en.wikipedia.org/wiki/Ivan_the_Terrible_and_His_Son_Ivan",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Tretyakov Gallery",
+  "museumUrl": "https://www.wikidata.org/wiki/Q183334",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Ivan_the_Terrible_and_His_Son_Ivan",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q4195595"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q4195595/480.webp",
+     "w": 480,
+     "h": 377,
+     "bytes": 22268
+    },
+    {
+     "url": "/art/wd-Q4195595/960.webp",
+     "w": 960,
+     "h": 754,
+     "bytes": 85020
+    },
+    {
+     "url": "/art/wd-Q4195595/1280.webp",
+     "w": 1280,
+     "h": 1005,
+     "bytes": 173022
+    }
+   ],
+   "original": {
+    "w": 2023,
+    "h": 1589,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "expert"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q4451145",
+  "title": "Dance at Bougival",
+  "alternativeTitles": [],
+  "artist": "Pierre-Auguste Renoir",
+  "artistNationality": null,
+  "artistBirthYear": 1841,
+  "artistDeathYear": 1919,
+  "artistBio": "Pierre-Auguste Renoir was a leading French Impressionist artist. In his depiction of feminine beauty, Renoir has been described as \"the final representative of a tradition which runs directly from Rubens to Watteau.\"",
+  "artistBioSource": {
+   "name": "Wikipedia — Pierre-Auguste Renoir",
+   "url": "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1883,
+  "yearSpan": 0,
+  "dateDisplay": "1883",
+  "category": "painting",
+  "movement": "Impressionism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q4451145/1280.webp",
+  "imageWidth": 674,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Dance-At-Bougival.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q4451145/detail.webp",
+   "width": 548,
+   "height": 780,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 87782
+  },
+  "description": "Dance at Bougival is an 1883 oil-on-canvas painting by the French artist Pierre-Auguste Renoir, currently in the collection of the Museum of Fine Arts in Boston, Massachusetts, United States. Described as \"one of the museum's most beloved works\", it is one of three in a collection commissioned by Paul Durand-Ruel.",
+  "descriptionSource": {
+   "name": "Wikipedia — Dance at Bougival",
+   "url": "https://en.wikipedia.org/wiki/Dance_at_Bougival",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Museum of Fine Arts Boston",
+  "museumUrl": "https://www.wikidata.org/wiki/Q49133",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Dance_at_Bougival",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q4451145"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q4451145/480.webp",
+     "w": 253,
+     "h": 480,
+     "bytes": 15250
+    },
+    {
+     "url": "/art/wd-Q4451145/960.webp",
+     "w": 506,
+     "h": 960,
+     "bytes": 54196
+    },
+    {
+     "url": "/art/wd-Q4451145/1280.webp",
+     "w": 674,
+     "h": 1280,
+     "bytes": 109256
+    }
+   ],
+   "original": {
+    "w": 2301,
+    "h": 4366,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.6,
   "interestingFacts": []
  },
  {
@@ -33642,7 +36618,7 @@
  },
  {
   "id": "wd-Q476458",
-  "title": "The Oath of the Horatii",
+  "title": "Oath of the Horatii",
   "alternativeTitles": [],
   "artist": "Jacques-Louis David",
   "artistNationality": null,
@@ -33734,6 +36710,198 @@
    "movement": true
   },
   "recognizability": 3,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q478271",
+  "title": "Reply of the Zaporozhian Cossacks",
+  "alternativeTitles": [],
+  "artist": "Ilya Repin",
+  "artistNationality": null,
+  "artistBirthYear": 1844,
+  "artistDeathYear": 1930,
+  "artistBio": "Ilya Yefimovich Repin was a Ukrainian-born Russian painter. He became one of the most renowned artists in Russia in the 19th century.",
+  "artistBioSource": {
+   "name": "Wikipedia — Ilya Repin",
+   "url": "https://en.wikipedia.org/wiki/Ilya_Repin",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1890,
+  "yearSpan": 10,
+  "dateDisplay": "1890s",
+  "category": "painting",
+  "movement": "Russian Realism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q478271/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 757,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Ilja_Jefimowitsch_Repin_-_Reply_of_the_Zaporozhian_Cossacks_-_Yorck.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q478271/detail.webp",
+   "width": 720,
+   "height": 319,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 49090
+  },
+  "description": "Reply of the Zaporozhian Cossacks is a painting by Ukrainian-born Russian realist artist Ilya Repin. It is also known as Cossacks of Saporog Are Drafting a Manifesto and Cossacks are Writing a Letter to the Turkish Sultan.",
+  "descriptionSource": {
+   "name": "Wikipedia — Reply of the Zaporozhian Cossacks",
+   "url": "https://en.wikipedia.org/wiki/Reply_of_the_Zaporozhian_Cossacks",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Russian Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q211043",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Reply_of_the_Zaporozhian_Cossacks",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q478271"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q478271/480.webp",
+     "w": 480,
+     "h": 284,
+     "bytes": 25480
+    },
+    {
+     "url": "/art/wd-Q478271/960.webp",
+     "w": 960,
+     "h": 568,
+     "bytes": 96630
+    },
+    {
+     "url": "/art/wd-Q478271/1280.webp",
+     "w": 1280,
+     "h": 757,
+     "bytes": 178412
+    }
+   ],
+   "original": {
+    "w": 4122,
+    "h": 2437,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "expert"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.6,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q4960357",
+  "title": "Breezing Up",
+  "alternativeTitles": [],
+  "artist": "Winslow Homer",
+  "artistNationality": null,
+  "artistBirthYear": 1836,
+  "artistDeathYear": 1910,
+  "artistBio": "Winslow Homer was an American landscape painter and illustrator, best known for his marine subjects. He is considered one of the foremost painters of 19th-century America and a preeminent figure in American art.",
+  "artistBioSource": {
+   "name": "Wikipedia — Winslow Homer",
+   "url": "https://en.wikipedia.org/wiki/Winslow_Homer",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1873,
+  "yearSpan": 0,
+  "dateDisplay": "1873",
+  "category": "painting",
+  "movement": "Realism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q4960357/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 806,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_Breezing_Up_(A_Fair_Wind).jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q4960357/detail.webp",
+   "width": 720,
+   "height": 340,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 39068
+  },
+  "description": "Breezing Up (A Fair Wind) is an oil painting by American artist Winslow Homer. It depicts a catboat called the Gloucester chopping through that city's harbor under \"a fair wind\" (Homer's original title). Inside the boat are a man, three boys, and their catch.",
+  "descriptionSource": {
+   "name": "Wikipedia — Breezing Up (A Fair Wind)",
+   "url": "https://en.wikipedia.org/wiki/Breezing_Up_(A_Fair_Wind)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Public collection",
+  "museumUrl": "https://www.wikidata.org/wiki/Q214867",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Breezing_Up_(A_Fair_Wind)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q4960357"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q4960357/480.webp",
+     "w": 480,
+     "h": 302,
+     "bytes": 14540
+    },
+    {
+     "url": "/art/wd-Q4960357/960.webp",
+     "w": 960,
+     "h": 604,
+     "bytes": 61214
+    },
+    {
+     "url": "/art/wd-Q4960357/1280.webp",
+     "w": 1280,
+     "h": 806,
+     "bytes": 137794
+    }
+   ],
+   "original": {
+    "w": 10326,
+    "h": 6499,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
   "interestingFacts": []
  },
  {
@@ -33930,7 +37098,7 @@
  },
  {
   "id": "wd-Q512755",
-  "title": "El retorno del hijo gey",
+  "title": "The Return of the Prodigal Son",
   "alternativeTitles": [],
   "artist": "Rembrandt",
   "artistNationality": null,
@@ -35081,6 +38249,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q597114",
+  "title": "Death of the Virgin",
+  "alternativeTitles": [],
+  "artist": "Caravaggio",
+  "artistNationality": null,
+  "artistBirthYear": 1571,
+  "artistDeathYear": 1610,
+  "artistBio": "Michelangelo Merisi da Caravaggio, known mononymously as Caravaggio, was an Italian painter active in Rome for a significant portion of his artistic life. He began his apprenticeship in Milan in 1584, and during the final four years of his life, he moved between Naples, Malta, and Sicily.",
+  "artistBioSource": {
+   "name": "Wikipedia — Caravaggio",
+   "url": "https://en.wikipedia.org/wiki/Caravaggio",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1603,
+  "yearSpan": 10,
+  "dateDisplay": "1600s",
+  "category": "painting",
+  "movement": "Baroque",
+  "period": "Baroque",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q597114/1280.webp",
+  "imageWidth": 848,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Death_of_the_Virgin-Caravaggio_(1606).jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q597114/detail.webp",
+   "width": 689,
+   "height": 780,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 82786
+  },
+  "description": "Death of the Virgin is an oil on canvas painting by the Italian Baroque master Caravaggio, from c. 1604-1606. It is a depiction of the death of the Virgin Mary. It is part of the collection of the Musée du Louvre, in Paris.",
+  "descriptionSource": {
+   "name": "Wikipedia — Death of the Virgin (Caravaggio)",
+   "url": "https://en.wikipedia.org/wiki/Death_of_the_Virgin_(Caravaggio)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Louvre Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q19675",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Death_of_the_Virgin_(Caravaggio)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q597114"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q597114/480.webp",
+     "w": 318,
+     "h": 480,
+     "bytes": 13142
+    },
+    {
+     "url": "/art/wd-Q597114/960.webp",
+     "w": 636,
+     "h": 960,
+     "bytes": 44628
+    },
+    {
+     "url": "/art/wd-Q597114/1280.webp",
+     "w": 848,
+     "h": 1280,
+     "bytes": 99486
+    }
+   ],
+   "original": {
+    "w": 9458,
+    "h": 14274,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q603751",
   "title": "The Peasant Wedding",
   "alternativeTitles": [],
@@ -35270,6 +38534,102 @@
    "movement": true
   },
   "recognizability": 3.4,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q609572",
+  "title": "Spirit of the Dead Watching",
+  "alternativeTitles": [],
+  "artist": "Paul Gauguin",
+  "artistNationality": null,
+  "artistBirthYear": 1848,
+  "artistDeathYear": 1903,
+  "artistBio": "Eugène Henri Paul Gauguin was a French painter, sculptor, printmaker, ceramist, and writer, whose work has been primarily associated with the Post-Impressionist and Symbolist movements. He was also an influential practitioner of wood engraving and woodcuts as art forms.",
+  "artistBioSource": {
+   "name": "Wikipedia — Paul Gauguin",
+   "url": "https://en.wikipedia.org/wiki/Paul_Gauguin",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1892,
+  "yearSpan": 0,
+  "dateDisplay": "1892",
+  "category": "painting",
+  "movement": "Post-Impressionism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q609572/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 1013,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_Mana%C3%B2_tupapa%C3%BA_(Spirit_of_the_Dead_Watching)_-_1965-1_-_Albright%E2%80%93Knox_Art_Gallery.tiff",
+  "detail": {
+   "imageUrl": "/art/wd-Q609572/detail.webp",
+   "width": 720,
+   "height": 428,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 41172
+  },
+  "description": "Spirit of the Dead Watching (Manao tupapau) is an 1892 oil on burlap canvas painting by Paul Gauguin, depicting a nude Tahitian girl lying on her stomach. An old woman is seated behind her. Gauguin said the title may refer to either the girl imagining the ghost, or the ghost imagining her.",
+  "descriptionSource": {
+   "name": "Wikipedia — Spirit of the Dead Watching",
+   "url": "https://en.wikipedia.org/wiki/Spirit_of_the_Dead_Watching",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Buffalo AKG Art Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q1970945",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Spirit_of_the_Dead_Watching",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q609572"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q609572/480.webp",
+     "w": 480,
+     "h": 380,
+     "bytes": 28902
+    },
+    {
+     "url": "/art/wd-Q609572/960.webp",
+     "w": 960,
+     "h": 760,
+     "bytes": 137402
+    },
+    {
+     "url": "/art/wd-Q609572/1280.webp",
+     "w": 1280,
+     "h": 1013,
+     "bytes": 260202
+    }
+   ],
+   "original": {
+    "w": 3392,
+    "h": 2683,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.6,
   "interestingFacts": []
  },
  {
@@ -35465,6 +38825,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q644856",
+  "title": "The Triumph of Death",
+  "alternativeTitles": [],
+  "artist": "Pieter Brueghel the Elder",
+  "artistNationality": null,
+  "artistBirthYear": 1525,
+  "artistDeathYear": 1569,
+  "artistBio": "Pieter Bruegel the Elder was among the most significant artists of Dutch and Flemish Renaissance painting, a painter and printmaker, known for his landscapes and peasant scenes; he was a pioneer in presenting both types of subject as large paintings.",
+  "artistBioSource": {
+   "name": "Wikipedia — Pieter Bruegel the Elder",
+   "url": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1560,
+  "yearSpan": 10,
+  "dateDisplay": "1560s",
+  "category": "painting",
+  "movement": "Northern Renaissance",
+  "period": "Renaissance",
+  "medium": "oil on panel",
+  "culture": null,
+  "imageUrl": "/art/wd-Q644856/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 913,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:The_Triumph_of_Death_by_Pieter_Bruegel_the_Elder.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q644856/detail.webp",
+   "width": 720,
+   "height": 385,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 76346
+  },
+  "description": "The Triumph of Death is an oil panel painting by Pieter Bruegel the Elder painted c. 1562. It has been in the Museo del Prado in Madrid since 1827.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Triumph of Death",
+   "url": "https://en.wikipedia.org/wiki/The_Triumph_of_Death",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Museo del Prado",
+  "museumUrl": "https://www.wikidata.org/wiki/Q160112",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Triumph_of_Death",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q644856"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q644856/480.webp",
+     "w": 480,
+     "h": 342,
+     "bytes": 42426
+    },
+    {
+     "url": "/art/wd-Q644856/960.webp",
+     "w": 960,
+     "h": 685,
+     "bytes": 154724
+    },
+    {
+     "url": "/art/wd-Q644856/1280.webp",
+     "w": 1280,
+     "h": 913,
+     "bytes": 289082
+    }
+   ],
+   "original": {
+    "w": 2126,
+    "h": 1517,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.8,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q646337",
   "title": "Nocturne in Black and Gold – The Falling Rocket",
   "alternativeTitles": [],
@@ -35558,6 +39014,102 @@
    "movement": true
   },
   "recognizability": 2.6,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q650635",
+  "title": "The Merry Drinker",
+  "alternativeTitles": [],
+  "artist": "Frans Hals",
+  "artistNationality": null,
+  "artistBirthYear": 1591,
+  "artistDeathYear": 1666,
+  "artistBio": "Frans Hals the Elder was a Dutch Golden Age painter. He lived and worked in Haarlem, a city in which the local authority of the day frowned on religious painting in places of worship but citizens liked to decorate their homes with works of art.",
+  "artistBioSource": {
+   "name": "Wikipedia — Frans Hals",
+   "url": "https://en.wikipedia.org/wiki/Frans_Hals",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1629,
+  "yearSpan": 10,
+  "dateDisplay": "1620s",
+  "category": "painting",
+  "movement": "Baroque",
+  "period": "Baroque",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q650635/1280.webp",
+  "imageWidth": 1090,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Frans_Hals_002.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q650635/detail.webp",
+   "width": 720,
+   "height": 634,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 100320
+  },
+  "description": "The Merry Drinker is an oil-on-canvas painting by Dutch artist Frans Hals, from c. 1628–1630. The painting has dimensions of 81 by 66.5 centimeters. It is in the collection of the Rijksmuseum, in Amsterdam.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Merry Drinker",
+   "url": "https://en.wikipedia.org/wiki/The_Merry_Drinker",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Rijksmuseum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q190804",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Merry_Drinker",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q650635"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q650635/480.webp",
+     "w": 408,
+     "h": 480,
+     "bytes": 15262
+    },
+    {
+     "url": "/art/wd-Q650635/960.webp",
+     "w": 818,
+     "h": 960,
+     "bytes": 63196
+    },
+    {
+     "url": "/art/wd-Q650635/1280.webp",
+     "w": 1090,
+     "h": 1280,
+     "bytes": 145684
+    }
+   ],
+   "original": {
+    "w": 4626,
+    "h": 5430,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.2,
   "interestingFacts": []
  },
  {
@@ -36233,6 +39785,198 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q699091",
+  "title": "The Tower of Babel",
+  "alternativeTitles": [],
+  "artist": "Pieter Brueghel the Elder",
+  "artistNationality": null,
+  "artistBirthYear": 1525,
+  "artistDeathYear": 1569,
+  "artistBio": "Pieter Bruegel the Elder was among the most significant artists of Dutch and Flemish Renaissance painting, a painter and printmaker, known for his landscapes and peasant scenes; he was a pioneer in presenting both types of subject as large paintings.",
+  "artistBioSource": {
+   "name": "Wikipedia — Pieter Bruegel the Elder",
+   "url": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1563,
+  "yearSpan": 0,
+  "dateDisplay": "1563",
+  "category": "painting",
+  "movement": "Northern Renaissance",
+  "period": "Renaissance",
+  "medium": "oil paint",
+  "culture": null,
+  "imageUrl": "/art/wd-Q699091/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 937,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project_-_edited.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q699091/detail.webp",
+   "width": 720,
+   "height": 395,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 86680
+  },
+  "description": "The Tower of Babel was the subject of two surviving paintings and one lost painting by Dutch and Flemish Renaissance painter Pieter Bruegel the Elder. The earliest of the three, a miniature painted on ivory, was completed in 1552–1553 while Bruegel was in Rome, and is now lost.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Tower of Babel (Bruegel)",
+   "url": "https://en.wikipedia.org/wiki/The_Tower_of_Babel_(Bruegel)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Public collection",
+  "museumUrl": "https://www.wikidata.org",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Tower_of_Babel_(Bruegel)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q699091"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q699091/480.webp",
+     "w": 480,
+     "h": 351,
+     "bytes": 36198
+    },
+    {
+     "url": "/art/wd-Q699091/960.webp",
+     "w": 960,
+     "h": 703,
+     "bytes": 147142
+    },
+    {
+     "url": "/art/wd-Q699091/1280.webp",
+     "w": 1280,
+     "h": 937,
+     "bytes": 281442
+    }
+   ],
+   "original": {
+    "w": 30000,
+    "h": 21952,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q714802",
+  "title": "Along the River During the Qingming Festival",
+  "alternativeTitles": [],
+  "artist": "Zhang Zeduan",
+  "artistNationality": null,
+  "artistBirthYear": 1085,
+  "artistDeathYear": 1145,
+  "artistBio": "Zhang Zeduan, courtesy name Zhengdao, was a Chinese painter of the Song dynasty. He lived during the transitional period from the Northern Song to the Southern Song, and was instrumental in the early history of the Chinese landscape art style known as shan shui.",
+  "artistBioSource": {
+   "name": "Wikipedia — Zhang Zeduan",
+   "url": "https://en.wikipedia.org/wiki/Zhang_Zeduan",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1085,
+  "yearSpan": 0,
+  "dateDisplay": "1085",
+  "category": "painting",
+  "movement": "Song dynasty art",
+  "period": "Medieval",
+  "medium": "silk",
+  "culture": null,
+  "imageUrl": "/art/wd-Q714802/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 60,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Alongtheriver_QingMing.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q714802/detail.webp",
+   "width": 720,
+   "height": 26,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 4206
+  },
+  "description": "Along the River During the Qingming Festival is a handscroll painting by the Song dynasty painter Zhang Zeduan and copied or recreated many times in the following centuries. It captures the daily life of people and the landscape of the capital, Bianjing during the Northern Song.",
+  "descriptionSource": {
+   "name": "Wikipedia — Along the River During the Qingming Festival",
+   "url": "https://en.wikipedia.org/wiki/Along_the_River_During_the_Qingming_Festival",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Forbidden City",
+  "museumUrl": "https://www.wikidata.org/wiki/Q80290",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Along_the_River_During_the_Qingming_Festival",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q714802"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q714802/480.webp",
+     "w": 480,
+     "h": 22,
+     "bytes": 1866
+    },
+    {
+     "url": "/art/wd-Q714802/960.webp",
+     "w": 960,
+     "h": 45,
+     "bytes": 7156
+    },
+    {
+     "url": "/art/wd-Q714802/1280.webp",
+     "w": 1280,
+     "h": 60,
+     "bytes": 14782
+    }
+   ],
+   "original": {
+    "w": 38414,
+    "h": 1800,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3.2,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q724377",
   "title": "Bedroom in Arles",
   "alternativeTitles": [],
@@ -36425,6 +40169,102 @@
   "interestingFacts": []
  },
  {
+  "id": "wd-Q737062",
+  "title": "Olympia",
+  "alternativeTitles": [],
+  "artist": "Édouard Manet",
+  "artistNationality": null,
+  "artistBirthYear": 1832,
+  "artistDeathYear": 1883,
+  "artistBio": "Édouard Manet was a French modernist painter. He was one of the first 19th-century artists to paint modern life, as well as a pivotal figure in the transition from Realism to Impressionism.",
+  "artistBioSource": {
+   "name": "Wikipedia — Édouard Manet",
+   "url": "https://en.wikipedia.org/wiki/%C3%89douard_Manet",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1863,
+  "yearSpan": 0,
+  "dateDisplay": "1863",
+  "category": "painting",
+  "movement": "Realism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q737062/1280.webp",
+  "imageWidth": 1280,
+  "imageHeight": 872,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Olympia_-_Google_Art_Project_3.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q737062/detail.webp",
+   "width": 720,
+   "height": 368,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 30356
+  },
+  "description": "Olympia is an 1863 oil painting by Édouard Manet, depicting a nude white woman (\"Olympia\") lying on a bed being attended to by a black maid. The French government acquired the painting in 1890 after a public subscription organized by Claude Monet. The painting is now in the Musée d'Orsay, Paris.",
+  "descriptionSource": {
+   "name": "Wikipedia — Olympia (Manet)",
+   "url": "https://en.wikipedia.org/wiki/Olympia_(Manet)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Luxembourg Museum",
+  "museumUrl": "https://www.wikidata.org/wiki/Q1411180",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Olympia_(Manet)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q737062"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q737062/480.webp",
+     "w": 480,
+     "h": 326,
+     "bytes": 17814
+    },
+    {
+     "url": "/art/wd-Q737062/960.webp",
+     "w": 960,
+     "h": 654,
+     "bytes": 56870
+    },
+    {
+     "url": "/art/wd-Q737062/1280.webp",
+     "w": 1280,
+     "h": 872,
+     "bytes": 106342
+    }
+   ],
+   "original": {
+    "w": 3510,
+    "h": 2391,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 3.6,
+  "interestingFacts": []
+ },
+ {
   "id": "wd-Q766782",
   "title": "The Jewish Bride",
   "alternativeTitles": [],
@@ -36614,6 +40454,102 @@
    "movement": true
   },
   "recognizability": 2.8,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q775407",
+  "title": "The Balcony",
+  "alternativeTitles": [],
+  "artist": "Édouard Manet",
+  "artistNationality": null,
+  "artistBirthYear": 1832,
+  "artistDeathYear": 1883,
+  "artistBio": "Édouard Manet was a French modernist painter. He was one of the first 19th-century artists to paint modern life, as well as a pivotal figure in the transition from Realism to Impressionism.",
+  "artistBioSource": {
+   "name": "Wikipedia — Édouard Manet",
+   "url": "https://en.wikipedia.org/wiki/%C3%89douard_Manet",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1868,
+  "yearSpan": 0,
+  "dateDisplay": "1868",
+  "category": "painting",
+  "movement": "Realism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q775407/1280.webp",
+  "imageWidth": 921,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_The_Balcony_-_Google_Art_Project.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q775407/detail.webp",
+   "width": 720,
+   "height": 751,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 76694
+  },
+  "description": "The Balcony is an 1868–69 oil painting by the French painter Édouard Manet. It depicts four figures on a balcony, one of whom is sitting: the painter Berthe Morisot, who married Manet's brother Eugène in 1874. In the centre is the painter Jean Baptiste Antoine Guillemet.",
+  "descriptionSource": {
+   "name": "Wikipedia — The Balcony (Manet)",
+   "url": "https://en.wikipedia.org/wiki/The_Balcony_(Manet)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Musée d'Orsay",
+  "museumUrl": "https://www.wikidata.org/wiki/Q23402",
+  "sourceUrl": "https://en.wikipedia.org/wiki/The_Balcony_(Manet)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q775407"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q775407/480.webp",
+     "w": 345,
+     "h": 480,
+     "bytes": 19972
+    },
+    {
+     "url": "/art/wd-Q775407/960.webp",
+     "w": 691,
+     "h": 960,
+     "bytes": 72264
+    },
+    {
+     "url": "/art/wd-Q775407/1280.webp",
+     "w": 921,
+     "h": 1280,
+     "bytes": 144288
+    }
+   ],
+   "original": {
+    "w": 5804,
+    "h": 8066,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
   "interestingFacts": []
  },
  {
@@ -37574,6 +41510,198 @@
    "movement": true
   },
   "recognizability": 3.2,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q970968",
+  "title": "Symphony in White, No. 1: The White Girl",
+  "alternativeTitles": [],
+  "artist": "James McNeill Whistler",
+  "artistNationality": null,
+  "artistBirthYear": 1834,
+  "artistDeathYear": 1903,
+  "artistBio": "James Abbott McNeill Whistler was an American painter in oils and watercolor, and printmaker, based primarily in the United Kingdom. He eschewed sentimentality and moral allusion in painting and was a leading proponent of the credo \"art for art's sake\".",
+  "artistBioSource": {
+   "name": "Wikipedia — James McNeill Whistler",
+   "url": "https://en.wikipedia.org/wiki/James_McNeill_Whistler",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1860,
+  "yearSpan": 10,
+  "dateDisplay": "1860s",
+  "category": "painting",
+  "movement": "Aestheticism",
+  "period": "19th Century",
+  "medium": "oil on canvas",
+  "culture": null,
+  "imageUrl": "/art/wd-Q970968/1280.webp",
+  "imageWidth": 639,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Whistler_James_Symphony_in_White_no_1_(The_White_Girl)_1862.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q970968/detail.webp",
+   "width": 519,
+   "height": 780,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 101794
+  },
+  "description": "Symphony in White, No. 1, also known as The White Girl, is a painting by James McNeill Whistler. The work shows a woman in full figure standing on a wolf skin in front of a beige curtain with a lily in her hand. The colour scheme of the painting is almost entirely white.",
+  "descriptionSource": {
+   "name": "Wikipedia — Symphony in White, No. 1: The White Girl",
+   "url": "https://en.wikipedia.org/wiki/Symphony_in_White%2C_No._1%3A_The_White_Girl",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Public collection",
+  "museumUrl": "https://www.wikidata.org/wiki/Q214867",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Symphony_in_White%2C_No._1%3A_The_White_Girl",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q970968"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q970968/480.webp",
+     "w": 239,
+     "h": 480,
+     "bytes": 13976
+    },
+    {
+     "url": "/art/wd-Q970968/960.webp",
+     "w": 479,
+     "h": 960,
+     "bytes": 61950
+    },
+    {
+     "url": "/art/wd-Q970968/1280.webp",
+     "w": 639,
+     "h": 1280,
+     "bytes": 129618
+    }
+   ],
+   "original": {
+    "w": 10509,
+    "h": 21071,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.4,
+  "interestingFacts": []
+ },
+ {
+  "id": "wd-Q977200",
+  "title": "Holy Trinity",
+  "alternativeTitles": [],
+  "artist": "Masaccio",
+  "artistNationality": null,
+  "artistBirthYear": 1401,
+  "artistDeathYear": 1428,
+  "artistBio": "Masaccio, born Tommaso di Ser Giovanni di Simone, was a Florentine artist who is regarded as the first great Italian painter of the Quattrocento period of the Italian Renaissance.",
+  "artistBioSource": {
+   "name": "Wikipedia — Masaccio",
+   "url": "https://en.wikipedia.org/wiki/Masaccio",
+   "license": "CC BY-SA 4.0"
+  },
+  "creationYear": 1420,
+  "yearSpan": 10,
+  "dateDisplay": "1420s",
+  "category": "painting",
+  "movement": "Early Renaissance",
+  "period": "Renaissance",
+  "medium": "fresco",
+  "culture": null,
+  "imageUrl": "/art/wd-Q977200/1280.webp",
+  "imageWidth": 685,
+  "imageHeight": 1280,
+  "imageSource": "https://commons.wikimedia.org/wiki/File:Masaccio_-_Trinity_-_Santa_Maria_Novella.jpg",
+  "detail": {
+   "imageUrl": "/art/wd-Q977200/detail.webp",
+   "width": 472,
+   "height": 662,
+   "rect": {
+    "x": 0.3,
+    "y": 0.3,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "source": "",
+   "status": "reviewed",
+   "bytes": 55808
+  },
+  "description": "The Holy Trinity, with the Virgin and Saint John and donors is a fresco by the Italian Renaissance artist Masaccio in the Dominican church of Santa Maria Novella, in Florence. The fresco was among Masaccio's last major commissions and is often cited as one of the first monumental Renaissance paintings to utilize linear perspective.",
+  "descriptionSource": {
+   "name": "Wikipedia — Holy Trinity (Masaccio)",
+   "url": "https://en.wikipedia.org/wiki/Holy_Trinity_(Masaccio)",
+   "license": "CC BY-SA 4.0"
+  },
+  "museum": "Basilica of Santa Maria Novella",
+  "museumUrl": "https://www.wikidata.org/wiki/Q51175",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Holy_Trinity_(Masaccio)",
+  "license": "Image: Public domain (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0",
+  "tags": [
+   "Wikidata Q977200"
+  ],
+  "measurements": null,
+  "images": {
+   "variants": [
+    {
+     "url": "/art/wd-Q977200/480.webp",
+     "w": 257,
+     "h": 480,
+     "bytes": 21202
+    },
+    {
+     "url": "/art/wd-Q977200/960.webp",
+     "w": 514,
+     "h": 960,
+     "bytes": 86378
+    },
+    {
+     "url": "/art/wd-Q977200/1280.webp",
+     "w": 685,
+     "h": 1280,
+     "bytes": 161998
+    }
+   ],
+   "original": {
+    "w": 1181,
+    "h": 2206,
+    "format": "jpeg"
+   }
+  },
+  "difficulty": {
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  "quiz": {
+   "guess": true,
+   "detail": true,
+   "artist": true,
+   "movement": true
+  },
+  "recognizability": 2.6,
   "interestingFacts": []
  }
 ]

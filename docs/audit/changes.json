@@ -29,6 +29,12 @@
    "to": null
   },
   {
+   "id": "cma-102578",
+   "title": "Portrait of Dora Wheeler",
+   "from": "American Impressionism",
+   "to": null
+  },
+  {
    "id": "cma-103366",
    "title": "Elizabeth Beltzhoover Mason",
    "from": "American Colonial",
@@ -128,7 +134,7 @@
    "id": "cma-121188",
    "title": "Romaine Lacaux",
    "from": "Impressionism",
-   "to": "Realism"
+   "to": null
   },
   {
    "id": "cma-122979",
@@ -155,6 +161,12 @@
    "to": "Etruscan art"
   },
   {
+   "id": "cma-124814",
+   "title": "The Patio",
+   "from": "Realism",
+   "to": null
+  },
+  {
    "id": "cma-127537",
    "title": "A Hussar Officer on Horseback",
    "from": "American Colonial",
@@ -170,7 +182,7 @@
    "id": "cma-128808",
    "title": "Sheet of Studies and Sketches",
    "from": "Impressionism",
-   "to": "Realism"
+   "to": null
   },
   {
    "id": "cma-128876",
@@ -209,6 +221,12 @@
    "to": "Muromachi-period art"
   },
   {
+   "id": "cma-134236",
+   "title": "Claire Campbell",
+   "from": "Realism",
+   "to": null
+  },
+  {
    "id": "cma-134430",
    "title": "The Illustrated Miraculous Origins of the Yūzū Nenbutsu School",
    "from": "Japanese art",
@@ -230,7 +248,13 @@
    "id": "cma-135286",
    "title": "Landscape with Wheelbarrow",
    "from": "Post-Impressionism",
-   "to": "Realism"
+   "to": null
+  },
+  {
+   "id": "cma-135336",
+   "title": "Berthe Morisot with a Muff",
+   "from": "Realism",
+   "to": null
   },
   {
    "id": "cma-136482",
@@ -267,6 +291,12 @@
    "title": "Mural Fragment with Elite Male and Maguey Cactus Leaves",
    "from": "Art of the Americas",
    "to": "Teotihuacan art"
+  },
+  {
+   "id": "cma-140078",
+   "title": "La Cervara, the Roman Campagna",
+   "from": "Barbizon school",
+   "to": null
   },
   {
    "id": "cma-141643",
@@ -335,6 +365,12 @@
    "to": null
   },
   {
+   "id": "cma-148759",
+   "title": "La Roche-Guyon",
+   "from": "Impressionism",
+   "to": null
+  },
+  {
    "id": "cma-150115",
    "title": "Kitchen Utensils with Leeks, Fish, and Eggs",
    "from": "Rococo",
@@ -359,9 +395,27 @@
    "to": "Medieval Italian painting"
   },
   {
+   "id": "cma-159988",
+   "title": "Studies of a Soldier Drinking, for Gassed (recto)",
+   "from": "Realism",
+   "to": null
+  },
+  {
    "id": "cma-160078",
    "title": "Wave",
    "from": "Modern sculpture",
+   "to": null
+  },
+  {
+   "id": "cma-160289",
+   "title": "Portrait of Lisa Colt Curtis",
+   "from": "Realism",
+   "to": null
+  },
+  {
+   "id": "cma-161273",
+   "title": "Head of Caracalla",
+   "from": "Sentimentalism",
    "to": null
   },
   {
@@ -386,13 +440,31 @@
    "id": "cma-163547",
    "title": "Self-Portrait",
    "from": "Impressionism",
-   "to": "Realism"
+   "to": null
   },
   {
    "id": "cma-168747",
    "title": "Male Figure (nkishi)",
    "from": "African art",
    "to": "Songye art"
+  },
+  {
+   "id": "cma-173480",
+   "title": "Apple Blossoms",
+   "from": "Luminism",
+   "to": null
+  },
+  {
+   "id": "cma-324444",
+   "title": "At the Café",
+   "from": "Realism",
+   "to": null
+  },
+  {
+   "id": "cma-325449",
+   "title": "The Steerage",
+   "from": "Pictorialism",
+   "to": null
   },
   {
    "id": "cma-93992",
@@ -1040,7 +1112,7 @@
    "guess": "easy",
    "detail": "intermediate",
    "artist": "easy",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-121406",
@@ -1220,7 +1292,7 @@
    "guess": "intermediate",
    "detail": "intermediate",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-125234",
@@ -1420,7 +1492,7 @@
    "guess": "expert",
    "detail": "expert",
    "artist": "easy",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-128842",
@@ -1580,7 +1652,7 @@
    "guess": "easy",
    "detail": "easy",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-134430",
@@ -1640,7 +1712,7 @@
    "guess": "expert",
    "detail": "expert",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-135299",
@@ -1670,7 +1742,7 @@
    "guess": "easy",
    "detail": "easy",
    "artist": "easy",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-135341",
@@ -1930,7 +2002,7 @@
    "guess": "intermediate",
    "detail": "intermediate",
    "artist": "intermediate",
-   "movement": "intermediate"
+   "movement": "expert"
   },
   {
    "id": "cma-140152",
@@ -2330,7 +2402,7 @@
    "guess": "easy",
    "detail": "intermediate",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-148774",
@@ -2660,7 +2732,7 @@
    "guess": "intermediate",
    "detail": "expert",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-160078",
@@ -2680,7 +2752,7 @@
    "guess": "intermediate",
    "detail": "intermediate",
    "artist": "easy",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-160885",
@@ -2760,7 +2832,7 @@
    "guess": "intermediate",
    "detail": "expert",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-164940",
@@ -2890,7 +2962,7 @@
    "guess": "easy",
    "detail": "easy",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "expert"
   },
   {
    "id": "cma-325449",
@@ -2900,7 +2972,7 @@
    "guess": "easy",
    "detail": "easy",
    "artist": "intermediate",
-   "movement": "easy"
+   "movement": "intermediate"
   },
   {
    "id": "cma-396848",
@@ -3434,7 +3506,7 @@
   },
   {
    "id": "wd-Q512755",
-   "title": "El retorno del hijo gey",
+   "title": "The Return of the Prodigal Son",
    "old": "intermediate",
    "recog": 3,
    "guess": "easy",
@@ -3604,7 +3676,7 @@
   },
   {
    "id": "wd-Q2735507",
-   "title": "The Clothed Maja",
+   "title": "La maja vestida",
    "old": "intermediate",
    "recog": 2.6,
    "guess": "easy",
@@ -3764,7 +3836,7 @@
   },
   {
    "id": "wd-Q476458",
-   "title": "The Oath of the Horatii",
+   "title": "Oath of the Horatii",
    "old": "intermediate",
    "recog": 3,
    "guess": "easy",
@@ -3813,6 +3885,16 @@
    "movement": "easy"
   },
   {
+   "id": "wd-Q3080509",
+   "title": "The Valpinçon Bather",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
    "id": "wd-Q2027662",
    "title": "The Turkish Bath",
    "old": "intermediate",
@@ -3824,7 +3906,7 @@
   },
   {
    "id": "wd-Q3137278",
-   "title": "Madame Moitessier",
+   "title": "Portrait of Madame Moitessier",
    "old": "intermediate",
    "recog": 2.2,
    "guess": "intermediate",
@@ -3854,7 +3936,7 @@
   },
   {
    "id": "wd-Q1133821",
-   "title": "Death of Sardanapalus",
+   "title": "The Death of Sardanapalus",
    "old": "intermediate",
    "recog": 3,
    "guess": "easy",
@@ -3864,7 +3946,7 @@
   },
   {
    "id": "wd-Q1212737",
-   "title": "The Women of Algiers",
+   "title": "Women of Algiers",
    "old": "intermediate",
    "recog": 2.8,
    "guess": "easy",
@@ -3914,7 +3996,7 @@
   },
   {
    "id": "wd-Q311243",
-   "title": "Wanderer above the Sea of Fog",
+   "title": "Wanderer Above the Sea of Fog",
    "old": "easy",
    "recog": 4,
    "guess": "easy",
@@ -3939,6 +4021,16 @@
    "recog": 2.6,
    "guess": "easy",
    "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q2324840",
+   "title": "The Ancient of Days",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
    "artist": "intermediate",
    "movement": "easy"
   },
@@ -3983,8 +4075,18 @@
    "movement": "easy"
   },
   {
+   "id": "wd-Q737062",
+   "title": "Olympia",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "movement": "easy"
+  },
+  {
    "id": "wd-Q152509",
-   "title": "Luncheon on the Grass",
+   "title": "Le Déjeuner sur l'herbe",
    "old": "easy",
    "recog": 3.6,
    "guess": "easy",
@@ -4033,6 +4135,16 @@
    "movement": "easy"
   },
   {
+   "id": "wd-Q4451145",
+   "title": "Dance at Bougival",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
    "id": "wd-Q3808227",
    "title": "Girls at the Piano",
    "old": "intermediate",
@@ -4053,6 +4165,16 @@
    "movement": "easy"
   },
   {
+   "id": "wd-Q1452762",
+   "title": "Paris Street; Rainy Day",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "movement": "easy"
+  },
+  {
    "id": "wd-Q1766454",
    "title": "Les raboteurs de parquet",
    "old": "intermediate",
@@ -4067,6 +4189,16 @@
    "title": "The Cradle",
    "old": "intermediate",
    "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q3172226",
+   "title": "The Child's Bath",
+   "old": "intermediate",
+   "recog": 2.6,
    "guess": "easy",
    "detail": "intermediate",
    "artist": "intermediate",
@@ -4324,7 +4456,7 @@
   },
   {
    "id": "wd-Q16333797",
-   "title": "Rudolf II as Vertumnus",
+   "title": "Vertumnus",
    "old": "intermediate",
    "recog": 2.6,
    "guess": "easy",
@@ -4348,6 +4480,376 @@
    "old": "intermediate",
    "recog": 2.6,
    "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q3937621",
+   "title": "Marie Antoinette and Her Children",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q40432",
+   "title": "The Horse Fair",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q18719540",
+   "title": "Self-Portrait in a Straw Hat",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q714802",
+   "title": "Along the River During the Qingming Festival",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  {
+   "id": "wd-Q2717022",
+   "title": "The Dream of the Fisherman's Wife",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q977200",
+   "title": "Holy Trinity",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q2265370",
+   "title": "The Battle of San Romano",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q1899740",
+   "title": "Assumption of the Virgin",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  {
+   "id": "wd-Q699091",
+   "title": "The Tower of Babel",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  {
+   "id": "wd-Q644856",
+   "title": "The Triumph of Death",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  {
+   "id": "wd-Q1170480",
+   "title": "Syndics of the Drapers' Guild",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q650635",
+   "title": "The Merry Drinker",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q1619527",
+   "title": "Mr and Mrs Andrews",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q334360",
+   "title": "The Abbey in the Oakwood",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q1213453",
+   "title": "The Execution of Lady Jane Grey",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  {
+   "id": "wd-Q276174",
+   "title": "The Roses of Heliogabalus",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  {
+   "id": "wd-Q775407",
+   "title": "The Balcony",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q3821820",
+   "title": "The Ballet Class",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q3633419",
+   "title": "Blue Dancers",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q2275610",
+   "title": "The Circus",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  {
+   "id": "wd-Q1926628",
+   "title": "The Red Vineyard",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q1132723",
+   "title": "Prisoners' Round",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q609572",
+   "title": "Spirit of the Dead Watching",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q17001535",
+   "title": "Death and Life",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q18208623",
+   "title": "Anxiety",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q3203172",
+   "title": "Christ's Entry Into Brussels in 1889",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q2592400",
+   "title": "Blue Horse I",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q970968",
+   "title": "Symphony in White, No. 1: The White Girl",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  {
+   "id": "wd-Q4960357",
+   "title": "Breezing Up",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q334604",
+   "title": "The Heart of the Andes",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "intermediate"
+  },
+  {
+   "id": "wd-Q175628",
+   "title": "Barge Haulers on the Volga",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "movement": "expert"
+  },
+  {
+   "id": "wd-Q478271",
+   "title": "Reply of the Zaporozhian Cossacks",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "expert"
+  },
+  {
+   "id": "wd-Q4195595",
+   "title": "Ivan the Terrible and His Son Ivan",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "expert"
+  },
+  {
+   "id": "wd-Q1327676",
+   "title": "Madonna Litta",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q2610936",
+   "title": "Boy with a Basket of Fruit",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q597114",
+   "title": "Death of the Virgin",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "movement": "easy"
+  },
+  {
+   "id": "wd-Q2610675",
+   "title": "The Fortune Teller",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
    "detail": "intermediate",
    "artist": "intermediate",
    "movement": "easy"
@@ -4395,170 +4897,7 @@
    "reason": "'Matchlock Musket' – object type"
   }
  ],
- "dates": [
-  {
-   "id": "cma-106785",
-   "title": "Rue Transnonain, April 15, 1834",
-   "date": "1834",
-   "span": 0
-  },
-  {
-   "id": "cma-109507",
-   "title": "Portrait of Agostino Barbarigo",
-   "date": "after c. 1571",
-   "span": 10
-  },
-  {
-   "id": "cma-112877",
-   "title": "Portable Altar of Countess Gertrude",
-   "date": "shortly after 1038",
-   "span": 5
-  },
-  {
-   "id": "cma-112958",
-   "title": "Ceremonial Cross of Countess Gertrude",
-   "date": "1038 or shortly after",
-   "span": 5
-  },
-  {
-   "id": "cma-123249",
-   "title": "Basket of Peonies",
-   "date": "1810 or 1814",
-   "span": 4
-  },
-  {
-   "id": "cma-125234",
-   "title": "Low Tide at Pourville, near Dieppe, 1882",
-   "date": "1882",
-   "span": 0
-  },
-  {
-   "id": "cma-126772",
-   "title": "Pontifical Ceremony in Saints Giovanni e Paolo, Venice, 1782",
-   "date": "c. 1783",
-   "span": 10
-  },
-  {
-   "id": "cma-129862",
-   "title": "Swift Bull from the Ten Swift Bulls",
-   "date": "late 1200s–early 1300s",
-   "span": 58
-  },
-  {
-   "id": "cma-130133",
-   "title": "Head of Amenhotep III Wearing the Blue Crown",
-   "date": "c. 1391–1353 BCE",
-   "span": 38
-  },
-  {
-   "id": "cma-134430",
-   "title": "The Illustrated Miraculous Origins of the Yūzū Nenbutsu School",
-   "date": "early 1300s",
-   "span": 33
-  },
-  {
-   "id": "cma-134843",
-   "title": "Brush Washer",
-   "date": "late 1000s–1127",
-   "span": 52
-  },
-  {
-   "id": "cma-136482",
-   "title": "Statue of Amenemhat III",
-   "date": "c. 1859–1814 BCE",
-   "span": 45
-  },
-  {
-   "id": "cma-136667",
-   "title": "Nome Gods Bearing Offerings",
-   "date": "c. 1391–1353 BCE",
-   "span": 38
-  },
-  {
-   "id": "cma-136942",
-   "title": "Head of Amenhotep III Wearing the Round Wig",
-   "date": "c. 1391–1353 BCE",
-   "span": 38
-  },
-  {
-   "id": "cma-138881",
-   "title": "Mural Fragment with Elite Male and Maguey Cactus Leaves",
-   "date": "500–550",
-   "span": 50
-  },
-  {
-   "id": "cma-142647",
-   "title": "The Vicarello Goblet",
-   "date": "25 BCE–25 CE",
-   "span": 50
-  },
-  {
-   "id": "cma-145937",
-   "title": "Vase with Golden Pheasants",
-   "date": "1736–95",
-   "span": 59
-  },
-  {
-   "id": "cma-148774",
-   "title": "Niagara Falls by Moonlight",
-   "date": "probably 1856",
-   "span": 10
-  },
-  {
-   "id": "cma-151078",
-   "title": "Plum Tree",
-   "date": "c. 1700",
-   "span": 36
-  },
-  {
-   "id": "cma-151356",
-   "title": "Alexandre Dumas père (1802–1870)",
-   "date": "1855",
-   "span": 0
-  },
-  {
-   "id": "cma-151839",
-   "title": "Julia Jackson Duckworth (1846-1895)",
-   "date": "1874",
-   "span": 0
-  },
-  {
-   "id": "cma-155499",
-   "title": "Memorial head (nsodie)",
-   "date": "late 1600s–early 1700s",
-   "span": 50
-  },
-  {
-   "id": "cma-163543",
-   "title": "Staff of Office",
-   "date": "early to mid-1800s",
-   "span": 50
-  },
-  {
-   "id": "cma-168747",
-   "title": "Male Figure (nkishi)",
-   "date": "late 1800s–early 1900s",
-   "span": 40
-  },
-  {
-   "id": "cma-94676",
-   "title": "Seated Amitayus Buddha",
-   "date": "c. 570s",
-   "span": 40
-  },
-  {
-   "id": "cma-98300",
-   "title": "Mina'i Beaker with Seated Princes",
-   "date": "1180–1220",
-   "span": 40
-  },
-  {
-   "id": "wd-Q1091086",
-   "title": "The Third of May 1808",
-   "date": "1814",
-   "span": 0
-  }
- ],
+ "dates": [],
  "crops": [],
  "artistNames": [
   {

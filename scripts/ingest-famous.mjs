@@ -14,6 +14,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+sharp.cache(false); // keep memory low: no libvips cache, one image at a time
+sharp.concurrency(1);
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cache = path.join(root, "scripts", ".cache");
@@ -95,6 +97,20 @@ CANDIDATES.push(
   ["Fine Wind, Clear Morning", "Ukiyo-e", 3.4], ["Plum Park in Kameido", "Ukiyo-e", 2.4], ["The Artist's Studio", "Realism", 2.4], ["The Stone Breakers", "Realism", 2.4], ["Whistlejacket", "Rococo", 2.4], ["Salisbury Cathedral from the Meadows", "Romanticism", 2.4],
   ["Adam and Eve (Cranach)", "Northern Renaissance", 2.2], ["Tree of Life (Klimt)", "Symbolism", 2.6], ["The Large Blue Horses", "Expressionism", 2.4], ["The Tower of Blue Horses", "Expressionism", 2.6],
   ["Mystical Nativity", "Early Renaissance", 2.2], ["The Triumph of Galatea", "High Renaissance", 2.4], ["Boy with a Basket of Fruit", "Baroque", 2.2], ["Death of the Virgin (Caravaggio)", "Baroque", 2.4], ["Conversion on the Way to Damascus (Caravaggio)", "Baroque", 2.4], ["David with the Head of Goliath (Caravaggio)", "Baroque", 2.4], ["The Fortune Teller (Caravaggio)", "Baroque", 2.2],
+);
+
+// ---- batch 4: sculpture (≥25% target), famous ancient statues (no recorded creator), remaining priority paintings.
+// Sculpture photos are usually CC BY / CC BY-SA (credited); anything not freely reusable is rejected automatically.
+CANDIDATES.push(
+  ["David (Michelangelo)", "High Renaissance", 4], ["Pietà (Michelangelo)", "High Renaissance", 3.8], ["Moses (Michelangelo)", "High Renaissance", 2.6], ["Bacchus (Michelangelo)", "High Renaissance", 2.2],
+  ["The Burghers of Calais", "Modern sculpture", 3], ["The Kiss (Rodin)", "Modern sculpture", 3.8], ["The Gates of Hell", "Modern sculpture", 3.2], ["The Walking Man", "Modern sculpture", 2.4], ["The Cathedral (Rodin)", "Modern sculpture", 2.2],
+  ["Ecstasy of Saint Teresa", "Baroque", 3.2], ["Apollo and Daphne (Bernini)", "Baroque", 3.2], ["The Rape of Proserpina", "Baroque", 2.8], ["David (Bernini)", "Baroque", 2.6], ["Fontana dei Quattro Fiumi", "Baroque", 2.4], ["Bust of Louis XIV", "Baroque", 2.2],
+  ["Perseus with the Head of Medusa", "Mannerism", 3], ["David (Donatello)", "Early Renaissance", 3], ["Equestrian Statue of Gattamelata", "Early Renaissance", 2.4],
+  ["Psyche Revived by Cupid's Kiss", "Neoclassicism", 3.2], ["The Three Graces (Canova)", "Neoclassicism", 2.6], ["Perseus Triumphant", "Neoclassicism", 2.2],
+  ["The Waltz (Claudel)", "Modern sculpture", 2.4], ["The Age of Maturity", "Modern sculpture", 2.2], ["Little Dancer of Fourteen Years", "Impressionism", 3.2],
+  ["Winged Victory of Samothrace", "Ancient Greek art", 3.8], ["Venus de Milo", "Ancient Greek art", 4], ["Laocoön and His Sons", "Ancient Greek art", 3.2], ["Discobolus", "Ancient Greek art", 3.2], ["Apollo Belvedere", "Roman art", 2.8], ["Dying Gaul", "Ancient Greek art", 2.4], ["Charioteer of Delphi", "Ancient Greek art", 2.4], ["Farnese Hercules", "Roman art", 2.2],
+  ["Augustus of Prima Porta", "Roman art", 3], ["Capitoline Wolf", "Roman art", 3], ["Equestrian Statue of Marcus Aurelius", "Roman art", 2.8], ["Bust of Nefertiti", "Egyptian art (New Kingdom)", 3.8], ["Great Buddha of Kamakura", "Kamakura-period art", 3], ["Nataraja", "Chola art", 2.6], ["Mask of Tutankhamun", "Egyptian art (New Kingdom)", 3.8],
+  ["Composition with Red Blue and Yellow", "Modernism", 3], ["Broadway Boogie Woogie", "Modernism", 2.6], ["Yellow-Red-Blue", "Expressionism", 2.4], ["The Judgement of Paris (Rubens)", "Baroque", 2.4], ["Water Lilies", "Impressionism", 3.6], ["Rouen Cathedral (Monet)", "Impressionism", 2.6],
 );
 
 const apiCache = path.join(cache, "wiki-api");
@@ -220,12 +236,13 @@ for (const s of summaries) {
   const title = (s.en.title || "").replace(/\s*\([^)]*\)\s*$/, "").trim() || enLabel(e);
   if (!title) { reject("no English title"); continue; }
   const cids = ids(e, "P170");
-  if (cids.length !== 1) { reject("creator count " + cids.length); continue; }
-  const c = creators[cids[0]];
-  const cName = enLabel(c);
-  const death = year(val(c, "P570"));
-  const birth = year(val(c, "P569"));
-  if (!cName || death === null || death > 1955) { reject(`creator ${cName} died ${death} (not clearly public domain)`); continue; }
+  if (cids.length > 1) { reject("creator count " + cids.length); continue; }
+  // no recorded creator is accepted only for ancient works (decided below, once the date is known)
+  const c = cids.length ? creators[cids[0]] : null;
+  const cName = c ? enLabel(c) : null;
+  const death = c ? year(val(c, "P570")) : null;
+  const birth = c ? year(val(c, "P569")) : null;
+  if (c && (!cName || death === null || death > 1955)) { reject(`creator ${cName} died ${death} (not clearly public domain)`); continue; }
   let inc = claim(e, "P571")[0]?.mainsnak?.datavalue?.value;
   let y = year(inc);
   let precision = inc?.precision ?? 0;
@@ -240,12 +257,21 @@ for (const s of summaries) {
       precision = 9;
     }
   }
-  if (y === null || precision < 8) { reject("date too imprecise"); continue; }
+  const anon = !c;
+  if (anon && (y === null || y > 1000)) { reject("no creator recorded and not an ancient work"); continue; }
+  if (y === null || precision < (anon ? 7 : 8)) { reject("date too imprecise"); continue; }
   const fileName = fileOf(s);
   const info = fileName && commons[fileName.replace(/_/g, " ")];
   if (!info) { reject("no Commons image"); continue; }
   const lic = info.extmetadata?.LicenseShortName?.value ?? "";
-  if (!/public domain|\bpd\b|cc0/i.test(lic) || /cc[- ]by|gfdl/i.test(lic)) { reject("image licence: " + lic); continue; }
+  // Photographs of 3-D works belong to the photographer: for sculptures CC BY / CC BY-SA is accepted (credited in the
+  // record and on the Credits page); every other category needs public domain / CC0.
+  const kindsEarly = ids(e, "P31").map(label).filter(Boolean).join(" ").toLowerCase();
+  const isSculpture = /sculpture|statue|relief|bust|monument|fountain/.test(kindsEarly);
+  const pdOk = /public domain|\bpd\b|cc0/i.test(lic) && !/gfdl/i.test(lic) && !/cc[- ]by/i.test(lic);
+  const ccOk = isSculpture && /^cc[- ]by(-sa)?[- ]\d/i.test(lic) && !/-nc|-nd/i.test(lic);
+  if (!pdOk && !ccOk) { reject("image licence: " + lic); continue; }
+  const photographer = (info.extmetadata?.Artist?.value ?? "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim().slice(0, 80);
   if (Math.max(info.width, info.height) < 1500) { reject("image too small"); continue; }
   if (usedTitles.has(norm(title))) { reject("title already in dataset"); continue; }
   const frTitle = e.sitelinks?.frwiki?.title;
@@ -254,8 +280,8 @@ for (const s of summaries) {
   const frDesc = frSum?.extract ? take(frSum.extract, 460, 3) : "";
   if (enDesc.length < 60 || frDesc.length < 60) { reject("no usable en/fr description"); continue; }
 
-  const cEn = c.sitelinks?.enwiki?.title;
-  const cFr = c.sitelinks?.frwiki?.title;
+  const cEn = c?.sitelinks?.enwiki?.title;
+  const cFr = c?.sitelinks?.frwiki?.title;
   const bioEn = cEn ? await getJson(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(cEn.replace(/ /g, "_"))}`) : null;
   const bioFr = cFr ? await getJson(`https://fr.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(cFr.replace(/ /g, "_"))}`) : null;
   const artistBio = bioEn?.extract ? take(bioEn.extract, 380, 2) : null;
@@ -272,7 +298,7 @@ for (const s of summaries) {
   const museum = museumId ? label(museumId) : null;
   const kinds = ids(e, "P31").map(label).filter(Boolean).join(" ").toLowerCase();
   const printLike = mats.some((m) => /woodblock|print/.test(m)) || /print/.test(kinds);
-  const category = /drawing/.test(kinds) ? "drawing" : printLike ? "printmaking" : "painting";
+  const category = isSculpture ? "sculpture" : /drawing/.test(kinds) ? "drawing" : printLike ? "printmaking" : "painting";
 
   const id = "wd-" + s.qid;
   const dest = path.join(work, id + ".jpg");
@@ -306,8 +332,8 @@ for (const s of summaries) {
     artistBio,
     artistBioSource: artistBio ? { name: "Wikipedia — " + (bioEn?.title ?? cName), url: bioEn?.content_urls?.desktop?.page ?? null, license: "CC BY-SA 4.0" } : null,
     creationYear: y,
-    yearSpan: precision >= 9 ? span : 10,
-    dateDisplay: precision >= 9 ? (span ? `c. ${y}` : String(y)) : `${Math.floor(y / 10) * 10}s`,
+    yearSpan: anon && precision < 9 ? 50 : precision >= 9 ? span : 10,
+    dateDisplay: anon && precision < 9 ? (y < 0 ? `c. ${-y} BCE` : `c. ${y} CE`) : precision >= 9 ? (span ? `c. ${y}` : String(y)) : `${Math.floor(y / 10) * 10}s`,
     category,
     movement: s.movement,
     period: periodOf(y),
@@ -325,7 +351,7 @@ for (const s of summaries) {
     museum: museum ?? "Public collection",
     museumUrl: museumId ? `https://www.wikidata.org/wiki/${museumId}` : "https://www.wikidata.org",
     sourceUrl: s.en.content_urls?.desktop?.page ?? `https://www.wikidata.org/wiki/${s.qid}`,
-    license: `Image: ${lic} (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0`,
+    license: `Image: ${lic}${ccOk && photographer ? ", photo by " + photographer : ""} (Wikimedia Commons); text: Wikipedia, CC BY-SA 4.0`,
     tags: ["Wikidata " + s.qid],
     measurements,
   });
