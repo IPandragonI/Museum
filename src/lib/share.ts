@@ -1,16 +1,10 @@
 import { MODES } from "@/lib/game/config";
 import { t, type Lang } from "@/lib/i18n";
 import { sumMax, sumPoints } from "@/lib/game/scoring";
-import type { DailyRecord, GameMode, QuestionResult } from "@/lib/types";
+import type { DailyRecord, QuestionResult } from "@/lib/types";
 
-/** Squares for one mode: one per question (or per artwork in the timeline). No titles, no answers. */
-function squares(mode: GameMode, answers: QuestionResult[]): string {
-  if (mode === "timeline") {
-    const r = answers[0];
-    if (!r) return "";
-    const total = r.artworkIds.length;
-    return "■".repeat(r.correctArtworkIds.length) + "□".repeat(total - r.correctArtworkIds.length);
-  }
+/** Squares for one mode: one per question. No titles, no answers. */
+function squares(answers: QuestionResult[]): string {
   return answers.map((a) => (a.correct ? "■" : "□")).join("");
 }
 
@@ -22,7 +16,7 @@ export function dailyTotals(rec: DailyRecord): { points: number; max: number } {
 /** Share text in the player's language. It never contains titles or answers: only squares per game. */
 export function buildShareText(rec: DailyRecord, url: string, lang: Lang): string {
   const { points, max } = dailyTotals(rec);
-  const lines = MODES.map((m) => `${t(lang, `mode.${m}.name`).padEnd(22, " ")} ${squares(m, rec.modes[m].answers)}`);
+  const lines = MODES.map((m) => `${t(lang, `mode.${m}.name`).padEnd(22, " ")} ${squares(rec.modes[m].answers)}`);
   return [t(lang, "share.header", { date: rec.date }), t(lang, "share.complete", { points, max }), "", ...lines, "", url].join("\n");
 }
 

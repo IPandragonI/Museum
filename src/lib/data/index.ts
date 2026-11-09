@@ -18,9 +18,9 @@ export function mustArtwork(id: string): Artwork {
 
 /** A stable, representative artwork per game mode for illustration on the home page. */
 export function featuredArtwork(mode: GameMode): Artwork | undefined {
-  const pool = dataset.artworks.filter((a) => a.difficulty[mode] === "easy" && a.quiz[mode] && (mode !== "detail" || a.detail?.imageUrl) && (mode === "artist" || mode === "timeline" ? true : a.category === "painting"));
+  const pool = dataset.artworks.filter((a) => a.difficulty[mode] === "easy" && a.quiz[mode] && (mode !== "detail" || a.detail?.imageUrl) && (mode === "artist" || mode === "movement" ? true : a.category === "painting"));
   if (!pool.length) return dataset.artworks[0];
-  const offset = { guess: 0, detail: 1, artist: 2, timeline: 3 }[mode];
+  const offset = { guess: 0, detail: 1, artist: 2, movement: 3 }[mode];
   // spread picks apart so the four modes show four different works
   return pool[(offset * Math.max(1, Math.floor(pool.length / 4)) + 1) % pool.length];
 }

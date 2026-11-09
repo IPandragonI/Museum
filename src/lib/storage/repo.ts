@@ -1,6 +1,6 @@
 import { getDb } from "./db";
-import { emptyDailyRecord, isDailyComplete } from "@/lib/game/daily";
-import type { CollectionEntry, DailyRecord, GameMode, GameSession, QuestionResult } from "@/lib/types";
+import { emptyDailyRecord, isDailyComplete, normalizeDailyRecord } from "@/lib/game/daily";
+import type { CollectionEntry, DailyRecord, GameMode, GameSession, QuestionResult, StoredMode } from "@/lib/types";
 
 // ------------------------------------------------------------------ sessions
 
@@ -22,7 +22,7 @@ export async function listCollection(): Promise<CollectionEntry[]> {
 }
 
 /** Adds artworks to the collection, ignoring ones already present. Returns the ids that are new. */
-export async function addToCollection(artworkIds: string[], mode: GameMode, sessionId: string): Promise<string[]> {
+export async function addToCollection(artworkIds: string[], mode: StoredMode, sessionId: string): Promise<string[]> {
   if (!artworkIds.length) return [];
   const db = await getDb();
   const tx = db.transaction("collection", "readwrite");
@@ -40,18 +40,20 @@ export async function addToCollection(artworkIds: string[], mode: GameMode, sess
 
 export async function getDaily(date: string): Promise<DailyRecord> {
   const db = await getDb();
-  return (await db.get("daily", date)) ?? emptyDailyRecord(date);
+  const stored = await db.get("daily", date);
+  return stored ? normalizeDailyRecord(stored) : emptyDailyRecord(date);
 }
 
 export async function listDailyRecords(): Promise<DailyRecord[]> {
   const db = await getDb();
-  return db.getAll("daily");
+  return (await db.getAll("daily")).map(normalizeDailyRecord);
 }
 
 async function mutateDaily(date: string, fn: (r: DailyRecord) => void): Promise<DailyRecord> {
   const db = await getDb();
   const tx = db.transaction("daily", "readwrite");
-  const rec = (await tx.store.get(date)) ?? emptyDailyRecord(date);
+  const stored = await tx.store.get(date);
+  const rec = stored ? normalizeDailyRecord(stored) : emptyDailyRecord(date);
   fn(rec);
   await tx.store.put(rec);
   await tx.done;

@@ -9,7 +9,8 @@
     "lint": "eslint",
     "test": "vitest run",
     "ingest": "node scripts/ingest.mjs all",
-    "icons": "node scripts/icons.mjs"
+    "icons": "node scripts/icons.mjs",
+    "curate": "tsx scripts/curate.mjs"
   },
   "dependencies": {
     "idb": "^8.0.4",
@@ -20,7 +21,7 @@
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
+    "@types/node": "^22.20.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

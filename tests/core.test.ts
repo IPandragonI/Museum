@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { dataset } from "@/lib/data";
 import { DIFFICULTIES, HINT_COST } from "@/lib/game/config";
-import { computeStreaks, emptyDailyRecord, generateDailyChallenge, isDailyComplete, previousDate, utcDateString } from "@/lib/game/daily";
-import { correctTimelineOrder, generateFreePlay, generateQuestions, questionArtworkIds } from "@/lib/game/questions";
-import { guessPoints, timelineCorrectPositions, timelinePoints } from "@/lib/game/scoring";
+import { computeStreaks, emptyDailyRecord, generateDailyChallenge, isDailyComplete, normalizeDailyRecord, previousDate, utcDateString } from "@/lib/game/daily";
+import { generateFreePlay, generateQuestions, questionArtworkIds } from "@/lib/game/questions";
+import { movementsRelated } from "@/lib/game/movements";
+import { guessPoints } from "@/lib/game/scoring";
 import { createRng } from "@/lib/rng";
 import { computeStats } from "@/lib/stats";
 import fs from "node:fs";
@@ -11,7 +12,7 @@ import path from "node:path";
 import { en } from "@/lib/i18n/en";
 import { fr } from "@/lib/i18n/fr";
 import { dateLabel, movementLabel, t, tn } from "@/lib/i18n";
-import type { ChoiceQuestion, DailyRecord, GameSession, TimelineQuestion } from "@/lib/types";
+import type { ChoiceQuestion, DailyRecord, GameSession } from "@/lib/types";
 
 describe("dataset quality", () => {
   it("has a meaningful number of unique artworks with valid core fields", () => {
@@ -24,7 +25,7 @@ describe("dataset quality", () => {
       expect(a.imageUrl.startsWith("/art/")).toBe(true);
       expect(a.images.variants.length).toBe(3);
       expect(a.images.variants.every((v) => v.bytes > 0 && v.url.startsWith(`/art/${a.id}/`))).toBe(true);
-      expect(Object.keys(a.difficulty).sort()).toEqual(["artist", "detail", "guess", "timeline"]);
+      expect(Object.keys(a.difficulty).sort()).toEqual(["artist", "detail", "guess", "movement"]);
       expect(a.license).toMatch(/CC0|public domain/i);
       if (a.detail && a.detail.status !== "rejected") {
         // the crop belongs to its own artwork: same folder
@@ -45,20 +46,11 @@ describe("scoring", () => {
     expect(guessPoints(true)).toBe(100 - HINT_COST);
     expect(HINT_COST).toBe(25);
   });
-  it("timeline: exact positions only, proportional credit, 100 for perfect", () => {
-    const correct = ["a", "b", "c", "d", "e"];
-    expect(timelineCorrectPositions(["a", "b", "c", "d", "e"], correct)).toBe(5);
-    expect(timelineCorrectPositions(["b", "a", "c", "d", "e"], correct)).toBe(3);
-    expect(timelinePoints(5, 5)).toBe(100);
-    expect(timelinePoints(3, 5)).toBe(60);
-    expect(timelinePoints(0, 4)).toBe(0);
-    expect(timelinePoints(1, 4)).toBe(25);
-  });
 });
 
 describe("question generation", () => {
   it("builds valid multiple-choice questions in every mode and difficulty", () => {
-    for (const mode of ["guess", "detail", "artist"] as const) {
+    for (const mode of ["guess", "detail", "artist", "movement"] as const) {
       for (const difficulty of DIFFICULTIES) {
         for (let seed = 1; seed <= 15; seed++) {
           const qs = generateQuestions(dataset, mode, { count: 10, difficulty }, createRng(seed)) as ChoiceQuestion[];
@@ -71,7 +63,7 @@ describe("question generation", () => {
             expect(q.options.filter((o) => o.id === q.correctId)).toHaveLength(1);
             const art = dataset.byId.get(q.artworkId)!;
             const correct = q.options.find((o) => o.id === q.correctId)!;
-            expect(correct.label).toBe(mode === "artist" ? art.artist : art.title);
+            expect(correct.label).toBe(mode === "artist" ? art.artist : mode === "movement" ? art.movement : art.title);
             if (mode === "detail") expect(art.detail).not.toBeNull();
             expect(seen.has(q.artworkId)).toBe(false); // no repeats inside a game
             seen.add(q.artworkId);
@@ -81,19 +73,28 @@ describe("question generation", () => {
     }
   }, 30_000);
 
-  it("timelines have distinct, well-separated years and are never pre-sorted", () => {
+  it("movement questions never mix confusable movements, and keep one defensible answer", () => {
     for (const difficulty of DIFFICULTIES) {
       for (let seed = 1; seed <= 25; seed++) {
-        const [q] = generateQuestions(dataset, "timeline", { count: 5, difficulty }, createRng(seed)) as TimelineQuestion[];
-        expect(q.artworkIds).toHaveLength(5);
-        const years = q.artworkIds.map((id) => dataset.byId.get(id)!.creationYear);
-        expect(new Set(years).size).toBe(5);
-        const sorted = correctTimelineOrder(dataset, q.artworkIds);
-        expect(sorted).not.toEqual(q.artworkIds);
-        const ys = sorted.map((id) => dataset.byId.get(id)!.creationYear);
-        expect(ys).toEqual([...ys].sort((a, b) => a - b));
+        const qs = generateQuestions(dataset, "movement", { count: 10, difficulty }, createRng(seed)) as ChoiceQuestion[];
+        for (const q of qs) {
+          const labels = q.options.map((o) => o.label);
+          const right = dataset.byId.get(q.artworkId)!.movement!;
+          expect(labels).toContain(right);
+          for (let a = 0; a < labels.length; a++) for (let b = a + 1; b < labels.length; b++) expect(movementsRelated(labels[a], labels[b]), `${labels[a]} / ${labels[b]}`).toBe(false);
+        }
       }
     }
+    expect(movementsRelated("Impressionism", "Post-Impressionism")).toBe(true);
+    expect(movementsRelated("Baroque", "Dutch Golden Age")).toBe(true);
+    expect(movementsRelated("Baroque", "Cubism")).toBe(false);
+  });
+
+  it("movement questions are language-free (English names + stable ids) and varied", () => {
+    const qs = generateQuestions(dataset, "movement", { count: 10, difficulty: "intermediate" }, createRng(7)) as ChoiceQuestion[];
+    expect(qs.every((q) => q.options.every((o) => o.id.startsWith("movement:")))).toBe(true);
+    const movements = qs.map((q) => dataset.byId.get(q.artworkId)!.movement);
+    expect(new Set(movements).size).toBeGreaterThanOrEqual(5);
   });
 
   it("free play avoids recently played artworks when the pool allows", () => {
@@ -119,8 +120,7 @@ describe("daily challenge", () => {
       expect(c.guess).toHaveLength(3);
       expect(c.detail).toHaveLength(3);
       expect(c.artist).toHaveLength(3);
-      expect(c.timeline).toHaveLength(1);
-      expect((c.timeline[0] as TimelineQuestion).artworkIds).toHaveLength(4);
+      expect(c.movement).toHaveLength(3);
       const ids = Object.values(c).flatMap((qs) => qs.flatMap(questionArtworkIds));
       expect(new Set(ids).size).toBe(ids.length);
     }
@@ -129,7 +129,7 @@ describe("daily challenge", () => {
   it("uses only intermediate-difficulty artworks where the pool allows", () => {
     const c = generateDailyChallenge(dataset, date);
     const ids = Object.values(c).flatMap((qs) => qs.flatMap(questionArtworkIds));
-    const modes = ["guess", "detail", "artist", "timeline"] as const;
+    const modes = ["guess", "detail", "artist", "movement"] as const;
     const intermediate = modes.flatMap((m) => c[m].flatMap(questionArtworkIds).filter((id) => dataset.byId.get(id)!.difficulty[m] === "intermediate"));
     expect(intermediate.length / ids.length).toBeGreaterThan(0.8);
   });
@@ -154,7 +154,7 @@ describe("daily streaks", () => {
     expect(isDailyComplete(rec)).toBe(false);
     for (const m of ["guess", "detail", "artist"] as const) rec.modes[m].status = "completed";
     expect(isDailyComplete(rec)).toBe(false);
-    rec.modes.timeline.status = "completed";
+    rec.modes.movement.status = "completed";
     expect(isDailyComplete(rec)).toBe(true);
   });
 });
@@ -233,6 +233,34 @@ describe("localisation", () => {
 });
 
 describe("compatibility with games saved before the redesign", () => {
+  it("a completed legacy Timeline daily game counts as the completed Movement game (streaks survive)", () => {
+    const done = { status: "completed" as const, answers: [] };
+    const legacy = {
+      date: "2026-11-08",
+      modes: {
+        guess: done,
+        detail: done,
+        artist: done,
+        timeline: { status: "completed" as const, answers: [{ artworkIds: ["a", "b", "c", "d"], correctArtworkIds: ["a", "b"], correct: false, points: 50, maxPoints: 100, answer: ["a", "b", "c", "d"] }] },
+      },
+    } as unknown as DailyRecord;
+    const n = normalizeDailyRecord(legacy);
+    expect(isDailyComplete(n)).toBe(true);
+    expect(n.modes.movement.answers).toHaveLength(4);
+    expect(n.modes.movement.answers.reduce((s, r) => s + r.points, 0)).toBe(50);
+    expect(n.modes.movement.answers.reduce((s, r) => s + r.maxPoints, 0)).toBe(100);
+    // an unfinished legacy timeline is dropped, and a record with no movement entry is filled in as pending
+    const half = normalizeDailyRecord({ ...legacy, modes: { ...legacy.modes, timeline: { status: "in_progress", answers: [] } } } as unknown as DailyRecord);
+    expect(isDailyComplete(half)).toBe(false);
+    expect(half.modes.movement.status).toBe("pending");
+  });
+  it("statistics keep legacy Timeline sessions in the totals without crashing", () => {
+    const old = { id: "t", mode: "timeline", difficulty: "easy", kind: "free", startedAt: "2026-11-01T10:00:00Z", completedAt: "2026-11-01T10:05:00Z", completed: true, questions: [{ artworkIds: ["a", "b"], correctArtworkIds: ["a"], correct: false, points: 50, maxPoints: 100, answer: ["a", "b"] }] } as unknown as GameSession;
+    const stats = computeStats([old], [], "2026-11-09");
+    expect(stats.gamesPlayed).toBe(1);
+    expect(stats.accuracy).toBe(50);
+    expect(stats.bestScore.movement).toBeNull();
+  });
   it("statistics still read old guess results that carry a reveal `stage` and partial points", () => {
     const old: GameSession = {
       id: "old",

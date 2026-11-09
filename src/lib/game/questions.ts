@@ -1,6 +1,7 @@
-import { TIMELINE_MIN_GAP, questionCount } from "./config";
+import { questionCount } from "./config";
+import { movementDistractors, movementStats, type MovementStats } from "./movements";
 import { createRng, shuffle, type Rng } from "@/lib/rng";
-import type { Artwork, ChoiceQuestion, Choice, Difficulty, GameMode, Question, TimelineQuestion } from "@/lib/types";
+import type { Artwork, ChoiceQuestion, Choice, Difficulty, GameMode, Question } from "@/lib/types";
 
 export const norm = (s: string): string =>
   s
@@ -17,6 +18,8 @@ export interface Dataset {
   byId: Map<string, Artwork>;
   /** Normalised titles shared by more than one artwork are ambiguous as answers. */
   ambiguousTitles: Set<string>;
+  /** Per-movement statistics (era, kind) used to pick plausible wrong movements. */
+  movements: Map<string, MovementStats>;
 }
 
 export function createDataset(artworks: Artwork[]): Dataset {
@@ -25,7 +28,7 @@ export function createDataset(artworks: Artwork[]): Dataset {
   const counts = new Map<string, number>();
   for (const a of sorted) counts.set(norm(a.title), (counts.get(norm(a.title)) ?? 0) + 1);
   const ambiguousTitles = new Set([...counts].filter(([, n]) => n > 1).map(([t]) => t));
-  return { artworks: sorted, byId: new Map(sorted.map((a) => [a.id, a])), ambiguousTitles };
+  return { artworks: sorted, byId: new Map(sorted.map((a) => [a.id, a])), ambiguousTitles, movements: movementStats(sorted) };
 }
 
 // ------------------------------------------------------------------ eligibility
@@ -45,8 +48,9 @@ export function eligibleFor(ds: Dataset, mode: GameMode, a: Artwork): boolean {
     case "artist":
       // the title must not give the creator away
       return !!a.artist && !norm(a.title).includes(norm(a.artist.split(" ").pop() ?? ""));
-    case "timeline":
-      return a.yearSpan <= 25;
+    case "movement":
+      // needs a reliable work-level movement; labels shared by no other work can't have a fair set of distractors
+      return !!a.movement && ds.movements.has(a.movement);
   }
 }
 
@@ -135,7 +139,7 @@ export function artistDistractors(ds: Dataset, answer: Artwork, rng: Rng, count 
 
 // -------------------------------------------------------------------- questions
 
-export function buildChoiceQuestion(ds: Dataset, mode: ChoiceQuestion["mode"], a: Artwork, rng: Rng): ChoiceQuestion | null {
+export function buildChoiceQuestion(ds: Dataset, mode: ChoiceQuestion["mode"], a: Artwork, rng: Rng, difficulty: Difficulty = "intermediate"): ChoiceQuestion | null {
   let options: Choice[];
   let correctId: string;
   if (mode === "artist") {
@@ -144,6 +148,13 @@ export function buildChoiceQuestion(ds: Dataset, mode: ChoiceQuestion["mode"], a
     if (!wrong) return null;
     correctId = "artist:" + norm(a.artist);
     options = [{ id: correctId, label: a.artist }, ...wrong.map((n) => ({ id: "artist:" + norm(n), label: n }))];
+  } else if (mode === "movement") {
+    if (!a.movement) return null;
+    const wrong = movementDistractors(ds.movements, a, difficulty, rng);
+    if (!wrong) return null;
+    // option ids and labels are the English movement names (language-free); the UI localises the label when showing it
+    correctId = "movement:" + norm(a.movement);
+    options = [{ id: correctId, label: a.movement }, ...wrong.map((m) => ({ id: "movement:" + norm(m), label: m }))];
   } else {
     if (!hasUsableTitle(ds, a)) return null;
     const wrong = titleDistractors(ds, a, rng);
@@ -186,64 +197,32 @@ export function generateChoiceQuestions(ds: Dataset, mode: ChoiceQuestion["mode"
   const tiers = tieredPool(ds, mode, opts.difficulty);
   const out: ChoiceQuestion[] = [];
   const used = new Set<string>();
-  const perArtist = new Map<string, number>();
-  const attempt = (candidates: Artwork[], respectExclude: boolean, maxPerArtist: number) => {
+  // variety: at most N works per artist (per movement in "Which Movement?"), relaxed if the pool is small
+  const keyOf = (a: Artwork) => (mode === "movement" ? a.movement : a.artist);
+  const perKey = new Map<string, number>();
+  const attempt = (candidates: Artwork[], respectExclude: boolean, maxPerKey: number) => {
     for (const a of candidates) {
       if (out.length >= opts.count) return;
       if (used.has(a.id) || (respectExclude && opts.exclude?.has(a.id))) continue;
-      if (a.artist && (perArtist.get(a.artist) ?? 0) >= maxPerArtist) continue;
-      const q = buildChoiceQuestion(ds, mode, a, rng);
+      const key = keyOf(a);
+      if (key && (perKey.get(key) ?? 0) >= maxPerKey) continue;
+      const q = buildChoiceQuestion(ds, mode, a, rng, opts.difficulty);
       if (!q) continue; // not enough good distractors -> choose another artwork
       out.push(q);
       used.add(a.id);
-      if (a.artist) perArtist.set(a.artist, (perArtist.get(a.artist) ?? 0) + 1);
+      if (key) perKey.set(key, (perKey.get(key) ?? 0) + 1);
     }
   };
   for (const respectExclude of [true, false])
-    for (const maxPerArtist of [1, 2, 99])
+    for (const maxPerKey of [1, 2, 99])
       for (const tier of tiers) {
         if (out.length >= opts.count) break;
-        attempt(preferenceSort(tier, rng, opts.recent), respectExclude, maxPerArtist);
+        attempt(preferenceSort(tier, rng, opts.recent), respectExclude, maxPerKey);
       }
   return out;
 }
 
-export function generateTimeline(ds: Dataset, opts: PickOptions, rng: Rng): TimelineQuestion | null {
-  const tiers = tieredPool(ds, "timeline", opts.difficulty);
-  const gap0 = TIMELINE_MIN_GAP[opts.difficulty];
-  for (const respectExclude of [true, false]) {
-    for (let gap = gap0; gap >= 5; gap = Math.floor(gap / 2)) {
-      for (const tierCount of [1, 2, 3]) {
-        const pool = preferenceSort(
-          tiers.slice(0, tierCount).flat().filter((a) => !(respectExclude && opts.exclude?.has(a.id))),
-          rng,
-          opts.recent,
-        );
-        const picked: Artwork[] = [];
-        for (const a of pool) {
-          if (picked.length === opts.count) break;
-          // far enough apart in time AND their date ranges can't overlap, so the order is unambiguous
-          if (picked.some((p) => Math.abs(p.creationYear - a.creationYear) < Math.max(gap, (p.yearSpan + a.yearSpan) / 2 + 1))) continue;
-          picked.push(a);
-        }
-        if (picked.length === opts.count) {
-          let order = shuffle(picked, rng);
-          // never present an already-sorted list
-          const sorted = [...picked].sort((a, b) => a.creationYear - b.creationYear).map((a) => a.id);
-          for (let k = 0; k < 6 && order.every((a, i) => a.id === sorted[i]); k++) order = shuffle(picked, rng);
-          return { mode: "timeline", artworkIds: order.map((a) => a.id) };
-        }
-      }
-    }
-  }
-  return null;
-}
-
 export function generateQuestions(ds: Dataset, mode: GameMode, opts: PickOptions, rng: Rng): Question[] {
-  if (mode === "timeline") {
-    const t = generateTimeline(ds, opts, rng);
-    return t ? [t] : [];
-  }
   return generateChoiceQuestions(ds, mode, opts, rng);
 }
 
@@ -252,15 +231,6 @@ export function generateFreePlay(ds: Dataset, mode: GameMode, difficulty: Diffic
   return generateQuestions(ds, mode, { count: questionCount(mode, false), difficulty, recent }, createRng(seed));
 }
 
-/** Correct chronological order (oldest → newest); stable for ties via id. */
-export function correctTimelineOrder(ds: Dataset, ids: readonly string[]): string[] {
-  return [...ids].sort((a, b) => {
-    const A = ds.byId.get(a)!;
-    const B = ds.byId.get(b)!;
-    return A.creationYear - B.creationYear || (a < b ? -1 : 1);
-  });
-}
-
 export function questionArtworkIds(q: Question): string[] {
-  return q.mode === "timeline" ? q.artworkIds : [q.artworkId];
+  return [q.artworkId];
 }

@@ -44,13 +44,17 @@ export function computeStats(sessions: GameSession[], dailyRecords: DailyRecord[
 
   for (const s of done) {
     addSession(total, s);
-    addSession(byMode[s.mode], s);
     addSession(byDiff[s.difficulty], s);
+    // Games saved under the removed "Art Timeline" mode still count in the totals and per-difficulty figures,
+    // but have no row of their own in the per-mode tables.
+    if (!(MODES as string[]).includes(s.mode)) continue;
+    const mode = s.mode as GameMode;
+    addSession(byMode[mode], s);
     const pts = sumPoints(s.questions);
     const max = sumMax(s.questions);
-    const b = best[s.mode];
+    const b = best[mode];
     // compare by ratio so daily (3 questions) and free (10) games are comparable within a mode
-    if (!b || pts / max > b.points / b.max || (pts / max === b.points / b.max && max > b.max)) best[s.mode] = { points: pts, max };
+    if (!b || pts / max > b.points / b.max || (pts / max === b.points / b.max && max > b.max)) best[mode] = { points: pts, max };
   }
 
   const pct = (t: Tally) => (t.max ? percent(t.points, t.max) : null);

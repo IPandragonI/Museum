@@ -8,10 +8,10 @@
  *  - other:     network-first with cache fallback; navigations fall back to /offline.html.
  *  Game progress lives in IndexedDB, so it is untouched by any of this.
  */
-const VERSION = "v2";
+const VERSION = "v3";
 const SHELL = "museum-shell-" + VERSION;
 const ART = "museum-art-v2";
-const ROUTES = ["/", "/daily/", "/collection/", "/stats/", "/settings/", "/play/guess/", "/play/detail/", "/play/artist/", "/play/timeline/"];
+const ROUTES = ["/", "/daily/", "/collection/", "/stats/", "/settings/", "/play/guess/", "/play/detail/", "/play/artist/", "/play/movement/"];
 const EXTRA = ["/offline.html", "/manifest.webmanifest", "/icons/icon.svg", "/icons/icon-192.png", "/icons/icon-512.png"];
 
 self.addEventListener("install", (event) => {

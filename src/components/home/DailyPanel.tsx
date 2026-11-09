@@ -101,7 +101,7 @@ export function DailyPanel({ variant = "home" }: { variant?: "home" | "page" }) 
                     <span className="block text-lg font-medium leading-tight">{t(`mode.${m}.name`)}</span>
                     <span className="block text-sm text-muted">
                       {info.dailyCount} {tn(info.unit, info.dailyCount)}
-                      {s.status === "in_progress" && m !== "timeline" ? ` · ${t("daily.answered", { n: s.answered, total: info.dailyCount })}` : ""}
+                      {s.status === "in_progress" ? ` · ${t("daily.answered", { n: s.answered, total: info.dailyCount })}` : ""}
                     </span>
                   </span>
                   <span className={`flex items-center gap-2 text-sm ${s.status === "completed" ? "text-good" : "text-muted group-hover:text-ink"}`}>

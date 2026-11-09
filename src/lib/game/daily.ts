@@ -1,7 +1,7 @@
 import { DAILY_DIFFICULTY, MODES, questionCount } from "./config";
 import { generateQuestions, questionArtworkIds, type Dataset } from "./questions";
 import { createRng } from "@/lib/rng";
-import type { DailyRecord, GameMode, Question } from "@/lib/types";
+import type { DailyModeProgress, DailyRecord, GameMode, Question, QuestionResult } from "@/lib/types";
 
 /** Calendar date in UTC, e.g. "2026-11-09". Everyone on Earth gets the same one at the same instant. */
 export function utcDateString(d: Date = new Date()): string {
@@ -39,9 +39,36 @@ export function generateDailyChallenge(ds: Dataset, date: string): DailyChalleng
   return out;
 }
 
+const blank = (): DailyModeProgress => ({ status: "pending", answers: [] });
+
 export function emptyDailyRecord(date: string): DailyRecord {
-  const blank = () => ({ status: "pending" as const, answers: [] });
-  return { date, modes: { guess: blank(), detail: blank(), artist: blank(), timeline: blank() } };
+  return { date, modes: Object.fromEntries(MODES.map((m) => [m, blank()])) as DailyRecord["modes"] };
+}
+
+/** A finished legacy "Art Timeline" game becomes equivalent finished "Which Movement?" results (same points, same max). */
+function convertLegacyTimeline(r: QuestionResult | undefined): QuestionResult[] {
+  if (!r || r.artworkIds.length === 0) return [];
+  const n = r.artworkIds.length;
+  const each = Math.round(100 / n);
+  return r.artworkIds.map((id) => {
+    const ok = r.correctArtworkIds.includes(id);
+    return { artworkIds: [id], correctArtworkIds: ok ? [id] : [], correct: ok, points: ok ? each : 0, maxPoints: each, answer: "legacy-timeline" };
+  });
+}
+
+/**
+ * Completes and migrates a stored daily record so older data keeps working: modes added later are filled in as
+ * pending, and a completed legacy "timeline" game counts as the completed "movement" game (streaks stay intact).
+ */
+export function normalizeDailyRecord(raw: DailyRecord): DailyRecord {
+  const legacy = (raw.modes as unknown as Record<string, DailyModeProgress | undefined>).timeline;
+  const modes = { ...raw.modes } as DailyRecord["modes"];
+  for (const m of MODES) {
+    if (!modes[m]) {
+      modes[m] = m === "movement" && legacy?.status === "completed" ? { ...legacy, answers: convertLegacyTimeline(legacy.answers[0]) } : blank();
+    }
+  }
+  return { ...raw, modes };
 }
 
 export function isDailyComplete(r: DailyRecord | undefined | null): boolean {

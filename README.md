@@ -1,6 +1,6 @@
 # MUSEUM — a bilingual art discovery game (FR / EN)
 
-Four game modes (Guess the Artwork, The Mystery Detail, Who Is the Artist?, Art Timeline), a deterministic Daily Challenge and unlimited
+Four game modes (Guess the Artwork, The Mystery Detail, Who Is the Artist?, Which Movement?), a deterministic Daily Challenge and unlimited
 Free Play — entirely client-side, installable, offline-capable, French by default.
 
 ## Run
@@ -18,7 +18,7 @@ Data pipeline (network needed, only when you want to change the collection):
 ```bash
 node scripts/ingest.mjs select && node scripts/audit-fetch.mjs   # pick + re-fetch the museum records
 node scripts/images-fetch.mjs                                    # cache 2600px working copies (once)
-node scripts/curate.mjs && node scripts/images.mjs && node scripts/curate.mjs   # curation → WebP variants → merge
+npm run curate && node scripts/images.mjs && npm run curate   # curation → WebP variants → merge
 node scripts/merge-translations.mjs                              # French texts → src/data/translations.fr.json
 ```
 
@@ -35,10 +35,10 @@ node scripts/merge-translations.mjs                              # French texts 
 | `scripts/` | Ingestion, audit, curation (`curation.mjs`), crops, images, translation merge |
 | `docs/audit/` | `AUDIT.md` (Phase 1 report) and `changes.json` (machine-readable change log) |
 
-**Scoring** (one model everywhere): Guess 100, or 75 with the optional hint; Detail and Artist 100 or 0; Timeline `round(100 × exactly-placed / n)`.
+**Scoring** (one model everywhere): Guess 100, or 75 with the optional hint; Detail, Artist and Movement 100 or 0.
 Daily max = 1000. Old saved games (which used the removed grid scoring) remain valid in statistics.
 
-**Difficulty** is per artwork *and* per mode (see the audit): recognisability of the work, of a close-up of it, of its creator, of its date.
+**Difficulty** is per artwork *and* per mode (see the audit): recognisability of the work, of a close-up of it, of its creator, and how well known its movement is.
 
 **Localization**: language lives in Settings (persisted, default French). `useI18n()` hands components `t`, `tn`, formatters and localised art vocabulary;
 components contain no language conditionals. Artwork titles and artist names are never translated. Museum texts show the French translation when one

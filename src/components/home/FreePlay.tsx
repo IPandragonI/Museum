@@ -10,7 +10,7 @@ import { useI18n } from "@/lib/i18n/useI18n";
 import type { Difficulty, GameMode } from "@/lib/types";
 import { DifficultyPicker } from "./DifficultyPicker";
 
-const NUMBER: Record<GameMode, string> = { guess: "01", detail: "02", artist: "03", timeline: "04" };
+const NUMBER: Record<GameMode, string> = { guess: "01", detail: "02", artist: "03", movement: "04" };
 
 function ModeCard({ mode }: { mode: GameMode }) {
   const { t, tn } = useI18n();
@@ -26,13 +26,6 @@ function ModeCard({ mode }: { mode: GameMode }) {
           <PlainImage src={art.detail.imageUrl} alt="" width={art.detail.width} height={art.detail.height} className="size-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.035]" />
         ) : art ? (
           <ArtImage artwork={art} alt="" sizes="(min-width:1024px) 22vw, (min-width:640px) 44vw, 94vw" className="size-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.035]" />
-        ) : null}
-        {mode === "timeline" ? (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 flex h-1.5" aria-hidden>
-            {[0, 1, 2, 3, 4].map((k) => (
-              <span key={k} className="flex-1 border-r border-bg/60 bg-ink/70" />
-            ))}
-          </div>
         ) : null}
         <span className="display absolute left-3 top-2 text-3xl text-white mix-blend-difference" aria-hidden>
           {NUMBER[mode]}

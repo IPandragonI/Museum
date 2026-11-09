@@ -8,11 +8,12 @@
  *   guess    – recognising the whole work: public recognisability of that work
  *   detail   – recognising a close-up: recognisability, one notch harder
  *   artist   – naming the creator: artist fame, harder if the medium is atypical for them
- *   timeline – placing it in time: recognisability + artist fame, harder when the date is imprecise
+ *   movement – naming its artistic movement: how well known the movement is (movements.ts), easier for famous works
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { movementDifficulty } from "../src/lib/game/movements.ts"; // run with tsx (npm run curate)
 import { ARTIST_FAME, CATEGORY, DESCRIPTION_FIX, FACT_FIX, MOVEMENT, RECOGNIZABILITY, REMOVE, TITLE_QUIZ_OFF, TYPICAL_MEDIA } from "./curation.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -73,12 +74,14 @@ for (const a of base) {
   const typical = TYPICAL_MEDIA[a.artist] ?? ["painting"];
   const atypical = !anonymous && !typical.includes(category);
   const artistScore = anonymous ? 0 : fame + (atypical ? -1.0 : 0) + clamp((recog - DEFAULT_RECOG[tier]) * 0.4, -0.5, 0.5);
-  const timelineScore = 0.5 * recog + 0.5 * (fame ?? recog) - (a.yearSpan > 15 ? 0.6 : 0);
+  // "Which Movement?": how well known the movement is; a famous work makes its movement easier to name
+  const baseMovement = movement ? movementDifficulty(movement) : "expert";
+  const movementLevel = recog >= 3.4 ? (baseMovement === "expert" ? "intermediate" : "easy") : baseMovement;
   const difficulty = {
     guess: level(recog, 2.4, 1.4),
     detail: level(recog - 0.35, 2.3, 1.3),
     artist: anonymous ? "expert" : level(artistScore, 2.6, 1.5),
-    timeline: level(timelineScore, 2.2, 1.3),
+    movement: movementLevel,
   };
   log.difficulty.push({ id: a.id, title: a.title, old: a.difficulty, recog: +recog.toFixed(2), ...difficulty });
 
@@ -104,13 +107,11 @@ for (const a of base) {
     };
     detail = detailRaw && man.detail ? { ...detailRaw, imageUrl: `/art/${a.id}/detail.webp`, width: man.detail.w, height: man.detail.h, bytes: man.detail.bytes } : detailRaw && detailRaw.status === "rejected" ? { ...detailRaw, imageUrl: null, bytes: 0 } : detailRaw;
   }
-  const dateOk = a.yearSpan <= 25 && !UNCERTAIN_DATE.test(a.dateDisplay) && !/\b(1\d{3}|20\d{2})\b/.test(a.title);
-  if (!dateOk) log.dates.push({ id: a.id, title: a.title, date: a.dateDisplay, span: a.yearSpan });
   const quiz = {
     guess: titleOk,
     detail: titleOk && !!detail && detail.status !== "rejected",
     artist: !anonymous && !new RegExp(a.artist.split(" ").pop().replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i").test(a.title),
-    timeline: dateOk,
+    movement: !!movement,
   };
 
   // ---- facts: keep only the museum's own "did you know" text; templated facts are rendered by the UI
@@ -173,5 +174,5 @@ fs.writeFileSync(path.join(root, "docs", "audit", "changes.json"), JSON.stringif
 
 const count = (f) => out.reduce((m, a) => ((m[f(a)] = (m[f(a)] || 0) + 1), m), {});
 console.log("artworks:", out.length, "removed:", log.removed.length);
-for (const m of ["guess", "detail", "artist", "timeline"]) console.log(m, count((a) => a.difficulty[m]), "eligible:", out.filter((a) => a.quiz[m]).length);
-console.log("movement changes:", log.movement.length, "category changes:", log.category.length, "quiz-off titles:", log.quizOff.length, "timeline-ineligible dates:", log.dates.length);
+for (const m of ["guess", "detail", "artist", "movement"]) console.log(m, count((a) => a.difficulty[m]), "eligible:", out.filter((a) => a.quiz[m]).length);
+console.log("movement changes:", log.movement.length, "category changes:", log.category.length, "quiz-off titles:", log.quizOff.length);

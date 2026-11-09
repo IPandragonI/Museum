@@ -9,13 +9,13 @@ import { generateDailyChallenge, utcDateString } from "@/lib/game/daily";
 import { generateFreePlay, questionArtworkIds } from "@/lib/game/questions";
 import { randomSeed } from "@/lib/rng";
 import { addToCollection, completeDailyMode, getDaily, getRecent, listCollection, pushRecent, saveDailyProgress, saveSession } from "@/lib/storage/repo";
-import type { ChoiceQuestion, Difficulty, GameMode, GameSession, Question, QuestionResult, TimelineQuestion } from "@/lib/types";
+import type { ChoiceQuestion, Difficulty, GameMode, GameSession, Question, QuestionResult } from "@/lib/types";
 import { ArtistGame } from "./ArtistGame";
 import { DetailGame } from "./DetailGame";
 import { GuessGame } from "./GuessGame";
 import { Intro } from "./Intro";
 import { ResultsView } from "./ResultsView";
-import { TimelineGame } from "./TimelineGame";
+import { MovementGame } from "./MovementGame";
 
 type Phase =
   | { kind: "loading" }
@@ -160,7 +160,7 @@ export function GameRunner({ mode }: { mode: GameMode }) {
       {mode === "guess" ? <GuessGame {...common} questions={phase.questions as ChoiceQuestion[]} initialHint={phase.hint} onProgress={onProgress} /> : null}
       {mode === "detail" ? <DetailGame {...common} questions={phase.questions as ChoiceQuestion[]} onProgress={onProgress} /> : null}
       {mode === "artist" ? <ArtistGame {...common} questions={phase.questions as ChoiceQuestion[]} onProgress={onProgress} /> : null}
-      {mode === "timeline" ? <TimelineGame exitHref={exitHref} onComplete={onComplete} question={phase.questions[0] as TimelineQuestion} /> : null}
+      {mode === "movement" ? <MovementGame {...common} questions={phase.questions as ChoiceQuestion[]} onProgress={onProgress} /> : null}
       <p className="sr-only">
         {t(`mode.${mode}.name`)}, {daily ? t("game.srKind.daily") : t(`diff.${difficulty}.name`)}
       </p>

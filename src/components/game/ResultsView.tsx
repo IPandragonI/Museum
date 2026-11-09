@@ -39,10 +39,7 @@ export function ResultsView({ mode, difficulty, results, newIds, collectionIds, 
   }, []);
 
   const rows = useMemo(
-    () =>
-      mode === "timeline"
-        ? results[0].artworkIds.map((id, k) => ({ id, ok: results[0].correctArtworkIds.includes(id), note: t("res.position", { n: k + 1 }), points: null as number | null }))
-        : results.map((r, k) => ({ id: r.artworkIds[0], ok: r.correct, note: mode === "guess" && r.hint ? t("res.hintUsed") : t("res.question", { n: k + 1 }), points: r.points })),
+    () => results.map((r, k) => ({ id: r.artworkIds[0], ok: r.correct, note: mode === "guess" && r.hint ? t("res.hintUsed") : t("res.question", { n: k + 1 }), points: r.points })),
     [mode, results, t],
   );
 
@@ -61,8 +58,8 @@ export function ResultsView({ mode, difficulty, results, newIds, collectionIds, 
           </p>
           <dl className="mt-6 grid grid-cols-2 gap-6 border-t border-line pt-5">
             <div>
-              <dt className="eyebrow">{mode === "timeline" ? t("res.inPlace") : t("res.correctAnswers")}</dt>
-              <dd className="display mt-1 text-3xl">{mode === "timeline" ? `${results[0].correctArtworkIds.length} / ${results[0].artworkIds.length}` : `${correctCount} / ${results.length}`}</dd>
+              <dt className="eyebrow">{t("res.correctAnswers")}</dt>
+              <dd className="display mt-1 text-3xl">{`${correctCount} / ${results.length}`}</dd>
             </div>
             <div>
               <dt className="eyebrow">{t("res.success")}</dt>
@@ -95,7 +92,7 @@ export function ResultsView({ mode, difficulty, results, newIds, collectionIds, 
         </div>
 
         <div>
-          <h2 className="eyebrow mb-3">{mode === "timeline" ? t("res.chrono") : t("res.byQuestion")}</h2>
+          <h2 className="eyebrow mb-3">{t("res.byQuestion")}</h2>
           <ol className="divide-y divide-line border-y border-line">
             {rows.map((row, k) => {
               const a = getArtwork(row.id);

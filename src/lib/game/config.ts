@@ -1,6 +1,6 @@
 import type { Difficulty, GameMode } from "@/lib/types";
 
-export const MODES: GameMode[] = ["guess", "detail", "artist", "timeline"];
+export const MODES: GameMode[] = ["guess", "detail", "artist", "movement"];
 export const DIFFICULTIES: Difficulty[] = ["easy", "intermediate", "expert"];
 export const DAILY_DIFFICULTY: Difficulty = "intermediate";
 
@@ -17,16 +17,13 @@ export const MODE_INFO: Record<GameMode, ModeInfo> = {
   guess: { id: "guess", freeCount: 10, dailyCount: 3, unit: "unit.questions" },
   detail: { id: "detail", freeCount: 10, dailyCount: 3, unit: "unit.questions" },
   artist: { id: "artist", freeCount: 10, dailyCount: 3, unit: "unit.questions" },
-  timeline: { id: "timeline", freeCount: 5, dailyCount: 4, unit: "unit.artworks" },
+  movement: { id: "movement", freeCount: 10, dailyCount: 3, unit: "unit.questions" },
 };
 
 /** Every question is worth 100 points. */
 export const MAX_POINTS_PER_QUESTION = 100;
 /** Guess the Artwork: opening the optional hint costs 25 points (a correct answer is then worth 75). */
 export const HINT_COST = 25;
-
-/** Minimum year gap between artworks in a timeline, per difficulty. */
-export const TIMELINE_MIN_GAP: Record<Difficulty, number> = { easy: 80, intermediate: 35, expert: 12 };
 
 export function questionCount(mode: GameMode, daily: boolean): number {
   return daily ? MODE_INFO[mode].dailyCount : MODE_INFO[mode].freeCount;

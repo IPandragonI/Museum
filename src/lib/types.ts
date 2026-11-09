@@ -8,7 +8,9 @@ export type Category =
   | "decorative";
 
 export type Difficulty = "easy" | "intermediate" | "expert";
-export type GameMode = "guess" | "detail" | "artist" | "timeline";
+export type GameMode = "guess" | "detail" | "artist" | "movement";
+/** Mode value found in games saved before "Art Timeline" was replaced by "Which Movement?". */
+export type StoredMode = GameMode | "timeline";
 
 export interface SourceCredit {
   name: string;
@@ -91,31 +93,25 @@ export interface Choice {
 }
 
 export interface ChoiceQuestion {
-  mode: "guess" | "detail" | "artist";
+  mode: "guess" | "detail" | "artist" | "movement";
   artworkId: string;
   options: Choice[];
   correctId: string;
 }
 
-export interface TimelineQuestion {
-  mode: "timeline";
-  /** Artwork ids in the (shuffled) order shown to the player at the start. */
-  artworkIds: string[];
-}
-
-export type Question = ChoiceQuestion | TimelineQuestion;
+export type Question = ChoiceQuestion;
 
 // ------------------------------------------------------------------- results
 
 export interface QuestionResult {
-  /** Artworks involved in the question (1 for choice modes, 4-5 for timeline). */
+  /** Artworks involved in the question (one for every current mode). */
   artworkIds: string[];
   /** Artworks the player earned into the collection. */
   correctArtworkIds: string[];
   correct: boolean;
   points: number;
   maxPoints: number;
-  /** Selected option id, or the submitted order for timeline. */
+  /** Selected option id (legacy Timeline results stored the submitted order as an array). */
   answer: string | string[];
   /** Guess mode: whether the hint was used (it costs 25 points). */
   hint?: boolean;
@@ -125,7 +121,7 @@ export interface QuestionResult {
 
 export interface GameSession {
   id: string;
-  mode: GameMode;
+  mode: StoredMode;
   difficulty: Difficulty;
   kind: "free" | "daily";
   dailyDate?: string;
@@ -138,7 +134,7 @@ export interface GameSession {
 export interface CollectionEntry {
   artworkId: string;
   discoveredAt: string;
-  mode: GameMode;
+  mode: StoredMode;
   sessionId: string;
 }
 
