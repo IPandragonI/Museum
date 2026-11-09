@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ tokens
+   Warm ivory gallery wall by day, charcoal by night. One accent (terracotta),
+   adapted for dark. Feedback colours are deliberately muted. */
+:root {
+  --bg: #f6f2ea;
+  --surface: #efe9dd;
+  --surface-2: #e7dfd0;
+  --ink: #1b1915;
+  --muted: #6d675d;
+  --line: rgba(27, 25, 21, 0.13);
+  --accent: #a8482a;
+  --accent-ink: #fbf7f0;
+  --good: #3b6e4f;
+  --bad: #a43a2a;
+  --veil: #d3c9b5;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #121110;
+  --surface: #1b1a18;
+  --surface-2: #242320;
+  --ink: #efe9de;
+  --muted: #9b958a;
+  --line: rgba(239, 233, 222, 0.14);
+  --accent: #d98a64;
+  --accent-ink: #1a1410;
+  --good: #7fb594;
+  --bad: #e08a78;
+  --veil: #2a2825;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), "Iowan Old Style", Georgia, serif;
+}
+
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Animated theme transition (only while toggling, so it never slows normal interactions). */
+html.theme-fade,
+html.theme-fade *,
+html.theme-fade *::before,
+html.theme-fade *::after {
+  transition:
+    background-color 350ms ease,
+    color 350ms ease,
+    border-color 350ms ease,
+    fill 350ms ease !important;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-[0.72rem] font-medium uppercase tracking-[0.18em] text-muted;
+  }
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.04;
+  }
+  .rule {
+    @apply border-t border-line;
+  }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] border border-line px-5 text-sm font-medium tracking-wide transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-45;
+  }
+  .btn-primary {
+    @apply border-transparent bg-ink text-bg hover:bg-accent hover:text-accent-ink;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-ink hover:border-ink;
+  }
+  .link {
+    @apply underline decoration-line decoration-1 underline-offset-4 transition-colors hover:decoration-accent;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line px-3 py-1 text-xs text-muted;
+  }
+}
+
+/* page transition (template.tsx re-mounts on navigation) */
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.page-enter {
+  animation: page-in 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes reveal-art {
+  from {
+    opacity: 0;
+    transform: scale(1.015);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+.art-reveal {
+  animation: reveal-art 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fade-up {
+  animation: fade-up 450ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: none;
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+.shake {
+  animation: shake 260ms ease-in-out 1;
+}
+
+/* reveal grid cells */
+.veil-cell {
+  background: var(--veil);
+  box-shadow: 0 0 0 0.6px var(--veil);
+  transition: opacity 650ms ease;
+}
+.veil-cell[data-open="true"] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* hide scrollbars on horizontal chip rows */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+dialog::backdrop {
+  background: rgba(10, 9, 8, 0.72);
+}
+dialog {
+  color: var(--ink);
+}

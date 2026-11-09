@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="MUSEUM">
+  <rect width="512" height="512" fill="#1b1915"/>
+  <rect x="128" y="112" width="256" height="288" fill="none" stroke="#efe9de" stroke-width="14"/>
+  <rect x="164" y="148" width="184" height="216" fill="none" stroke="#efe9de" stroke-width="4" opacity="0.55"/>
+  <rect x="216" y="212" width="80" height="88" fill="#d98a64"/>
+</svg>
