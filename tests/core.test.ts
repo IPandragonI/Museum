@@ -223,7 +223,7 @@ describe("localisation", () => {
     const tr = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../src/data/translations.fr.json"), "utf8"));
     const missing = dataset.artworks.filter((a) => !tr.artworks[a.id]?.description).map((a) => a.id);
     expect(missing).toEqual([]);
-    const noBio = [...new Set(dataset.artworks.filter((a) => a.artistBio && !tr.artists[a.artist!]).map((a) => a.artist))];
+    const noBio = [...new Set(dataset.artworks.filter((a) => a.artistBio && !tr.artists[a.artist!] && !tr.artworks[a.id]?.artistBio).map((a) => a.artist))];
     expect(noBio).toEqual([]);
   });
   it("the daily challenge cannot depend on the language: game logic never imports the i18n layer", () => {

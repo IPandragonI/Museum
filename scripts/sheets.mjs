@@ -31,13 +31,14 @@ for (let s = 0; s * per < list.length; s++) {
     const y = Math.floor(i / COLS) * TILE_H;
     const cropPath = useNew ? path.join(root, "scripts", ".cache", "crops-new", a.id + ".jpg") : path.join(root, "public", a.detail.imageUrl);
     const crop = await sharp(cropPath).resize(200, 138, { fit: "cover" }).toBuffer();
-    const thumbSrc = path.join(root, "public", a.imageUrl);
+    const thumbSrc = useNew ? path.join(root, "scripts", ".cache", "work", a.id + ".jpg") : path.join(root, "public", a.imageUrl);
     const thumb = await sharp(thumbSrc).resize(150, 138, { fit: "contain", background: "#eee" }).toBuffer();
     const meta = await sharp(thumb).metadata();
     comps.push({ input: crop, left: x + 4, top: y + 2 });
     comps.push({ input: thumb, left: x + 208, top: y + 2 });
     // crop rectangle on thumbnail (computed against the contained image box)
-    const ratio = a.imageWidth / a.imageHeight;
+    const wm = useNew ? await sharp(thumbSrc).metadata() : null;
+    const ratio = wm ? wm.width / wm.height : a.imageWidth / a.imageHeight;
     let bw = 150;
     let bh = 138;
     if (ratio > 150 / 138) bh = 150 / ratio;

@@ -3211,6 +3211,1146 @@
    "detail": "easy",
    "artist": "easy",
    "timeline": "easy"
+  },
+  {
+   "id": "wd-Q12418",
+   "title": "Mona Lisa",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q474338",
+   "title": "Lady with an Ermine",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q215486",
+   "title": "Vitruvian Man",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1267893",
+   "title": "Ginevra de' Benci",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q656434",
+   "title": "La Belle Ferronnière",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q500242",
+   "title": "The Creation of Adam",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1473546",
+   "title": "Doni Tondo",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q186953",
+   "title": "The School of Athens",
+   "old": "easy",
+   "recog": 3.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q328079",
+   "title": "Sistine Madonna",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q546977",
+   "title": "Portrait of Baldassare Castiglione",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q948034",
+   "title": "La velata",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "wd-Q151047",
+   "title": "The Birth of Venus",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q549847",
+   "title": "Primavera",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2293953",
+   "title": "Venus and Mars",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q727875",
+   "title": "Venus of Urbino",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1206860",
+   "title": "Bacchus and Ariadne",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q930137",
+   "title": "The Tempest",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q969377",
+   "title": "The Calling of Saint Matthew",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2293905",
+   "title": "Medusa",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2011510",
+   "title": "Bacchus",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q219831",
+   "title": "The Night Watch",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q661378",
+   "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q512755",
+   "title": "El retorno del hijo gey",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2246489",
+   "title": "The Storm on the Sea of Galilee",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q766782",
+   "title": "The Jewish Bride",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1167932",
+   "title": "Belshazzar's Feast",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "wd-Q185372",
+   "title": "Girl with a Pearl Earring",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q167605",
+   "title": "The Milkmaid",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q523974",
+   "title": "View of Delft",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q588695",
+   "title": "The Art of Painting",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q969367",
+   "title": "Woman Holding a Balance",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q586035",
+   "title": "The Little Street",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q151143",
+   "title": "Woman with a Pearl Necklace",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "wd-Q208758",
+   "title": "Las Meninas",
+   "old": "easy",
+   "recog": 3.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1133420",
+   "title": "The Surrender of Breda",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q275349",
+   "title": "Rokeby Venus",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1091086",
+   "title": "The Third of May 1808",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1150997",
+   "title": "Saturn Devouring His Son",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q152867",
+   "title": "La maja desnuda",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2735507",
+   "title": "The Clothed Maja",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q920030",
+   "title": "Charles IV of Spain and His Family",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q94802",
+   "title": "The Burial of the Count of Orgaz",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q883994",
+   "title": "View of Toledo",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2213811",
+   "title": "The Haywain Triptych",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q500985",
+   "title": "The Hunters in the Snow",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q533619",
+   "title": "Netherlandish Proverbs",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q603751",
+   "title": "The Peasant Wedding",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q220859",
+   "title": "Arnolfini Portrait",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1212937",
+   "title": "The Ambassadors",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q965124",
+   "title": "Laughing Cavalier",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q531329",
+   "title": "The Embarkation for Cythera",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q3387944",
+   "title": "Pierrot",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2629559",
+   "title": "The Swing",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q604761",
+   "title": "The Blue Boy",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q636537",
+   "title": "The Death of Marat",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q476458",
+   "title": "The Oath of the Horatii",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q59201",
+   "title": "Napoleon Crossing the Alps",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1231009",
+   "title": "The Coronation of Napoleon",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1314013",
+   "title": "The Intervention of the Sabine Women",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1978815",
+   "title": "Grande Odalisque",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2027662",
+   "title": "The Turkish Bath",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q3137278",
+   "title": "Madame Moitessier",
+   "old": "intermediate",
+   "recog": 2.2,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "wd-Q212616",
+   "title": "The Raft of the Medusa",
+   "old": "easy",
+   "recog": 3.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q29530",
+   "title": "Liberty Leading the People",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1133821",
+   "title": "Death of Sardanapalus",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1212737",
+   "title": "The Women of Algiers",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2354251",
+   "title": "The Barque of Dante",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q257580",
+   "title": "The Fighting Temeraire",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q219344",
+   "title": "The Slave Ship",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2366825",
+   "title": "The Hay Wain",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q311243",
+   "title": "Wanderer above the Sea of Fog",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q693746",
+   "title": "The Monk by the Sea",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q194137",
+   "title": "The Sea of Ice",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q540488",
+   "title": "A Burial at Ornans",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1368055",
+   "title": "The Gleaners",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2571560",
+   "title": "The Angelus",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q20540661",
+   "title": "The Sower",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q152509",
+   "title": "Luncheon on the Grass",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q328523",
+   "title": "Impression, Sunrise",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2395218",
+   "title": "Woman with a Parasol – Madame Monet and Her Son",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1167907",
+   "title": "Luncheon of the Boating Party",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q683274",
+   "title": "Bal du moulin de la Galette",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q3808227",
+   "title": "Girls at the Piano",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1239950",
+   "title": "L'Absinthe",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1766454",
+   "title": "Les raboteurs de parquet",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q5966403",
+   "title": "The Cradle",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1044742",
+   "title": "A Sunday Afternoon on the Island of La Grande Jatte",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1090837",
+   "title": "Bathers at Asnières",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q17277950",
+   "title": "The Card Players",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q45585",
+   "title": "The Starry Night",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q724377",
+   "title": "Bedroom in Arles",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1025704",
+   "title": "Café Terrace at Night",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q154469",
+   "title": "The Potato Eaters",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2282256",
+   "title": "Irises",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q634122",
+   "title": "Wheatfield with Crows",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q674846",
+   "title": "The Night Café",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1464531",
+   "title": "Starry Night Over the Rhône",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q157541",
+   "title": "Sunflowers",
+   "old": "easy",
+   "recog": 3.6,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2200610",
+   "title": "The Yellow House",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q890678",
+   "title": "Where Do We Come From? What Are We? Where Are We Going?",
+   "old": "intermediate",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1764395",
+   "title": "Vision After the Sermon",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q930535",
+   "title": "Tahitian Women on the Beach",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1219263",
+   "title": "The Sleeping Gypsy",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q548141",
+   "title": "The Dream",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q698487",
+   "title": "The Kiss",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2267579",
+   "title": "The Sick Child",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2990634",
+   "title": "Composition VII",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q687182",
+   "title": "Whistler's Mother",
+   "old": "easy",
+   "recog": 3.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q646337",
+   "title": "Nocturne in Black and Gold – The Falling Rocket",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q7738501",
+   "title": "The Gulf Stream",
+   "old": "intermediate",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1213936",
+   "title": "The Gross Clinic",
+   "old": "intermediate",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q16333797",
+   "title": "Rudolf II as Vertumnus",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q2712679",
+   "title": "Beata Beatrix",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "wd-Q1070896",
+   "title": "The Ninth Wave",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
   }
  ],
  "quizOff": [
@@ -3411,6 +4551,12 @@
    "title": "Mina'i Beaker with Seated Princes",
    "date": "1180–1220",
    "span": 40
+  },
+  {
+   "id": "wd-Q1091086",
+   "title": "The Third of May 1808",
+   "date": "1814",
+   "span": 0
   }
  ],
  "crops": [],

@@ -46,7 +46,10 @@ exists and fall back to the English original otherwise.
 
 ## Data sources & licensing
 
-All 276 artworks come from the **Cleveland Museum of Art Open Access API**, records flagged CC0. Titles, artists, dates, descriptions, facts and
+390 artworks: 276 from the **Cleveland Museum of Art Open Access API** (CC0) and 114 very famous public-domain works added with
+`scripts/ingest-famous.mjs` from **Wikidata, Wikimedia Commons and Wikipedia** (Mona Lisa, The Starry Night, Liberty Leading the People…). The famous
+works are admitted only if the creator died before 1956 and Commons lists the image as public domain; their texts are Wikipedia summaries (CC BY-SA 4.0,
+credited in each artwork's detail view, French from fr.wikipedia). Cleveland details: Titles, artists, dates, descriptions, facts and
 biographies are the museum's own English text; French translations are stored alongside, never replacing the originals. Each artwork keeps its source URL
 and licence. Images are the museum's open-access images, converted to WebP (480/960/1280 px long edge); detail crops are real crops of the original,
 with the crop rectangle stored in the data. See `docs/audit/AUDIT.md` for what was checked, corrected and removed.

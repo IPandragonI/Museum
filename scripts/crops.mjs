@@ -107,7 +107,7 @@ const cmd = process.argv[2];
 if (cmd === "candidates") {
   const cand = {};
   for (const a of art) {
-    if (!REDO.has(a.id) || !a.detail) continue;
+    if ((!REDO.has(a.id) && !(process.argv[3] === "famous" && a.id.startsWith("wd-"))) || !a.detail) continue;
     const mode = a.difficulty.detail;
     const rank = mode === "easy" ? 0 : mode === "intermediate" ? 1 : 2;
     const file = path.join(work, a.id + ".jpg");
@@ -125,7 +125,7 @@ if (cmd === "candidates") {
 } else if (cmd === "accept" || cmd === "reject") {
   const cand = JSON.parse(fs.readFileSync(candFile, "utf8"));
   const arg = process.argv[3];
-  const ids = arg === "all" ? Object.keys(cand) : arg.split(",").map((s) => (s.startsWith("cma-") ? s : "cma-" + s));
+  const ids = arg === "all" ? Object.keys(cand) : arg.split(",").map((s) => (/^(cma|wd)-/.test(s) ? s : "cma-" + s));
   for (const id of ids) {
     if (cmd === "accept") crops[id] = { rect: cand[id].rect, status: "reviewed" };
     else crops[id] = { rect: cand[id]?.rect ?? null, status: "rejected" };
