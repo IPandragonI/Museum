@@ -4,6 +4,8 @@ import "./globals.css";
 import { THEME_INIT_SCRIPT } from "@/lib/settings";
 import { Header } from "@/components/ui/Header";
 import { BottomNav } from "@/components/ui/BottomNav";
+import { DataGate } from "@/components/ui/DataGate";
+import { Footer } from "@/components/ui/Footer";
 import { ServiceWorker } from "@/components/ui/ServiceWorker";
 import { SkipLink } from "@/components/ui/SkipLink";
 import { fr } from "@/lib/i18n/fr";
@@ -36,9 +38,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-dvh">
         <SkipLink />
         <Header />
-        <main id="main" className="mx-auto w-full max-w-6xl px-4 pb-28 sm:px-8 md:pb-24">
-          {children}
+        <main id="main" className="mx-auto w-full max-w-6xl px-4 pb-12 sm:px-8 md:pb-16">
+          <DataGate>{children}</DataGate>
         </main>
+        <Footer />
         <BottomNav />
         <ServiceWorker />
       </body>

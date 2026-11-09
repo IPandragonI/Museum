@@ -53,6 +53,28 @@ function ModeCard({ mode }: { mode: GameMode }) {
   );
 }
 
+/** All four games in a row (3 questions each). */
+function MixCard() {
+  const { t } = useI18n();
+  const [d, setD] = useState<Difficulty>("easy");
+  const name = t("mode.mix.name");
+  return (
+    <article className="mt-14 grid gap-6 border-t border-line pt-8 sm:grid-cols-[1fr_auto] sm:items-end">
+      <div>
+        <h3 className="display text-3xl">{name}</h3>
+        <p className="mt-2 max-w-xl text-[0.93rem] text-muted">{t("mix.short")}</p>
+        <p className="eyebrow mt-3">{t("mix.count")}</p>
+        <div className="mt-3 max-w-md">
+          <DifficultyPicker value={d} onChange={setD} label={t("diff.for", { mode: name })} compact />
+        </div>
+      </div>
+      <Link href={`/play/mix/?d=${d}`} className="btn btn-primary w-full sm:w-auto">
+        {t("free.start")} <ArrowRight size={16} aria-hidden />
+      </Link>
+    </article>
+  );
+}
+
 export function FreePlay() {
   const { t } = useI18n();
   return (
@@ -66,6 +88,7 @@ export function FreePlay() {
           <ModeCard key={m} mode={m} />
         ))}
       </div>
+      <MixCard />
     </section>
   );
 }

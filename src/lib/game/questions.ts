@@ -1,3 +1,4 @@
+import { REFERENCE_ARTISTS } from "./artists";
 import { questionCount } from "./config";
 import { movementDistractors, movementStats, type MovementStats } from "./movements";
 import { createRng, shuffle, type Rng } from "@/lib/rng";
@@ -111,6 +112,7 @@ export function titleDistractors(ds: Dataset, answer: Artwork, rng: Rng, count =
 /** Plausible wrong artists: distinct people, similar era / nationality / medium. */
 export function artistDistractors(ds: Dataset, answer: Artwork, rng: Rng, count = 3): string[] | null {
   const best = new Map<string, number>();
+  const answerName = answer.artist ?? "";
   for (const o of ds.artworks) {
     if (!o.artist || norm(o.artist) === norm(answer.artist ?? "")) continue;
     const near = o.artistBirthYear && answer.artistBirthYear ? Math.abs(o.artistBirthYear - answer.artistBirthYear) < 60 : Math.abs(o.creationYear - answer.creationYear) < 80;
@@ -123,18 +125,44 @@ export function artistDistractors(ds: Dataset, answer: Artwork, rng: Rng, count 
       jitter(rng);
     if (s > (best.get(o.artist) ?? -1)) best.set(o.artist, s);
   }
+  // Famous artists with no work in the collection widen the pool (wrong answers only), never a spelling of a known artist.
+  const known = [...best.keys()];
+  const ref = answer.artistBirthYear ?? answer.creationYear - 35;
+  for (const r of REFERENCE_ARTISTS) {
+    if (samePerson(r.name, answerName) || known.some((k) => samePerson(k, r.name))) continue;
+    // +2: no nationality / movement to compare, but a famous name is as believable a wrong answer as a collection artist
+    best.set(r.name, 2 + (answer.category === "painting" ? 3 : 0) + (Math.abs(r.born - ref) < 60 ? 3 : 0) + jitter(rng));
+  }
   const ordered = [...best].sort((a, b) => b[1] - a[1]).map(([n]) => n);
   const out: string[] = [];
   for (const name of ordered) {
     if (out.length === count) break;
-    // same person under another spelling ("Rembrandt" vs "Rembrandt van Rijn") or a shared surname
-    const n = norm(name);
-    const ans = norm(answer.artist ?? "");
-    if (n.includes(ans) || ans.includes(n)) continue;
-    if (out.some((p) => norm(p).includes(n) || n.includes(norm(p)))) continue;
+    if (samePerson(name, answerName) || out.some((p) => samePerson(p, name))) continue;
     out.push(name);
   }
   return out.length === count ? out : null;
+}
+
+/**
+ * Strict version for statistics, where merging two different people would be wrong: the first names must match and
+ * either one name is a single word ("Rembrandt" / "Rembrandt van Rijn") or the last names match ("Francisco de Goya").
+ */
+export function sameArtist(a: string, b: string): boolean {
+  const x = norm(a).split(" ").filter(Boolean);
+  const y = norm(b).split(" ").filter(Boolean);
+  if (!x.length || !y.length) return false;
+  return x.join(" ") === y.join(" ") || (x[0] === y[0] && (x.length === 1 || y.length === 1 || x[x.length - 1] === y[y.length - 1]));
+}
+
+/** The same artist under another spelling (loose, for distractors where excluding too much is harmless): one name contains the other, or same first and last words ("Francisco de Goya" / "Francisco Goya"). */
+export function samePerson(a: string, b: string): boolean {
+  const x = norm(a);
+  const y = norm(b);
+  if (!x || !y) return false;
+  if (x === y || x.includes(y) || y.includes(x)) return true;
+  const tx = x.split(" ");
+  const ty = y.split(" ");
+  return tx[0] === ty[0] && tx[tx.length - 1] === ty[ty.length - 1];
 }
 
 // -------------------------------------------------------------------- questions
@@ -174,13 +202,23 @@ export interface PickOptions {
   exclude?: ReadonlySet<string>;
   /** Recently played artworks — avoided when the pool allows. */
   recent?: ReadonlySet<string>;
+  /** When set, only these artworks may be asked (review mode: "replay what I missed"). */
+  only?: ReadonlySet<string>;
+}
+
+/**
+ * The two wrong options the Guess hint removes. Deterministic (first two wrong options in display order), so a saved
+ * game restores exactly the same hint and the daily challenge stays identical for everyone.
+ */
+export function hintEliminated(q: Pick<ChoiceQuestion, "options" | "correctId">): Set<string> {
+  return new Set(q.options.filter((o) => o.id !== q.correctId).slice(0, 2).map((o) => o.id));
 }
 
 /** Pool ordered by preference: exact difficulty first, then neighbours, then everything. */
-function tieredPool(ds: Dataset, mode: GameMode, difficulty: Difficulty): Artwork[][] {
+function tieredPool(ds: Dataset, mode: GameMode, difficulty: Difficulty, only?: ReadonlySet<string>): Artwork[][] {
   const order: Difficulty[] = ["easy", "intermediate", "expert"];
   const idx = order.indexOf(difficulty);
-  const eligible = ds.artworks.filter((a) => eligibleFor(ds, mode, a));
+  const eligible = ds.artworks.filter((a) => (!only || only.has(a.id)) && eligibleFor(ds, mode, a));
   const by = (d: Difficulty) => eligible.filter((a) => a.difficulty[mode] === d);
   const near = order.filter((_, i) => Math.abs(i - idx) === 1).flatMap(by);
   const far = order.filter((_, i) => Math.abs(i - idx) === 2).flatMap(by);
@@ -194,7 +232,7 @@ function preferenceSort(items: Artwork[], rng: Rng, recent?: ReadonlySet<string>
 }
 
 export function generateChoiceQuestions(ds: Dataset, mode: ChoiceQuestion["mode"], opts: PickOptions, rng: Rng): ChoiceQuestion[] {
-  const tiers = tieredPool(ds, mode, opts.difficulty);
+  const tiers = tieredPool(ds, mode, opts.difficulty, opts.only);
   const out: ChoiceQuestion[] = [];
   const used = new Set<string>();
   // variety: at most N works per artist (per movement in "Which Movement?"), relaxed if the pool is small
@@ -227,8 +265,8 @@ export function generateQuestions(ds: Dataset, mode: GameMode, opts: PickOptions
 }
 
 /** Free-play game: random seed, count by mode. */
-export function generateFreePlay(ds: Dataset, mode: GameMode, difficulty: Difficulty, seed: number, recent?: ReadonlySet<string>): Question[] {
-  return generateQuestions(ds, mode, { count: questionCount(mode, false), difficulty, recent }, createRng(seed));
+export function generateFreePlay(ds: Dataset, mode: GameMode, difficulty: Difficulty, seed: number, recent?: ReadonlySet<string>, only?: ReadonlySet<string>): Question[] {
+  return generateQuestions(ds, mode, { count: questionCount(mode, false), difficulty, recent, only }, createRng(seed));
 }
 
 export function questionArtworkIds(q: Question): string[] {

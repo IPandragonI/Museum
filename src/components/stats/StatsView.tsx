@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { artworks } from "@/lib/data";
 import { DIFFICULTIES, MODES } from "@/lib/game/config";
 import { useI18n } from "@/lib/i18n/useI18n";
+import type { MasteryRow } from "@/lib/stats";
 import { useAppData } from "@/lib/storage/useAppData";
 
 function Bar({ value }: { value: number | null }) {
@@ -10,6 +12,54 @@ function Bar({ value }: { value: number | null }) {
     <div className="h-[3px] w-full bg-line" aria-hidden>
       <div className="h-full bg-accent transition-[width] duration-700" style={{ width: `${value ?? 0}%` }} />
     </div>
+  );
+}
+
+const MIN_ANSWERS = 3; // fewer answers than this say nothing reliable about a movement or an artist
+
+function MasteryList({ title, rows, empty }: { title: string; rows: MasteryRow[]; empty: string }) {
+  const { t, num } = useI18n();
+  return (
+    <div>
+      <h3 className="mb-3 text-sm font-medium">{title}</h3>
+      {rows.length ? (
+        <ul className="space-y-3">
+          {rows.map((r) => (
+            <li key={r.label}>
+              <div className="mb-1.5 flex justify-between gap-3 text-sm">
+                <span className="truncate">{r.label}</span>
+                <span className="shrink-0 tabular-nums text-muted">{t("st.masteryRow", { pct: num(r.pct), correct: num(r.correct), answered: num(r.answered) })}</span>
+              </div>
+              <Bar value={r.pct} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-sm text-muted">{empty}</p>
+      )}
+    </div>
+  );
+}
+
+/** Weakest and strongest movements / artists (at least 3 answers each), with names in the active language. */
+function MasterySection({ movements, artists }: { movements: MasteryRow[]; artists: MasteryRow[] }) {
+  const i = useI18n();
+  const { t } = i;
+  const reliable = (rows: MasteryRow[]) => rows.filter((r) => r.answered >= MIN_ANSWERS);
+  const weakest = (rows: MasteryRow[]) => reliable(rows).filter((r) => r.pct < 100).slice(0, 5);
+  const strongest = (rows: MasteryRow[]) => [...reliable(rows)].reverse().filter((r) => r.pct >= 60).slice(0, 5);
+  const localized = (rows: MasteryRow[]) => rows.map((r) => ({ ...r, label: i.movement(r.label) ?? r.label }));
+  return (
+    <section className="mt-14" aria-label={t("st.mastery")}>
+      <h2 className="eyebrow mb-2">{t("st.mastery")}</h2>
+      <p className="mb-6 max-w-xl text-sm text-muted">{t("st.masteryIntro", { n: MIN_ANSWERS })}</p>
+      <div className="grid gap-10 lg:grid-cols-2">
+        <MasteryList title={t("st.weakMovements")} rows={localized(weakest(movements))} empty={t("st.masteryNone")} />
+        <MasteryList title={t("st.strongMovements")} rows={localized(strongest(movements))} empty={t("st.masteryNone")} />
+        <MasteryList title={t("st.weakArtists")} rows={weakest(artists)} empty={t("st.masteryNone")} />
+        <MasteryList title={t("st.strongArtists")} rows={strongest(artists)} empty={t("st.masteryNone")} />
+      </div>
+    </section>
   );
 }
 
@@ -125,6 +175,23 @@ export function StatsView() {
           </table>
         </div>
       </section>
+      {!empty ? <MasterySection movements={data.mastery.movements} artists={data.mastery.artists} /> : null}
+      {MODES.some((m) => data.missed[m].length) ? (
+        <section className="mt-14" aria-label={t("st.review")}>
+          <h2 className="eyebrow mb-2">{t("st.review")}</h2>
+          <p className="mb-4 max-w-xl text-sm text-muted">{t("st.reviewIntro")}</p>
+          <ul className="divide-y divide-line border-y border-line">
+            {MODES.filter((m) => data.missed[m].length).map((m) => (
+              <li key={m}>
+                <Link href={`/play/${m}/?review=1&start=1&d=intermediate`} className="flex min-h-14 items-center justify-between gap-4 py-3 transition-colors hover:bg-surface sm:px-3">
+                  <span>{t(`mode.${m}.name`)}</span>
+                  <span className="text-sm text-muted">{i.tn("st.reviewCount", data.missed[m].length)}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
       {empty ? <p className="mt-10 text-sm text-muted">{t("st.empty")}</p> : null}
     </div>
   );

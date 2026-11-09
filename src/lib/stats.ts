@@ -1,5 +1,6 @@
 import { DIFFICULTIES, MODES } from "@/lib/game/config";
 import { computeStreaks, isDailyComplete, type StreakInfo } from "@/lib/game/daily";
+import { sameArtist } from "@/lib/game/questions";
 import { percent, sumMax, sumPoints } from "@/lib/game/scoring";
 import type { DailyRecord, Difficulty, GameMode, GameSession } from "@/lib/types";
 
@@ -19,6 +20,64 @@ export interface Stats {
   accuracyByMode: Record<GameMode, number | null>;
   accuracyByDifficulty: Record<Difficulty, number | null>;
   streak: StreakInfo;
+}
+
+/**
+ * Artworks whose most recent attempt in `mode` was wrong, oldest miss first. Answering one correctly later removes
+ * it from the list (a light "spaced repetition": you review what is still not learned).
+ */
+export function missedArtworks(sessions: GameSession[], mode: GameMode): string[] {
+  const last = new Map<string, boolean>();
+  const done = sessions.filter((s) => s.completed && s.mode === mode).sort((a, b) => (a.completedAt ?? "").localeCompare(b.completedAt ?? ""));
+  for (const s of done)
+    for (const q of s.questions) {
+      const id = q.artworkIds[0];
+      if (id) {
+        last.delete(id); // re-insert so the order follows the latest attempt
+        last.set(id, q.correct);
+      }
+    }
+  return [...last].filter(([, ok]) => !ok).map(([id]) => id);
+}
+
+export interface MasteryRow {
+  label: string;
+  answered: number;
+  correct: number;
+  /** Share of correct answers, 0–100. */
+  pct: number;
+}
+
+/**
+ * How well each movement and each artist is known, from every answered question (all modes). Spelling variants of
+ * one artist ("Francisco Goya" / "Francisco de Goya") are merged. Rows are sorted weakest first.
+ */
+export function computeMastery(sessions: GameSession[], lookup: (artworkId: string) => { movement: string | null; artist: string | null } | undefined): { movements: MasteryRow[]; artists: MasteryRow[] } {
+  const movements = new Map<string, { answered: number; correct: number }>();
+  const artists = new Map<string, { answered: number; correct: number }>();
+  const bump = (m: Map<string, { answered: number; correct: number }>, key: string, ok: boolean) => {
+    const e = m.get(key) ?? { answered: 0, correct: 0 };
+    e.answered++;
+    if (ok) e.correct++;
+    m.set(key, e);
+  };
+  for (const s of sessions) {
+    if (!s.completed) continue;
+    for (const q of s.questions) {
+      const a = lookup(q.artworkIds[0]);
+      if (!a) continue;
+      if (a.movement) bump(movements, a.movement, q.correct);
+      if (a.artist) {
+        const same = [...artists.keys()].find((k) => sameArtist(k, a.artist as string));
+        bump(artists, same ?? a.artist, q.correct);
+      }
+    }
+  }
+  const rows = (m: Map<string, { answered: number; correct: number }>): MasteryRow[] =>
+    [...m]
+      .map(([label, e]) => ({ label, answered: e.answered, correct: e.correct, pct: Math.round((e.correct / e.answered) * 100) }))
+      .sort((x, y) => x.pct - y.pct || y.answered - x.answered || x.label.localeCompare(y.label));
+  return { movements: rows(movements), artists: rows(artists) };
 }
 
 const emptyTally = (): Tally => ({ points: 0, max: 0, correct: 0, questions: 0 });

@@ -74,6 +74,29 @@ const CANDIDATES = [
   ["Les Demoiselles d'Avignon", "Cubism", 3.6],
 ];
 
+// ---- batch 2: more of the canon, women artists and non-Western works (a guess that does not resolve, or is not public domain, is skipped automatically)
+CANDIDATES.push(
+  ["Marie Antoinette and Her Children", "Neoclassicism", 2.8], ["The Horse Fair", "Realism", 3], ["Self-Portrait as the Allegory of Painting", "Baroque", 2.6], ["Self-Portrait in a Straw Hat", "Neoclassicism", 2.2],
+  ["Red and White Plum Blossoms", "Rinpa school", 3], ["Along the River During the Qingming Festival", "Song dynasty art", 3.2], ["Night-Shining White", "Tang dynasty art", 2.6], ["Early Spring (painting)", "Song dynasty art", 2.8], ["Travelers Among Mountains and Streams", "Song dynasty art", 2.8], ["Jahangir Preferring a Sufi Sheikh to Kings", "Mughal painting", 2.4], ["The Dream of the Fisherman's Wife", "Ukiyo-e", 3],
+  ["Lamentation (Giotto)", "Proto-Renaissance", 2.8], ["Maestà (Duccio)", "Proto-Renaissance", 2.6], ["Holy Trinity (Masaccio)", "Early Renaissance", 2.6], ["The Battle of San Romano", "Early Renaissance", 2.4], ["Lamentation over the Dead Christ", "Early Renaissance", 2.8], ["Madonna with the Long Neck", "Mannerism", 2.8], ["An Allegory with Venus and Cupid", "Mannerism", 2.8], ["The Wedding Feast at Cana", "Venetian Renaissance", 3], ["The Origin of the Milky Way", "Mannerism", 2.4], ["Assumption of the Virgin (Titian)", "Venetian Renaissance", 2.4],
+  ["The Spinners (painting)", "Baroque", 2.4], ["Agnus Dei (Zurbarán)", "Baroque", 2.4], ["The Tower of Babel (Bruegel)", "Northern Renaissance", 3], ["The Triumph of Death", "Northern Renaissance", 2.8], ["The Syndics of the Drapers' Guild", "Baroque", 2.6], ["The Lacemaker (Vermeer)", "Baroque", 3], ["The Merry Drinker", "Baroque", 2.2], ["The Descent from the Cross (Rubens)", "Baroque", 2.6], ["The Three Graces (Rubens)", "Baroque", 2.8], ["Marriage A-la-Mode", "Rococo", 2.4], ["Mr and Mrs Andrews", "Rococo", 3], ["The Nightmare", "Romanticism", 3],
+  ["The Abbey in the Oakwood", "Romanticism", 2.2], ["The Execution of Lady Jane Grey", "Academic art", 3.2], ["The Kiss (Hayez)", "Romanticism", 3], ["Isle of the Dead (painting)", "Symbolism", 3], ["Pollice Verso", "Academic art", 2.8], ["The Roses of Heliogabalus", "Academic art", 2.4], ["The Third-Class Carriage", "Realism", 2.4], ["The Balcony (Manet)", "Realism", 2.4], ["The Execution of Emperor Maximilian", "Realism", 2.6],
+  ["Two Sisters (On the Terrace)", "Impressionism", 2.4], ["The Dance Class", "Impressionism", 2.8], ["Blue Dancers", "Impressionism", 2.2], ["The Circus (Seurat)", "Neo-Impressionism", 2.4], ["The Large Bathers", "Post-Impressionism", 2.8], ["Still Life with Apples and Oranges", "Post-Impressionism", 2.4],
+  ["La Berceuse (Van Gogh)", "Post-Impressionism", 2.6], ["Portrait of Père Tanguy", "Post-Impressionism", 2.4], ["Road with Cypress and Star", "Post-Impressionism", 2.6], ["The Red Vineyard", "Post-Impressionism", 2.6], ["Prisoners Exercising", "Post-Impressionism", 2.2], ["Spirit of the Dead Watching", "Post-Impressionism", 2.6], ["The Snake Charmer (Rousseau)", "Naïve art", 2.6], ["War (Rousseau)", "Naïve art", 2.2],
+  ["Death and Life (Klimt)", "Symbolism", 2.6], ["The Three Ages of Woman", "Symbolism", 2.4], ["Anxiety (Munch)", "Expressionism", 2.4], ["The Dance of Life", "Expressionism", 2.4], ["Embrace (Schiele)", "Expressionism", 2.4], ["Portrait of Wally", "Expressionism", 2.4], ["Christ's Entry into Brussels in 1889", "Symbolism", 2.8],
+  ["Twittering Machine", "Expressionism", 3], ["Senecio (Klee)", "Expressionism", 2.4], ["Blue Horse I", "Expressionism", 3], ["Fate of the Animals", "Expressionism", 2.2], ["Blue Nude (Souvenir de Biskra)", "Fauvism", 2.6], ["The Red Studio", "Fauvism", 2.8], ["White on White (Malevich)", "Suprematism", 2.6],
+  ["Symphony in White, No. 1", "Aestheticism", 2.4], ["The Daughters of Edward Darley Boit", "Realism", 2.6], ["Breezing Up (A Fair Wind)", "Realism", 2.4], ["The Oxbow (painting)", "Hudson River School", 2.8], ["Heart of the Andes", "Hudson River School", 2.4],
+  ["Barge Haulers on the Volga", "Russian Realism", 3], ["Reply of the Zaporozhian Cossacks", "Russian Realism", 2.6], ["Three Bogatyrs", "Russian Realism", 2.4], ["Ivan the Terrible and His Son Ivan", "Russian Realism", 2.4], ["Boyarynya Morozova", "Russian Realism", 2.2],
+  ["Madonna Litta", "High Renaissance", 2.2], ["Melencolia I", "Northern Renaissance", 3], ["Knight, Death and the Devil", "Northern Renaissance", 2.6], ["Dürer's Rhinoceros", "Northern Renaissance", 3], ["Portrait of Henry VIII (Holbein)", "Northern Renaissance", 2.8], ["Ship of Fools (painting)", "Early Netherlandish", 2.4], ["Descent from the Cross (van der Weyden)", "Early Netherlandish", 2.8], ["Madonna of Chancellor Rolin", "Early Netherlandish", 2.4],
+  // batch 3
+  ["The Last Supper (Leonardo)", "High Renaissance", 4], ["Sistine Chapel ceiling", "High Renaissance", 3.4], ["Landscape with the Fall of Icarus", "Northern Renaissance", 3], ["The Fall of the Rebel Angels", "Northern Renaissance", 2.4], ["The Blind Leading the Blind", "Northern Renaissance", 2.4],
+  ["Girl Reading a Letter at an Open Window", "Baroque", 2.8], ["The Astronomer (Vermeer)", "Baroque", 2.6], ["Officer and Laughing Girl", "Baroque", 2.4], ["The Girl with the Wine Glass", "Baroque", 2.2], ["Self-Portrait (Leyster)", "Baroque", 2.2],
+  ["Little Girl in a Blue Armchair", "Impressionism", 2.6], ["The Boating Party", "Impressionism", 2.6], ["Summer's Day (Morisot)", "Impressionism", 2.4], ["Flaming June", "Academic art", 3], ["The Birth of Venus (Cabanel)", "Academic art", 2.8], ["The Birth of Venus (Bouguereau)", "Academic art", 2.6],
+  ["Fine Wind, Clear Morning", "Ukiyo-e", 3.4], ["Plum Park in Kameido", "Ukiyo-e", 2.4], ["The Artist's Studio", "Realism", 2.4], ["The Stone Breakers", "Realism", 2.4], ["Whistlejacket", "Rococo", 2.4], ["Salisbury Cathedral from the Meadows", "Romanticism", 2.4],
+  ["Adam and Eve (Cranach)", "Northern Renaissance", 2.2], ["Tree of Life (Klimt)", "Symbolism", 2.6], ["The Large Blue Horses", "Expressionism", 2.4], ["The Tower of Blue Horses", "Expressionism", 2.6],
+  ["Mystical Nativity", "Early Renaissance", 2.2], ["The Triumph of Galatea", "High Renaissance", 2.4], ["Boy with a Basket of Fruit", "Baroque", 2.2], ["Death of the Virgin (Caravaggio)", "Baroque", 2.4], ["Conversion on the Way to Damascus (Caravaggio)", "Baroque", 2.4], ["David with the Head of Goliath (Caravaggio)", "Baroque", 2.4], ["The Fortune Teller (Caravaggio)", "Baroque", 2.2],
+);
+
 const apiCache = path.join(cache, "wiki-api");
 fs.mkdirSync(apiCache, { recursive: true });
 const keyOf = (url) => Buffer.from(url).toString("base64url").slice(-120) + "." + (url.length % 997);
@@ -193,8 +216,9 @@ for (const s of summaries) {
     rejected.push(`${s.title}: ${why}`);
     console.log("REJECT", s.title, "—", why);
   };
-  const title = enLabel(e);
-  if (!title) { reject("no English label"); continue; }
+  // English Wikipedia article title without its disambiguation suffix ("Rokeby Venus", not a Wikidata label that may be in any language)
+  const title = (s.en.title || "").replace(/\s*\([^)]*\)\s*$/, "").trim() || enLabel(e);
+  if (!title) { reject("no English title"); continue; }
   const cids = ids(e, "P170");
   if (cids.length !== 1) { reject("creator count " + cids.length); continue; }
   const c = creators[cids[0]];

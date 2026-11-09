@@ -10,10 +10,12 @@ export interface Settings {
   sound: boolean;
   /** Interface + artwork-text language. French by default for new users. */
   lang: Lang;
+  /** Optional countdown (20 s per question) in Free Play. Never applies to the Daily Challenge. */
+  timer: boolean;
 }
 
 const KEY = "museum:settings";
-const DEFAULTS: Settings = { theme: "light", sound: true, lang: DEFAULT_LANG };
+const DEFAULTS: Settings = { theme: "light", sound: true, lang: DEFAULT_LANG, timer: false };
 const listeners = new Set<() => void>();
 let cache: Settings | null = null;
 

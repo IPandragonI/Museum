@@ -1,10 +1,56 @@
-import raw from "@/data/artworks.json";
 import { createDataset } from "@/lib/game/questions";
 import type { Artwork, GameMode } from "@/lib/types";
 
-/** The curated dataset, bundled with the app (no runtime API calls). */
-export const artworks = raw as unknown as Artwork[];
-export const dataset = createDataset(artworks);
+/** French museum-text translations, keyed by artwork id / artist name (see `src/data/translations.fr.json`). */
+export interface FrArtwork {
+  description?: string;
+  didYouKnow?: string[];
+  /** French biography for works whose creator bio comes from Wikipedia (keyed per artwork). */
+  artistBio?: string;
+}
+export interface FrData {
+  artworks: Record<string, FrArtwork>;
+  artists: Record<string, string>;
+}
+
+/**
+ * The curated dataset. It is NOT bundled into the JavaScript of every page: the two JSON files are fetched once
+ * (`/data/*.json`, pre-cached by the service worker so they also work offline) and installed with `setData`.
+ * These are live bindings: components rendered below <DataGate/> can read them synchronously.
+ */
+export let artworks: Artwork[] = [];
+export let dataset = createDataset([]);
+export let frTranslations: FrData = { artworks: {}, artists: {} };
+
+let loaded = false;
+let pending: Promise<void> | null = null;
+
+export function isDataLoaded(): boolean {
+  return loaded;
+}
+
+/** Install the data (used by `loadData` in the browser and directly by the tests). */
+export function setData(rawArtworks: unknown, rawTranslations: unknown): void {
+  artworks = rawArtworks as Artwork[];
+  dataset = createDataset(artworks);
+  frTranslations = rawTranslations as FrData;
+  loaded = true;
+}
+
+/** Fetch the dataset once; concurrent callers share one request, a failure can be retried. */
+export function loadData(): Promise<void> {
+  if (loaded) return Promise.resolve();
+  pending ??= (async () => {
+    try {
+      const [a, tr] = await Promise.all([fetch("/data/artworks.json"), fetch("/data/translations.fr.json")]);
+      if (!a.ok || !tr.ok) throw new Error(`data ${a.status}/${tr.status}`);
+      setData(await a.json(), await tr.json());
+    } finally {
+      pending = null;
+    }
+  })();
+  return pending;
+}
 
 export function getArtwork(id: string): Artwork | undefined {
   return dataset.byId.get(id);

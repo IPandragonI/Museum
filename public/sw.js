@@ -8,11 +8,11 @@
  *  - other:     network-first with cache fallback; navigations fall back to /offline.html.
  *  Game progress lives in IndexedDB, so it is untouched by any of this.
  */
-const VERSION = "v3";
+const VERSION = "v4-202611091551"; // replaced with a build stamp by scripts/sync-data.mjs, so every deploy is detected as an update
 const SHELL = "museum-shell-" + VERSION;
 const ART = "museum-art-v2";
-const ROUTES = ["/", "/daily/", "/collection/", "/stats/", "/settings/", "/play/guess/", "/play/detail/", "/play/artist/", "/play/movement/"];
-const EXTRA = ["/offline.html", "/manifest.webmanifest", "/icons/icon.svg", "/icons/icon-192.png", "/icons/icon-512.png"];
+const ROUTES = ["/", "/daily/", "/collection/", "/stats/", "/settings/", "/play/guess/", "/play/detail/", "/play/artist/", "/play/movement/", "/play/mix/", "/credits/"];
+const EXTRA = ["/data/artworks.json", "/data/translations.fr.json", "/offline.html", "/manifest.webmanifest", "/icons/icon.svg", "/icons/icon-192.png", "/icons/icon-512.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -34,9 +34,15 @@ self.addEventListener("install", (event) => {
         }),
       );
       await Promise.all([...assets].map((a) => cache.add(a).catch(() => undefined)));
-      await self.skipWaiting();
+      // No automatic skipWaiting: an open page keeps running with the files it loaded. The page shows
+      // "new version available" and asks us to take over (message below). On a first install there is no
+      // older worker, so this one activates by itself.
     })(),
   );
+});
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") self.skipWaiting();
 });
 
 self.addEventListener("activate", (event) => {

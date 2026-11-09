@@ -44,6 +44,7 @@ export function Intro({ mode, difficulty, count, onStart }: Props) {
         <p className="mt-3 text-sm text-muted">
           {t(`diff.${d}.name`)} : {t(`diff.${d}.blurb`)}
         </p>
+        {mode === "guess" && d === "expert" ? <p className="mt-2 text-sm text-muted">{t("guess.expertNote")}</p> : null}
       </div>
       <button type="button" onClick={() => onStart(d)} className="btn btn-primary mt-8 w-full sm:w-auto" autoFocus>
         {t("intro.start")}

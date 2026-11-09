@@ -1,18 +1,23 @@
 import { describe, expect, it } from "vitest";
-import { dataset } from "@/lib/data";
+import { dataset, setData } from "@/lib/data";
 import { DIFFICULTIES, HINT_COST } from "@/lib/game/config";
 import { computeStreaks, emptyDailyRecord, generateDailyChallenge, isDailyComplete, normalizeDailyRecord, previousDate, utcDateString } from "@/lib/game/daily";
-import { generateFreePlay, generateQuestions, questionArtworkIds } from "@/lib/game/questions";
+import { generateFreePlay, generateQuestions, hintEliminated, norm, questionArtworkIds, sameArtist, samePerson } from "@/lib/game/questions";
 import { movementsRelated } from "@/lib/game/movements";
-import { guessPoints } from "@/lib/game/scoring";
+import { bestStreak, currentStreak, guessPoints } from "@/lib/game/scoring";
+import { movementNote } from "@/lib/i18n/movementNotes";
 import { createRng } from "@/lib/rng";
-import { computeStats } from "@/lib/stats";
+import { computeMastery, computeStats, missedArtworks } from "@/lib/stats";
 import fs from "node:fs";
 import path from "node:path";
 import { en } from "@/lib/i18n/en";
 import { fr } from "@/lib/i18n/fr";
 import { dateLabel, movementLabel, t, tn } from "@/lib/i18n";
 import type { ChoiceQuestion, DailyRecord, GameSession } from "@/lib/types";
+
+// The app fetches its data at runtime; the tests install the same files directly.
+const readData = (f: string) => JSON.parse(fs.readFileSync(path.resolve(__dirname, "../src/data", f), "utf8"));
+setData(readData("artworks.json"), readData("translations.fr.json"));
 
 describe("dataset quality", () => {
   it("has a meaningful number of unique artworks with valid core fields", () => {
@@ -278,5 +283,90 @@ describe("compatibility with games saved before the redesign", () => {
     const stats = computeStats([old], [], "2026-11-09");
     expect(stats.gamesPlayed).toBe(1);
     expect(stats.accuracy).toBe(25);
+  });
+});
+
+describe("game features", () => {
+  const ids = dataset.artworks.map((a) => a.id);
+  const result = (id: string, correct: boolean): GameSession["questions"][number] => ({ artworkIds: [id], correctArtworkIds: correct ? [id] : [], correct, points: correct ? 100 : 0, maxPoints: 100, answer: id });
+  const sess = (mode: GameSession["mode"], at: string, qs: GameSession["questions"]): GameSession => ({ id: at + mode, mode, difficulty: "easy", kind: "free", startedAt: at, completedAt: at, completed: true, questions: qs });
+
+  it("the Guess hint removes exactly two wrong options, deterministically, never the right one", () => {
+    for (const q of generateQuestions(dataset, "guess", { count: 10, difficulty: "easy" }, createRng(5)) as ChoiceQuestion[]) {
+      const gone = hintEliminated(q);
+      expect(gone.size).toBe(2);
+      expect(gone.has(q.correctId)).toBe(false);
+      expect([...hintEliminated(q)]).toEqual([...gone]);
+    }
+  });
+
+  it("streak helpers count consecutive correct answers", () => {
+    const r = (c: boolean) => ({ correct: c });
+    expect(currentStreak([r(true), r(false), r(true), r(true)])).toBe(2);
+    expect(currentStreak([r(true), r(false)])).toBe(0);
+    expect(bestStreak([r(true), r(true), r(false), r(true), r(true), r(true)])).toBe(3);
+  });
+
+  it("review mode only asks the artworks it is given", () => {
+    const only = new Set(ids.filter((id) => dataset.byId.get(id)?.quiz.movement).slice(0, 12));
+    const qs = generateFreePlay(dataset, "movement", "intermediate", 3, undefined, only);
+    expect(qs.length).toBeGreaterThan(0);
+    for (const q of qs) expect(only.has(q.artworkId)).toBe(true);
+  });
+
+  it("missedArtworks keeps only works whose latest attempt was wrong", () => {
+    const sessions = [sess("guess", "2026-11-01T10:00:00Z", [result("a", false), result("b", false), result("c", true)]), sess("guess", "2026-11-02T10:00:00Z", [result("b", true), result("d", false)]), sess("artist", "2026-11-03T10:00:00Z", [result("e", false)])];
+    expect(missedArtworks(sessions, "guess")).toEqual(["a", "d"]);
+    expect(missedArtworks(sessions, "artist")).toEqual(["e"]);
+    expect(missedArtworks(sessions, "movement")).toEqual([]);
+  });
+
+  it("mastery groups by movement and merges spelling variants of one artist", () => {
+    const info: Record<string, { movement: string | null; artist: string | null }> = {
+      a: { movement: "Baroque", artist: "Francisco de Goya" },
+      b: { movement: "Baroque", artist: "Francisco Goya" },
+      c: { movement: "Realism", artist: null },
+    };
+    const m = computeMastery([sess("guess", "2026-11-01T10:00:00Z", [result("a", true), result("b", false), result("c", true)])], (id) => info[id]);
+    expect(m.movements.find((r) => r.label === "Baroque")).toMatchObject({ answered: 2, correct: 1, pct: 50 });
+    expect(m.artists).toHaveLength(1);
+    expect(m.artists[0]).toMatchObject({ answered: 2, correct: 1 });
+    expect(m.movements[0].pct).toBeLessThanOrEqual(m.movements[m.movements.length - 1].pct); // weakest first
+  });
+
+  it("statistics never merge two different artists", () => {
+    expect(sameArtist("Francisco de Goya", "Francisco Goya")).toBe(true);
+    expect(sameArtist("Rembrandt", "Rembrandt van Rijn")).toBe(true);
+    expect(sameArtist("Raphael", "Anton Raphael Mengs")).toBe(false);
+    expect(sameArtist("Paul Gauguin", "Paul Cézanne")).toBe(false);
+  });
+  it("recognises the same artist under another spelling", () => {
+    expect(samePerson("Francisco de Goya", "Francisco Goya")).toBe(true);
+    expect(samePerson("Rembrandt", "Rembrandt van Rijn")).toBe(true);
+    expect(samePerson("Paul Cezanne", "Paul Cézanne")).toBe(true);
+    expect(samePerson("Claude Monet", "Édouard Manet")).toBe(false);
+  });
+
+  it("artist questions get well-formed wrong answers from a pool wider than the collection", () => {
+    const own = new Set(dataset.artworks.map((a) => norm(a.artist ?? "")));
+    let outside = 0;
+    let total = 0;
+    for (const mode of ["easy", "intermediate", "expert"] as const)
+      for (const q of generateQuestions(dataset, "artist", { count: 10, difficulty: mode }, createRng(11)) as ChoiceQuestion[]) {
+        const names = q.options.map((o) => o.label);
+        for (let x = 0; x < names.length; x++) for (let y = x + 1; y < names.length; y++) expect(samePerson(names[x], names[y]), names.join(" / ")).toBe(false);
+        for (const o of q.options) if (o.id !== q.correctId) {
+          total++;
+          if (!own.has(norm(o.label))) outside++;
+        }
+      }
+    expect(total).toBeGreaterThan(0);
+    expect(outside).toBeGreaterThan(0); // reference artists do appear
+  });
+
+  it("every movement offered in the data has an explanation in both languages", () => {
+    const labels = new Set(dataset.artworks.map((a) => a.movement).filter((m): m is string => !!m));
+    const missing = [...labels].filter((m) => !movementNote("en", m) || !movementNote("fr", m));
+    expect(missing).toEqual([]);
   });
 });

@@ -1,0 +1,107 @@
+import type { Lang } from "./index";
+
+/**
+ * One-line explanation of each artistic movement / tradition, shown after a "Which Movement?" answer so the
+ * player learns why the work belongs there. Keyed by the English label stored in the dataset.
+ * These are short general-knowledge summaries written for this app (dates are approximate).
+ */
+const NOTES: Record<string, { en: string; fr: string }> = {
+  Baroque: { en: "Dramatic, richly contrasted art of the 17th century, full of movement and emotion, born in Catholic Europe.", fr: "Art théâtral et contrasté du XVIIᵉ siècle, plein de mouvement et d’émotion, né dans l’Europe catholique." },
+  Romanticism: { en: "Early 19th century: emotion, nature and the sublime matter more than reason and order.", fr: "Début du XIXᵉ siècle, où l’émotion, la nature et le sublime l’emportent sur la raison et l’ordre." },
+  Realism: { en: "Mid-19th century: ordinary people and everyday life, painted as they really are, without idealisation.", fr: "Milieu du XIXᵉ siècle, où l’on peint les gens ordinaires et la vie quotidienne tels qu’ils sont, sans les idéaliser." },
+  "Post-Impressionism": { en: "After 1886, artists such as Van Gogh, Cézanne and Gauguin used colour and form for expression and structure, going beyond fleeting impressions.", fr: "Après 1886, des artistes comme Van Gogh, Cézanne et Gauguin emploient la couleur et la forme pour exprimer et structurer, au-delà de l’impression fugitive." },
+  Impressionism: { en: "From the 1870s, quick brushwork and colour capture fleeting light and modern life, often painted outdoors.", fr: "À partir des années 1870, une touche rapide et la couleur saisissent la lumière fugitive et la vie moderne, souvent peintes en plein air." },
+  Neoclassicism: { en: "Late 18th to early 19th century: clarity, order and subjects borrowed from ancient Greece and Rome.", fr: "Fin du XVIIIᵉ et début du XIXᵉ siècle, avec clarté, ordre et sujets empruntés à la Grèce et à Rome antiques." },
+  Rococo: { en: "Light, ornate and playful 18th-century art, with pastel colours and curving forms, born in the French court.", fr: "Art léger, orné et enjoué du XVIIIᵉ siècle, aux tons pastel et aux formes courbes, né à la cour de France." },
+  "High Renaissance": { en: "Early 16th-century Italy at the peak of the Renaissance: harmony, balance and idealised figures.", fr: "L’Italie du début du XVIᵉ siècle, au sommet de la Renaissance, avec harmonie, équilibre et figures idéalisées." },
+  "Northern Renaissance": { en: "The Renaissance north of the Alps: minutely detailed oil painting and close observation of the real world.", fr: "La Renaissance au nord des Alpes, avec une peinture à l’huile très détaillée et une observation attentive du monde réel." },
+  "Ukiyo-e": { en: "Japanese woodblock prints and paintings (17th–19th centuries) of “the floating world”: actors, beauties and landscapes.", fr: "Estampes et peintures japonaises (XVIIᵉ–XIXᵉ siècles) du « monde flottant », avec acteurs, beautés et paysages." },
+  "Hudson River School": { en: "19th-century American landscape painters celebrating the grandeur of the wilderness.", fr: "Peintres paysagistes américains du XIXᵉ siècle célébrant la grandeur de la nature sauvage." },
+  "Early Renaissance": { en: "15th-century Italy, when perspective, anatomy and the study of antiquity were rediscovered.", fr: "L’Italie du XVᵉ siècle, qui redécouvre la perspective, l’anatomie et l’étude de l’Antiquité." },
+  Mannerism: { en: "Mid-16th century: elongated figures, artificial poses and complex compositions that depart from Renaissance harmony.", fr: "Milieu du XVIᵉ siècle, avec figures étirées, poses artificielles et compositions complexes qui s’éloignent de l’harmonie de la Renaissance." },
+  "Dutch Golden Age": { en: "17th-century Dutch painting of portraits, landscapes, still lifes and daily life, made for a new middle-class public.", fr: "Peinture néerlandaise du XVIIᵉ siècle (portraits, paysages, natures mortes, scènes de vie), faite pour un nouveau public bourgeois." },
+  "Early photography": { en: "The first decades of photography, when the process itself was still being invented.", fr: "Les premières décennies de la photographie, quand le procédé lui-même était encore en train d’être inventé." },
+  "Venetian Renaissance": { en: "The Renaissance in Venice, where colour and light mattered more than drawn line.", fr: "La Renaissance à Venise, où la couleur et la lumière comptent plus que le trait dessiné." },
+  "Neo-Impressionism": { en: "Seurat and Signac’s method of building a picture from small dots of pure colour, based on the science of optics.", fr: "La méthode de Seurat et Signac, qui construit l’image avec de petits points de couleur pure, selon la science de l’optique." },
+  Expressionism: { en: "Early 20th century: distorted forms and intense colours express inner feeling rather than outward appearance.", fr: "Début du XXᵉ siècle, où formes déformées et couleurs intenses expriment le sentiment intérieur plutôt que l’apparence." },
+  Aestheticism: { en: "Late 19th-century “art for art’s sake”: beauty matters more than any moral or story.", fr: "L’« art pour l’art » de la fin du XIXᵉ siècle, où la beauté compte plus que toute morale ou histoire." },
+  Symbolism: { en: "Late 19th century: dreams, myths and ideas suggested through symbols, in reaction to realism.", fr: "Fin du XIXᵉ siècle, où rêves, mythes et idées sont suggérés par des symboles, en réaction au réalisme." },
+  "Naïve art": { en: "Self-taught painters with simple forms, bright colours and a fresh, direct vision.", fr: "Peintres autodidactes aux formes simples, aux couleurs vives et au regard frais et direct." },
+  "Veduta painting": { en: "Precisely detailed views of cities, especially Venice, popular in 18th-century Italy.", fr: "Vues de villes très précises, surtout de Venise, populaires dans l’Italie du XVIIIᵉ siècle." },
+  "Egyptian art (New Kingdom)": { en: "Ancient Egypt, about 1550–1070 BCE: formal, idealised figures following a strict artistic code.", fr: "L’Égypte ancienne, vers 1550–1070 av. J.-C., avec des figures formelles et idéalisées selon un code artistique strict." },
+  "Early Netherlandish": { en: "15th-century Flanders: pioneers of oil painting, with astonishing detail and realism.", fr: "La Flandre du XVᵉ siècle, pionnière de la peinture à l’huile, d’un détail et d’un réalisme saisissants." },
+  "Barbizon school": { en: "Mid-19th-century French painters who worked in and around the forest of Fontainebleau, painting nature directly.", fr: "Peintres français du milieu du XIXᵉ siècle qui travaillaient dans et autour de la forêt de Fontainebleau, face à la nature." },
+  Luminism: { en: "American landscape painting focused on calm, glowing light and still water.", fr: "Paysage américain centré sur une lumière calme et rayonnante et sur l’eau immobile." },
+  "Documentary photography": { en: "Photography that records real life and social conditions as testimony.", fr: "Photographie qui consigne la vie réelle et les conditions sociales comme témoignage." },
+  "Modern sculpture": { en: "Sculpture from the late 19th and 20th centuries that breaks with academic tradition.", fr: "Sculpture de la fin du XIXᵉ et du XXᵉ siècle, qui rompt avec la tradition académique." },
+  Pictorialism: { en: "Photography treated as fine art, with soft focus and worked prints, about 1885–1915.", fr: "Photographie traitée comme un art, avec flou artistique et tirages retravaillés, vers 1885–1915." },
+  "American Impressionism": { en: "American painters who took up Impressionist light and brushwork, about 1880–1920.", fr: "Peintres américains qui adoptent la lumière et la touche impressionnistes, vers 1880–1920." },
+  "Gothic art": { en: "Medieval art of the 12th–15th centuries tied to cathedrals: stained glass, pointed forms, expressive figures.", fr: "Art médiéval des XIIᵉ–XVᵉ siècles lié aux cathédrales, avec vitraux, formes en pointe et figures expressives." },
+  Tonalism: { en: "Late 19th-century American landscapes in soft, misty harmonies of one dominant tone.", fr: "Paysages américains de la fin du XIXᵉ siècle, en harmonies douces et brumeuses d’un ton dominant." },
+  "Roman art": { en: "Art of ancient Rome: realistic portraits, narrative reliefs, mosaics and wall paintings.", fr: "Art de la Rome antique, avec portraits réalistes, reliefs narratifs, mosaïques et peintures murales." },
+  "Romanesque art": { en: "Medieval art of about 1000–1200: solid, stylised forms in churches and manuscripts.", fr: "Art médiéval d’environ 1000–1200, aux formes massives et stylisées, dans les églises et les manuscrits." },
+  "Pahari painting": { en: "Delicate, lyrical miniature painting from the Himalayan foothill kingdoms of India (17th–19th centuries).", fr: "Miniatures délicates et lyriques des royaumes de l’Himalaya indien (XVIIᵉ–XIXᵉ siècles)." },
+  "Muromachi-period art": { en: "Japanese art of about 1336–1573, marked by ink painting influenced by Zen Buddhism.", fr: "Art japonais d’environ 1336–1573, marqué par la peinture à l’encre influencée par le bouddhisme zen." },
+  "Qing dynasty art": { en: "Chinese art of 1644–1912, known for refined craftsmanship and technical virtuosity.", fr: "Art chinois de 1644–1912, réputé pour son artisanat raffiné et sa virtuosité technique." },
+  "Seljuq art": { en: "Art of the Seljuq Turks (11th–13th centuries) in Iran and Anatolia, famed for ceramics and metalwork.", fr: "Art des Turcs seldjoukides (XIᵉ–XIIIᵉ siècles) en Iran et en Anatolie, réputé pour ses céramiques et ses métaux." },
+  "Etruscan art": { en: "Art of the Etruscans of central Italy before Rome’s rise: lively terracotta, bronzes and tomb paintings.", fr: "Art des Étrusques d’Italie centrale avant l’essor de Rome, avec terres cuites vivantes, bronzes et peintures funéraires." },
+  "Danube school": { en: "Early 16th-century painters of the Danube region who made landscape expressive and emotional.", fr: "Peintres du début du XVIᵉ siècle dans la région du Danube, qui rendent le paysage expressif et émotionnel." },
+  "Kamakura-period art": { en: "Japanese art of 1185–1333: vigorous, realistic sculpture and painting of the warrior era.", fr: "Art japonais de 1185–1333, avec une sculpture et une peinture vigoureuses et réalistes à l’époque des guerriers." },
+  "Archaic Greek art": { en: "Greek art of about 700–480 BCE: stiff, smiling statues and black-figure vases.", fr: "Art grec d’environ 700–480 av. J.-C., avec statues raides et souriantes et vases à figures noires." },
+  "Late Gothic": { en: "Late medieval art of the 14th–15th centuries, with refined elegance and growing realism.", fr: "Art de la fin du Moyen Âge (XIVᵉ–XVᵉ siècles), d’une élégance raffinée et d’un réalisme croissant." },
+  "American Realism": { en: "American painters who showed everyday city and country life honestly, late 19th to early 20th century.", fr: "Peintres américains qui montrent honnêtement la vie quotidienne, en ville et à la campagne, de la fin du XIXᵉ au début du XXᵉ siècle." },
+  "Second Empire sculpture": { en: "French sculpture under Napoleon III (1852–1870): lively, naturalistic and richly decorative.", fr: "Sculpture française sous Napoléon III (1852–1870), vivante, naturaliste et richement décorative." },
+  "Academic art": { en: "Art taught and rewarded by official academies: polished technique, with history and mythological subjects.", fr: "Art enseigné et récompensé par les académies officielles, à la technique soignée, avec sujets d’histoire et de mythologie." },
+  "19th-century portrait photography": { en: "Studio portraits of the 19th century, when having your likeness taken became affordable.", fr: "Portraits de studio du XIXᵉ siècle, quand se faire tirer le portrait devient abordable." },
+  "Victorian photography": { en: "Photography in Britain under Queen Victoria (1837–1901).", fr: "La photographie en Grande-Bretagne sous la reine Victoria (1837–1901)." },
+  Sentimentalism: { en: "Art that appeals to tender feelings, often with domestic or moral scenes.", fr: "Art qui touche les sentiments tendres, souvent par des scènes domestiques ou morales." },
+  "Northern Mannerism": { en: "Mannerism in northern Europe: an elegant, artificial and learned style, about 1580–1610.", fr: "Le maniérisme en Europe du Nord, style élégant, artificiel et érudit, vers 1580–1610." },
+  "Northern Dynasties art": { en: "Chinese art of the 4th–6th centuries, above all Buddhist sculpture.", fr: "Art chinois des IVᵉ–VIᵉ siècles, surtout la sculpture bouddhique." },
+  "Ottoman art": { en: "Art of the Ottoman Empire (about 1300–1922): calligraphy, ceramics, textiles and miniatures.", fr: "Art de l’Empire ottoman (vers 1300–1922), avec calligraphie, céramiques, textiles et miniatures." },
+  "Ancient Greek art": { en: "Art of ancient Greece, in search of ideal proportions and harmony.", fr: "Art de la Grèce antique, en quête de proportions idéales et d’harmonie." },
+  "Rajput painting": { en: "Courtly miniature painting of the Rajput kingdoms of India (16th–19th centuries).", fr: "Miniatures de cour des royaumes rajputs de l’Inde (XVIᵉ–XIXᵉ siècles)." },
+  "Champa art": { en: "Art of the Cham kingdoms of central and southern Vietnam, mostly Hindu sculpture.", fr: "Art des royaumes chams du centre et du sud du Vietnam, surtout une sculpture hindoue." },
+  "Neo-Assyrian art": { en: "Art of the Assyrian empire (about 911–609 BCE): palace reliefs of kings, hunts and wars.", fr: "Art de l’empire assyrien (vers 911–609 av. J.-C.), avec des reliefs de palais montrant rois, chasses et guerres." },
+  "Asuka-period art": { en: "Japan’s earliest Buddhist art, 6th–7th centuries, influenced by Korea and China.", fr: "Les plus anciens arts bouddhiques du Japon (VIᵉ–VIIᵉ siècles), influencés par la Corée et la Chine." },
+  Modernism: { en: "The early 20th-century break with tradition and search for new forms.", fr: "La rupture avec la tradition au début du XXᵉ siècle et la recherche de formes nouvelles." },
+  "Ming dynasty art": { en: "Chinese art of 1368–1644: porcelain, scholar painting and refined decorative arts.", fr: "Art chinois de 1368–1644, avec porcelaines, peinture de lettrés et arts décoratifs raffinés." },
+  "Egyptian art (Middle Kingdom)": { en: "Ancient Egypt, about 2050–1700 BCE: refined jewellery and sculpture, with more individual royal portraits.", fr: "L’Égypte ancienne, vers 2050–1700 av. J.-C., avec bijoux et sculptures raffinés et des portraits royaux plus individualisés." },
+  "Heian-period art": { en: "Japanese art of 794–1185: elegant court culture, with Buddhist painting and sculpture.", fr: "Art japonais de 794–1185, d’une culture de cour élégante, avec peinture et sculpture bouddhiques." },
+  "Teotihuacan art": { en: "Art of the great city of Teotihuacan in central Mexico (about 100–550 CE): murals and geometric masks.", fr: "Art de la grande cité de Teotihuacan, au centre du Mexique (vers 100–550), avec peintures murales et masques géométriques." },
+  "Trompe-l'œil": { en: "Painting designed to fool the eye into seeing real objects.", fr: "Peinture conçue pour tromper l’œil et faire croire à des objets réels." },
+  "Early Christian art": { en: "Art of the first Christians (3rd–6th centuries): catacomb paintings, mosaics and sarcophagi.", fr: "Art des premiers chrétiens (IIIᵉ–VIᵉ siècles), avec peintures de catacombes, mosaïques et sarcophages." },
+  "Maya art": { en: "Art of the Maya of Mesoamerica: carved stelae, painted ceramics and hieroglyphs.", fr: "Art des Mayas de Mésoamérique, avec stèles sculptées, céramiques peintes et hiéroglyphes." },
+  "Indian Buddhist art": { en: "Early art of India’s Buddhist tradition, including sculpture of the Buddha and his life.", fr: "Premier art de la tradition bouddhique indienne, dont la sculpture du Bouddha et de sa vie." },
+  "Roman Egyptian art": { en: "Art of Egypt under Roman rule, mixing Egyptian and Greco-Roman styles, as in mummy portraits.", fr: "Art de l’Égypte sous domination romaine, mêlant styles égyptien et gréco-romain, comme dans les portraits de momies." },
+  "Hittite art": { en: "Art of the Hittite empire in Anatolia (2nd millennium BCE): rock reliefs and seals.", fr: "Art de l’empire hittite en Anatolie (IIᵉ millénaire av. J.-C.), avec reliefs rupestres et sceaux." },
+  "Maruyama school": { en: "A Japanese painting school of the 18th century known for naturalistic, observed painting.", fr: "École de peinture japonaise du XVIIIᵉ siècle, connue pour sa peinture naturaliste, d’après nature." },
+  "Chola art": { en: "South Indian art of the Chola dynasty (9th–13th centuries), famed for its bronze sculptures.", fr: "Art du sud de l’Inde sous la dynastie des Chola (IXᵉ–XIIIᵉ siècles), célèbre pour ses sculptures en bronze." },
+  "Rinpa school": { en: "A Japanese decorative school of bold design, gold leaf and nature motifs.", fr: "École décorative japonaise au dessin audacieux, à la feuille d’or et aux motifs de nature." },
+  "Akan art": { en: "Art of the Akan peoples of West Africa (Ghana): gold weights, textiles and sculpture.", fr: "Art des peuples akan d’Afrique de l’Ouest (Ghana), avec poids à peser l’or, textiles et sculptures." },
+  "Medieval Italian painting": { en: "Italian painting before the Renaissance, with gold backgrounds and flat, sacred figures.", fr: "Peinture italienne d’avant la Renaissance, aux fonds d’or et aux figures sacrées plates." },
+  "Tang dynasty art": { en: "Chinese art of 618–907: confident and cosmopolitan, famed for horses and figure painting.", fr: "Art chinois de 618–907, sûr de lui et cosmopolite, célèbre pour ses chevaux et sa peinture de figures." },
+  "Luba art": { en: "Art of the Luba kingdom in Central Africa: finely carved stools, staffs and memory boards.", fr: "Art du royaume luba en Afrique centrale, avec tabourets, bâtons et planches mnémoniques finement sculptés." },
+  "Songye art": { en: "Art of the Songye people of Central Africa: powerful masks and power figures.", fr: "Art du peuple songye d’Afrique centrale, avec masques et figures de pouvoir puissants." },
+  "Central African art": { en: "Sculpture and masks of the peoples of Central Africa, made for ritual and social life.", fr: "Sculptures et masques des peuples d’Afrique centrale, créés pour la vie rituelle et sociale." },
+  "Ilkhanid art": { en: "Art of the Mongol Ilkhanid dynasty of Iran (1256–1335), mixing Persian and Chinese influences.", fr: "Art de la dynastie mongole des Ilkhanides en Iran (1256–1335), mêlant influences persanes et chinoises." },
+  "American Colonial": { en: "Art of colonial America before independence, often portraits of the local elite.", fr: "Art de l’Amérique coloniale avant l’indépendance, souvent des portraits de l’élite locale." },
+  "Pre-Raphaelite": { en: "Mid-19th-century British painters who turned back to medieval detail, bright colour and literary themes.", fr: "Peintres britanniques du milieu du XIXᵉ siècle qui reviennent au détail médiéval, aux couleurs vives et aux thèmes littéraires." },
+  Fauvism: { en: "Early 20th century “wild beasts”: pure, bold, unrealistic colours.", fr: "Les « fauves » du début du XXᵉ siècle, aux couleurs pures, audacieuses et irréalistes." },
+  Cubism: { en: "Subjects broken into geometric shapes seen from several angles at once.", fr: "Des sujets décomposés en formes géométriques vues sous plusieurs angles à la fois." },
+  Suprematism: { en: "Russian abstract art of pure geometric forms, founded by Kazimir Malevich in 1915.", fr: "Art abstrait russe de formes géométriques pures, fondé par Kazimir Malevitch en 1915." },
+  "Russian Realism": { en: "19th-century Russian painters who showed the life and struggles of ordinary people and the nation’s history.", fr: "Peintres russes du XIXᵉ siècle qui montrent la vie et les épreuves des gens ordinaires ainsi que l’histoire de la nation." },
+  "Proto-Renaissance": { en: "Late 13th–14th century Italy: the first steps toward natural space and emotion, as in Giotto’s work.", fr: "L’Italie de la fin du XIIIᵉ et du XIVᵉ siècle, avec les premiers pas vers l’espace naturel et l’émotion, comme chez Giotto." },
+  "Mughal painting": { en: "Court miniature painting of India’s Mughal empire (16th–19th centuries), blending Persian and Indian traditions.", fr: "Miniatures de cour de l’empire moghol en Inde (XVIᵉ–XIXᵉ siècles), mêlant traditions persane et indienne." },
+  "Song dynasty art": { en: "Chinese art of 960–1279: a golden age of landscape painting in ink, and refined ceramics.", fr: "Art chinois de 960–1279, âge d’or du paysage à l’encre et des céramiques raffinées." },
+};
+
+/** The one-line explanation of a movement in the active language, or null when none is written. */
+export function movementNote(lang: Lang, label: string | null): string | null {
+  const n = label ? NOTES[label] : undefined;
+  return n ? n[lang] : null;
+}
+
+/** Labels that have an explanation (used by the tests to make sure every offered movement is covered). */
+export function movementNoteLabels(): string[] {
+  return Object.keys(NOTES);
+}

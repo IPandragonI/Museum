@@ -1,18 +1,24 @@
 "use client";
 
-import { Check, GalleryVertical, Home, RotateCcw, X } from "lucide-react";
+import { Check, GalleryVertical, Home, ListRestart, RotateCcw, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { ArtImage } from "@/components/ui/ArtImage";
 import { getArtwork } from "@/lib/data";
-import { percent, sumMax, sumPoints } from "@/lib/game/scoring";
+import { bestStreak, percent, sumMax, sumPoints } from "@/lib/game/scoring";
 import { useI18n } from "@/lib/i18n/useI18n";
 import { playSound } from "@/lib/sound";
 import type { Difficulty, GameMode, QuestionResult } from "@/lib/types";
 import { ArtworkDialog } from "./ArtworkDialog";
 
 interface Props {
-  mode: GameMode;
+  /** A single mode, or "mix" (3 questions of each mode in a row). */
+  mode: GameMode | "mix";
+  /** In a mix: the mode of each question, to label the rows. */
+  rowModes?: GameMode[];
+  /** Link that replays only the artworks still missed in this mode, and how many there are. */
+  reviewHref?: string;
+  reviewCount?: number;
   difficulty: Difficulty;
   results: QuestionResult[];
   /** Artworks newly added to the collection by this game. */
@@ -25,7 +31,7 @@ interface Props {
   backHref: string;
 }
 
-export function ResultsView({ mode, difficulty, results, newIds, collectionIds, daily, onReplay, backHref }: Props) {
+export function ResultsView({ mode, rowModes, reviewHref, reviewCount = 0, difficulty, results, newIds, collectionIds, daily, onReplay, backHref }: Props) {
   const i = useI18n();
   const { t, num } = i;
   const points = sumPoints(results);
@@ -39,9 +45,14 @@ export function ResultsView({ mode, difficulty, results, newIds, collectionIds, 
   }, []);
 
   const rows = useMemo(
-    () => results.map((r, k) => ({ id: r.artworkIds[0], ok: r.correct, note: mode === "guess" && r.hint ? t("res.hintUsed") : t("res.question", { n: k + 1 }), points: r.points })),
-    [mode, results, t],
+    () =>
+      results.map((r, k) => {
+        const base = r.hint ? t("res.hintUsed") : r.answer === "timeout" ? t("res.timeUp") : t("res.question", { n: k + 1 });
+        return { id: r.artworkIds[0], ok: r.correct, note: rowModes?.[k] ? `${t(`mode.${rowModes[k]}.name`)} · ${base}` : base, points: r.points };
+      }),
+    [results, rowModes, t],
   );
+  const streak = bestStreak(results);
 
   const headline = pct === 100 ? t("res.headline.perfect") : pct >= 70 ? t("res.headline.great") : pct >= 40 ? t("res.headline.good") : t("res.headline.low");
   const kind = daily ? t("res.kind.daily") : t(`diff.${difficulty}.name`);
@@ -66,10 +77,16 @@ export function ResultsView({ mode, difficulty, results, newIds, collectionIds, 
               <dd className="display mt-1 text-3xl">{pct} %</dd>
             </div>
           </dl>
+          {streak >= 2 ? <p className="mt-4 text-sm text-muted">{t("res.bestStreak", { n: streak })}</p> : null}
           <p className="mt-6 text-sm text-muted" role="status">
             {newIds.size ? i.tn("res.added", newIds.size) : t("res.none")}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
+            {reviewHref ? (
+              <Link href={reviewHref} className="btn btn-ghost">
+                <ListRestart size={16} aria-hidden /> {i.tn("res.review", reviewCount)}
+              </Link>
+            ) : null}
             {!daily && onReplay ? (
               <button type="button" onClick={onReplay} className="btn btn-primary">
                 <RotateCcw size={16} aria-hidden /> {t("res.again")}

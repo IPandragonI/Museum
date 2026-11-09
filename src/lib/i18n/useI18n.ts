@@ -1,22 +1,11 @@
 "use client";
 
 import { useMemo } from "react";
-import translations from "@/data/translations.fr.json";
+import { frTranslations } from "@/lib/data";
 import { useSettings } from "@/lib/settings";
 import type { Artwork, Category } from "@/lib/types";
+import { movementNote } from "./movementNotes";
 import { dateLabel, formatBytes, formatDateLong, formatNumber, mediumLabel, movementLabel, periodLabel, t, tn, type Lang, type MessageKey } from "./index";
-
-interface FrArtwork {
-  description?: string;
-  didYouKnow?: string[];
-  /** French biography for works whose creator bio comes from Wikipedia (keyed per artwork). */
-  artistBio?: string;
-}
-interface FrData {
-  artworks: Record<string, FrArtwork>;
-  artists: Record<string, string>;
-}
-const FR = translations as unknown as FrData;
 
 export interface LocalizedArtwork {
   description: string;
@@ -40,6 +29,8 @@ export function useI18n() {
       dateLong: (iso: string) => formatDateLong(L, iso),
       category: (c: Category) => t(L, `cat.${c}` as MessageKey),
       movement: (m: string | null) => movementLabel(L, m),
+      /** One-line explanation of a movement (null when none is written). */
+      movementNote: (m: string | null) => movementNote(L, m),
       period: (p: string) => periodLabel(L, p),
       medium: (m: string | null) => mediumLabel(L, m),
       artworkDate: (a: Pick<Artwork, "dateDisplay" | "creationYear">) => dateLabel(L, a.dateDisplay || String(a.creationYear)),
@@ -48,8 +39,8 @@ export function useI18n() {
       /** Museum text for the active language, falling back to the English original where no translation exists. */
       content: (a: Artwork): LocalizedArtwork => {
         if (L !== "fr") return { description: a.description, didYouKnow: a.interestingFacts, artistBio: a.artistBio, translated: false };
-        const tr = FR.artworks[a.id];
-        const bio = tr?.artistBio ?? (a.artist ? FR.artists[a.artist] : undefined);
+        const tr = frTranslations.artworks[a.id];
+        const bio = tr?.artistBio ?? (a.artist ? frTranslations.artists[a.artist] : undefined);
         return {
           description: tr?.description ?? a.description,
           didYouKnow: tr?.didYouKnow && tr.didYouKnow.length === a.interestingFacts.length ? tr.didYouKnow : a.interestingFacts,

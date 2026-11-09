@@ -2,6 +2,7 @@
 
 import { Maximize, Trash2 } from "lucide-react";
 import { useRef, useState } from "react";
+import { TIMER_SECONDS } from "@/lib/game/config";
 import { LANGS } from "@/lib/i18n";
 import { useI18n } from "@/lib/i18n/useI18n";
 import { updateSettings, useSettings } from "@/lib/settings";
@@ -36,7 +37,7 @@ function Segmented<T extends string>({ label, value, options, onChange }: { labe
 
 export function SettingsView() {
   const { t } = useI18n();
-  const { theme, sound, lang } = useSettings();
+  const { theme, sound, lang, timer } = useSettings();
   const [cleared, setCleared] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
 
@@ -90,6 +91,19 @@ export function SettingsView() {
             className={`relative h-8 w-14 rounded-full border transition-colors ${sound ? "border-accent bg-accent" : "border-strong bg-surface"}`}
           >
             <span className={`absolute top-1 size-6 rounded-full shadow transition-all ${sound ? "left-[1.7rem] bg-bg" : "left-1 bg-muted"}`} />
+          </button>
+        </Row>
+
+        <Row title={t("set.timer")} hint={t("set.timer.hint", { s: TIMER_SECONDS })}>
+          <button
+            type="button"
+            role="switch"
+            aria-checked={timer}
+            aria-label={t("set.timer")}
+            onClick={() => updateSettings({ timer: !timer })}
+            className={`relative h-8 w-14 rounded-full border transition-colors ${timer ? "border-accent bg-accent" : "border-strong bg-surface"}`}
+          >
+            <span className={`absolute top-1 size-6 rounded-full shadow transition-all ${timer ? "left-[1.7rem] bg-bg" : "left-1 bg-muted"}`} />
           </button>
         </Row>
 

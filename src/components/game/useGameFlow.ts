@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
-import { sumPoints } from "@/lib/game/scoring";
+import { currentStreak, sumPoints } from "@/lib/game/scoring";
 import type { QuestionResult } from "@/lib/types";
 
 interface Options {
@@ -46,7 +46,15 @@ export function useGameFlow({ total, initial, onProgress, onComplete }: Options)
     setAnswered(false);
   }, [answers, total, onComplete]);
 
+  /** The countdown ran out: a wrong answer with no choice made. */
+  const timeout = useCallback(
+    (artworkId: string, hint?: boolean) => submit({ artworkIds: [artworkId], correctArtworkIds: [], correct: false, points: 0, maxPoints: 100, answer: "timeout", hint }),
+    [submit],
+  );
+
   return {
+    streak: currentStreak(answers),
+    timeout,
     index,
     answers,
     answered,

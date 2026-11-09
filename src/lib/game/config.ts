@@ -25,6 +25,11 @@ export const MAX_POINTS_PER_QUESTION = 100;
 /** Guess the Artwork: opening the optional hint costs 25 points (a correct answer is then worth 75). */
 export const HINT_COST = 25;
 
+/** Optional Free Play countdown. Running out of time counts as a wrong answer; points are otherwise unchanged. */
+export const TIMER_SECONDS = 20;
+/** Questions per game mode in a "Mix" game (4 modes × 3 = 12). */
+export const MIX_PER_MODE = 3;
+
 export function questionCount(mode: GameMode, daily: boolean): number {
   return daily ? MODE_INFO[mode].dailyCount : MODE_INFO[mode].freeCount;
 }

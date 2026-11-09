@@ -8,7 +8,9 @@ import { useI18n } from "@/lib/i18n/useI18n";
 import { generateDailyChallenge, utcDateString } from "@/lib/game/daily";
 import { generateFreePlay, questionArtworkIds } from "@/lib/game/questions";
 import { randomSeed } from "@/lib/rng";
-import { addToCollection, completeDailyMode, getDaily, getRecent, listCollection, pushRecent, saveDailyProgress, saveSession } from "@/lib/storage/repo";
+import { useSettings } from "@/lib/settings";
+import { missedArtworks } from "@/lib/stats";
+import { addToCollection, completeDailyMode, getDaily, getRecent, listCollection, listSessions, pushRecent, saveDailyProgress, saveSession } from "@/lib/storage/repo";
 import type { ChoiceQuestion, Difficulty, GameMode, GameSession, Question, QuestionResult } from "@/lib/types";
 import { ArtistGame } from "./ArtistGame";
 import { DetailGame } from "./DetailGame";
@@ -19,10 +21,10 @@ import { MovementGame } from "./MovementGame";
 
 type Phase =
   | { kind: "loading" }
-  | { kind: "empty" }
+  | { kind: "empty"; review?: boolean }
   | { kind: "intro" }
   | { kind: "playing"; questions: Question[]; initial: QuestionResult[]; hint?: boolean; seed: number }
-  | { kind: "results"; results: QuestionResult[]; newIds: Set<string>; collection: Set<string> };
+  | { kind: "results"; results: QuestionResult[]; newIds: Set<string>; collection: Set<string>; reviewCount: number };
 
 const uuid = () => (typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `s-${Date.now()}-${Math.random().toString(36).slice(2)}`);
 
@@ -34,6 +36,11 @@ export function GameRunner({ mode }: { mode: GameMode }) {
   const diffParam = params.get("d");
   const difficulty: Difficulty = daily ? DAILY_DIFFICULTY : isDifficulty(diffParam) ? diffParam : "easy";
   const skipIntro = params.get("start") === "1";
+  /** "Review" replays only the artworks whose last attempt in this mode was wrong. */
+  const review = !daily && params.get("review") === "1";
+  const { timer } = useSettings();
+  const timed = !daily && timer; // the Daily Challenge is never timed, so everyone plays it under the same conditions
+  const typeahead = mode === "guess" && !daily && !review && difficulty === "expert";
   const [phase, setPhase] = useState<Phase>({ kind: "loading" });
   const startedAt = useRef(new Date().toISOString());
   const date = useRef(utcDateString());
@@ -47,7 +54,7 @@ export function GameRunner({ mode }: { mode: GameMode }) {
       const progress = rec.modes[mode];
       if (progress.status === "completed") {
         const collection = new Set((await listCollection()).map((c) => c.artworkId));
-        setPhase({ kind: "results", results: progress.answers, newIds: new Set(), collection });
+        setPhase({ kind: "results", results: progress.answers, newIds: new Set(), collection, reviewCount: 0 });
         return;
       }
       const questions = generateDailyChallenge(dataset, date.current)[mode];
@@ -58,12 +65,18 @@ export function GameRunner({ mode }: { mode: GameMode }) {
       setPhase({ kind: "playing", questions, initial: consistent ? progress.answers : [], hint: consistent ? progress.hint : false, seed: 0 });
     } else {
       const seed = randomSeed();
+      if (review) {
+        const only = new Set(missedArtworks(await listSessions(), mode));
+        const questions = only.size ? generateFreePlay(dataset, mode, difficulty, seed, undefined, only) : [];
+        if (!questions.length) return setPhase({ kind: "empty", review: true });
+        return setPhase({ kind: "playing", questions, initial: [], seed });
+      }
       const recent = new Set(await getRecent(mode));
       const questions = generateFreePlay(dataset, mode, difficulty, seed, recent);
       if (!questions.length) return setPhase({ kind: "empty" });
       setPhase({ kind: "playing", questions, initial: [], seed });
     }
-  }, [daily, mode, difficulty]);
+  }, [daily, mode, difficulty, review]);
 
   // Decide between intro and immediate start (initial load from local storage).
   /* eslint-disable react-hooks/set-state-in-effect */
@@ -114,10 +127,11 @@ export function GameRunner({ mode }: { mode: GameMode }) {
         if (daily) await completeDailyMode(date.current, mode, answers, session.id);
         else await pushRecent(mode, answers.flatMap((a) => a.artworkIds));
         const collection = new Set((await listCollection()).map((c) => c.artworkId));
-        setPhase({ kind: "results", results: answers, newIds: new Set(newIds), collection });
+        const reviewCount = daily ? 0 : missedArtworks(await listSessions(), mode).length;
+        setPhase({ kind: "results", results: answers, newIds: new Set(newIds), collection, reviewCount });
       } catch {
         // Storage unavailable (e.g. private mode): still show the results.
-        setPhase({ kind: "results", results: answers, newIds: new Set(answers.flatMap((a) => a.correctArtworkIds)), collection: new Set() });
+        setPhase({ kind: "results", results: answers, newIds: new Set(answers.flatMap((a) => a.correctArtworkIds)), collection: new Set(), reviewCount: 0 });
       }
     },
     [mode, difficulty, daily],
@@ -132,7 +146,7 @@ export function GameRunner({ mode }: { mode: GameMode }) {
   if (phase.kind === "empty")
     return (
       <div className="py-24 text-center">
-        <p className="display text-3xl">{t("game.empty.title")}</p>
+        <p className="display text-3xl">{phase.review ? t("review.empty") : t("game.empty.title")}</p>
         <button type="button" className="btn btn-ghost mt-6" onClick={() => router.push("/")}>
           {t("game.empty.back")}
         </button>
@@ -151,13 +165,26 @@ export function GameRunner({ mode }: { mode: GameMode }) {
       />
     );
   if (phase.kind === "results")
-    return <ResultsView mode={mode} difficulty={difficulty} results={phase.results} newIds={phase.newIds} collectionIds={phase.collection} daily={daily} onReplay={replay} backHref={exitHref} />;
+    return (
+      <ResultsView
+        mode={mode}
+        difficulty={difficulty}
+        results={phase.results}
+        newIds={phase.newIds}
+        collectionIds={phase.collection}
+        daily={daily}
+        onReplay={replay}
+        backHref={exitHref}
+        reviewHref={phase.reviewCount > 0 ? `/play/${mode}/?review=1&start=1&d=${difficulty}` : undefined}
+        reviewCount={phase.reviewCount}
+      />
+    );
 
   // playing
-  const common = { exitHref, onComplete, initialAnswers: phase.initial };
+  const common = { exitHref, onComplete, initialAnswers: phase.initial, timed };
   return (
     <div key={phase.seed}>
-      {mode === "guess" ? <GuessGame {...common} questions={phase.questions as ChoiceQuestion[]} initialHint={phase.hint} onProgress={onProgress} /> : null}
+      {mode === "guess" ? <GuessGame {...common} questions={phase.questions as ChoiceQuestion[]} initialHint={phase.hint} onProgress={onProgress} typeahead={typeahead} /> : null}
       {mode === "detail" ? <DetailGame {...common} questions={phase.questions as ChoiceQuestion[]} onProgress={onProgress} /> : null}
       {mode === "artist" ? <ArtistGame {...common} questions={phase.questions as ChoiceQuestion[]} onProgress={onProgress} /> : null}
       {mode === "movement" ? <MovementGame {...common} questions={phase.questions as ChoiceQuestion[]} onProgress={onProgress} /> : null}

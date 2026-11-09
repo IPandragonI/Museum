@@ -21,10 +21,25 @@ export const MOVEMENT = {
   109507: "Venetian Renaissance",
   118664: "Venetian Renaissance",
   // early works made before the artist's mature style (artist-level label was misleading)
-  163547: "Realism", // Degas, etching 1857
-  128808: "Realism", // Degas, studies 1858
-  121188: "Realism", // Renoir, 1864 (pre-Impressionist)
-  135286: "Realism", // Van Gogh, 1883 Dutch period
+  // (audit 2: these four were labelled "Realism" before; an early Degas, Renoir or Van Gogh is not a clear-cut
+  //  Realist work, so "Which Movement?" could not have one defensible answer → no label)
+  163547: null, // Degas, etching 1857
+  128808: null, // Degas, studies 1858
+  121188: null, // Renoir, 1864 (pre-Impressionist)
+  135286: null, // Van Gogh, 1883 Dutch period
+  // audit 2: works whose movement is debated or whose artist had not yet adopted the movement's style
+  324444: null, // Manet, late café scene: Realism or Impressionism
+  135336: null, // Manet, 1872: Realism or Impressionism
+  134236: null, // Manet, 1876: Realism or Impressionism
+  160289: null, // Sargent: portraitist, not a single movement
+  159988: null, // Sargent, study for Gassed (1918)
+  124814: null, // Sargent, The Patio (1869)
+  102578: null, // Chase, 1883: before his Impressionist period
+  173480: null, // Heade, flower painting: not Luminism
+  140078: null, // Corot, 1831 Italian study: before the Barbizon years
+  325449: null, // Stieglitz, The Steerage: straight photography / modernism, not Pictorialism
+  161273: null, // Greuze, head study: not a Sentimentalist subject picture
+  148759: null, // Pissarro, 1866: before Impressionism existed
   // contested or period-spanning: do not guess
   147607: null, // Chardin
   150115: null, // Chardin

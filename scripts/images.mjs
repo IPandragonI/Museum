@@ -23,14 +23,23 @@ const source = JSON.parse(fs.readFileSync(path.join(root, "scripts", ".cache", "
 const LONG = [480, 960, 1280];
 const QUALITY = { 480: 78, 960: 80, 1280: 82 };
 
+const manifestFile = path.join(root, "scripts", ".cache", "images-manifest.json");
+const previous = fs.existsSync(manifestFile) ? JSON.parse(fs.readFileSync(manifestFile, "utf8")) : {};
 const manifest = {};
 let n = 0;
 for (const a of art) {
   const file = path.join(work, a.id + ".jpg");
   const dir = path.join(outRoot, a.id);
+  // unchanged since the last build (same crop rectangle, every file present) → reuse instead of re-encoding
+  const sig = JSON.stringify(a.detail && a.detail.status !== "rejected" ? a.detail.rect : null);
+  const prev = previous[a.id];
+  if (prev && prev.sig === sig && LONG.every((l) => fs.existsSync(path.join(dir, `${l}.webp`))) && (sig === "null" || fs.existsSync(path.join(dir, "detail.webp")))) {
+    manifest[a.id] = prev;
+    continue;
+  }
   fs.mkdirSync(dir, { recursive: true });
   const meta = await sharp(file).metadata();
-  const entry = { source: { w: source[a.id]?.srcW ?? meta.width, h: source[a.id]?.srcH ?? meta.height, format: source[a.id]?.format ?? "jpeg", bytes: source[a.id]?.srcBytes ?? null }, variants: [], detail: null };
+  const entry = { sig, source: { w: source[a.id]?.srcW ?? meta.width, h: source[a.id]?.srcH ?? meta.height, format: source[a.id]?.format ?? "jpeg", bytes: source[a.id]?.srcBytes ?? null }, variants: [], detail: null };
   for (const long of LONG) {
     const info = await sharp(file)
       .resize({ width: long, height: long, fit: "inside", withoutEnlargement: true })

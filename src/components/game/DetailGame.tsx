@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ArtImage, PlainImage, preloadArtwork } from "@/components/ui/ArtImage";
 import { getArtwork, mustArtwork } from "@/lib/data";
+import { TIMER_SECONDS } from "@/lib/game/config";
 import { useI18n } from "@/lib/i18n/useI18n";
 import { playSound } from "@/lib/sound";
 import type { ChoiceQuestion, QuestionResult } from "@/lib/types";
@@ -18,9 +19,11 @@ interface Props {
   exitHref: string;
   onProgress?: (answers: QuestionResult[]) => void;
   onComplete: (answers: QuestionResult[]) => void;
+  /** Free Play countdown enabled in Settings. */
+  timed?: boolean;
 }
 
-export function DetailGame({ questions, initialAnswers, exitHref, onProgress, onComplete }: Props) {
+export function DetailGame({ questions, initialAnswers, exitHref, onProgress, onComplete, timed }: Props) {
   const i = useI18n();
   const { t } = i;
   const flow = useGameFlow({ total: questions.length, initial: initialAnswers, onProgress, onComplete });
@@ -50,6 +53,11 @@ export function DetailGame({ questions, initialAnswers, exitHref, onProgress, on
     flow.submit({ artworkIds: [art.id], correctArtworkIds: correct ? [art.id] : [], correct, points: correct ? 100 : 0, maxPoints: 100, answer: id });
   };
 
+  const expire = (artworkId: string) => {
+    playSound("wrong");
+    flow.timeout(artworkId);
+  };
+
   const goNext = () => {
     flow.next();
     if (!flow.isLast) {
@@ -63,7 +71,15 @@ export function DetailGame({ questions, initialAnswers, exitHref, onProgress, on
   const { x, y, w, h } = detail.rect;
 
   return (
-    <GameShell mode="detail" index={flow.index} total={questions.length} score={flow.score} exitHref={exitHref}>
+    <GameShell
+      mode="detail"
+      index={flow.index}
+      total={questions.length}
+      score={flow.score}
+      streak={flow.streak}
+      timer={timed ? { seconds: TIMER_SECONDS, active: !answered, onExpire: () => expire(art.id) } : undefined}
+      exitHref={exitHref}
+    >
       <div className="grid gap-8 lg:grid-cols-[1.25fr_1fr] lg:gap-12">
         <div>
           <div className="flex justify-center bg-surface p-3 sm:p-6">
