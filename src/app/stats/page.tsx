@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
 import { StatsView } from "@/components/stats/StatsView";
+import { PageTitle } from "@/components/ui/PageTitle";
 
-export const metadata: Metadata = { title: "Statistics" };
-
-export default function StatsPage() {
-  return <StatsView />;
+export default function Page() {
+  return (
+    <>
+      <PageTitle k="nav.stats" />
+      <StatsView />
+    </>
+  );
 }

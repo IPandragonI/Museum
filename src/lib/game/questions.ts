@@ -35,26 +35,44 @@ export function hasUsableTitle(ds: Dataset, a: Artwork): boolean {
 }
 
 export function eligibleFor(ds: Dataset, mode: GameMode, a: Artwork): boolean {
+  // `a.quiz[mode]` encodes the audit decisions (generic titles, imprecise dates, rejected crops…).
+  if (!a.quiz[mode]) return false;
   switch (mode) {
     case "guess":
       return hasUsableTitle(ds, a);
     case "detail":
-      return !!a.detail && hasUsableTitle(ds, a);
+      return !!a.detail?.imageUrl && a.detail.status !== "rejected" && hasUsableTitle(ds, a);
     case "artist":
       // the title must not give the creator away
       return !!a.artist && !norm(a.title).includes(norm(a.artist.split(" ").pop() ?? ""));
     case "timeline":
-      // a year in the title would leak the answer
-      return a.yearSpan <= 25 && !/\b(1\d{3}|20\d{2})\b/.test(a.title);
+      return a.yearSpan <= 25;
   }
 }
 
 // ----------------------------------------------------------------- distractors
 
+const STOP = new Set(["the", "a", "an", "of", "and", "with", "from", "in", "on", "at", "de", "la", "le"]);
+const wordsCache = new Map<string, string[]>();
+const words = (t: string): string[] => {
+  let w = wordsCache.get(t);
+  if (!w) {
+    w = norm(t).split(" ").filter((x) => x && !STOP.has(x));
+    wordsCache.set(t, w);
+  }
+  return w;
+};
+
+/** Titles a player could reasonably confuse: identical, nested, or sharing most significant words / a long series suffix. */
 function titleRelated(a: string, b: string): boolean {
   const x = norm(a);
   const y = norm(b);
-  return x === y || x.includes(y) || y.includes(x);
+  if (x === y || x.includes(y) || y.includes(x)) return true;
+  const wx = words(a);
+  const wy = words(b);
+  const shared = wx.filter((w) => wy.includes(w)).length;
+  if (shared >= 3 && shared / Math.min(wx.length, wy.length) >= 0.5) return true; // e.g. "…from Thirty-Six Views of Mount Fuji"
+  return wx.length >= 2 && wy.length >= 2 && wx[0] === wy[0] && wx[1] === wy[1]; // e.g. "Bacchanal with …"
 }
 
 function jitter(rng: Rng) {
@@ -72,7 +90,7 @@ export function titleDistractors(ds: Dataset, answer: Artwork, rng: Rng, count =
         (o.category === answer.category ? 3 : 0) +
         (o.period === answer.period ? 2 : 0) +
         (o.movement === answer.movement ? 1 : 0) +
-        (o.difficulty === answer.difficulty ? 1 : 0) +
+        (o.difficulty.guess === answer.difficulty.guess ? 1 : 0) +
         (o.artist && o.artist === answer.artist ? -2 : 0) + // avoid a cluster of one artist's works
         jitter(rng),
     }))
@@ -97,7 +115,7 @@ export function artistDistractors(ds: Dataset, answer: Artwork, rng: Rng, count 
       (near ? 3 : 0) +
       (o.artistNationality && o.artistNationality === answer.artistNationality ? 2 : 0) +
       (o.movement === answer.movement ? 1 : 0) +
-      (o.difficulty === answer.difficulty ? 1 : 0) +
+      (o.difficulty.artist === answer.difficulty.artist ? 1 : 0) +
       jitter(rng);
     if (s > (best.get(o.artist) ?? -1)) best.set(o.artist, s);
   }
@@ -152,7 +170,7 @@ function tieredPool(ds: Dataset, mode: GameMode, difficulty: Difficulty): Artwor
   const order: Difficulty[] = ["easy", "intermediate", "expert"];
   const idx = order.indexOf(difficulty);
   const eligible = ds.artworks.filter((a) => eligibleFor(ds, mode, a));
-  const by = (d: Difficulty) => eligible.filter((a) => a.difficulty === d);
+  const by = (d: Difficulty) => eligible.filter((a) => a.difficulty[mode] === d);
   const near = order.filter((_, i) => Math.abs(i - idx) === 1).flatMap(by);
   const far = order.filter((_, i) => Math.abs(i - idx) === 2).flatMap(by);
   return [by(difficulty), near, far];
@@ -204,7 +222,8 @@ export function generateTimeline(ds: Dataset, opts: PickOptions, rng: Rng): Time
         const picked: Artwork[] = [];
         for (const a of pool) {
           if (picked.length === opts.count) break;
-          if (picked.some((p) => Math.abs(p.creationYear - a.creationYear) < gap)) continue;
+          // far enough apart in time AND their date ranges can't overlap, so the order is unambiguous
+          if (picked.some((p) => Math.abs(p.creationYear - a.creationYear) < Math.max(gap, (p.yearSpan + a.yearSpan) / 2 + 1))) continue;
           picked.push(a);
         }
         if (picked.length === opts.count) {

@@ -1,0 +1,3539 @@
+{
+ "removed": [
+  {
+   "id": "cma-101360",
+   "title": "Trial Piece Worked on Both Sides",
+   "reason": "Generic title ('Trial Piece Worked on Both Sides'), obscure sculptor's exercise, poor quiz material"
+  },
+  {
+   "id": "cma-132646",
+   "title": "Three Sketches of Arches (verso)",
+   "reason": "Image is essentially a blank sheet ('Three Sketches of Arches (verso)'); unsuitable for any mode"
+  },
+  {
+   "id": "cma-147411",
+   "title": "Summer Night",
+   "reason": "Near-duplicate of 147410 (same Ōkyo screens; single panel photographed separately)"
+  },
+  {
+   "id": "cma-148391",
+   "title": "Catching Fireflies Beneath a Willow Tree (right)",
+   "reason": "Near-duplicate: one sheet of the Utamaro triptych whose centre sheet (148392) is kept; '(right)' title is ambiguous"
+  }
+ ],
+ "movement": [
+  {
+   "id": "cma-100489",
+   "title": "Baron FitzGibbon",
+   "from": "American Colonial",
+   "to": null
+  },
+  {
+   "id": "cma-103366",
+   "title": "Elizabeth Beltzhoover Mason",
+   "from": "American Colonial",
+   "to": null
+  },
+  {
+   "id": "cma-105540",
+   "title": "Black-Figure Neck-Amphora of Panathenaic Shape (Storage Vessel)",
+   "from": "Ancient Greek & Roman art",
+   "to": "Ancient Greek art"
+  },
+  {
+   "id": "cma-106841",
+   "title": "Table Fountain",
+   "from": "Medieval art",
+   "to": "Gothic art"
+  },
+  {
+   "id": "cma-109507",
+   "title": "Portrait of Agostino Barbarigo",
+   "from": "High Renaissance",
+   "to": "Venetian Renaissance"
+  },
+  {
+   "id": "cma-110232",
+   "title": "Sarcophagus",
+   "from": "Ancient Greek & Roman art",
+   "to": "Roman art"
+  },
+  {
+   "id": "cma-112062",
+   "title": "Le Sarcophage",
+   "from": "Rococo",
+   "to": null
+  },
+  {
+   "id": "cma-112858",
+   "title": "Shri Raga, from a Ragamala",
+   "from": "Indian & Southeast Asian art",
+   "to": "Rajput painting"
+  },
+  {
+   "id": "cma-112877",
+   "title": "Portable Altar of Countess Gertrude",
+   "from": "Medieval art",
+   "to": "Romanesque art"
+  },
+  {
+   "id": "cma-112958",
+   "title": "Ceremonial Cross of Countess Gertrude",
+   "from": "Medieval art",
+   "to": "Romanesque art"
+  },
+  {
+   "id": "cma-112971",
+   "title": "Monstrance with a Relic of Saint Sebastian",
+   "from": "Medieval art",
+   "to": "Gothic art"
+  },
+  {
+   "id": "cma-113026",
+   "title": "The heroine who waits anxiously for her absent lover (Utka Nayika)",
+   "from": "Indian & Southeast Asian art",
+   "to": "Pahari painting"
+  },
+  {
+   "id": "cma-114776",
+   "title": "Horse Stable",
+   "from": "Japanese art",
+   "to": "Muromachi-period art"
+  },
+  {
+   "id": "cma-114975",
+   "title": "Enthroned planetary deity",
+   "from": "Indian & Southeast Asian art",
+   "to": "Champa art"
+  },
+  {
+   "id": "cma-115987",
+   "title": "Bhima’s consultation with the astrologer, from a Nala-Damayanti",
+   "from": "Indian & Southeast Asian art",
+   "to": "Pahari painting"
+  },
+  {
+   "id": "cma-118664",
+   "title": "Various Sketches of the Madonna and Child (recto)",
+   "from": "High Renaissance",
+   "to": "Venetian Renaissance"
+  },
+  {
+   "id": "cma-120435",
+   "title": "Prisoners on a Projecting Platform, Plate 10",
+   "from": "Neoclassicism",
+   "to": null
+  },
+  {
+   "id": "cma-121188",
+   "title": "Romaine Lacaux",
+   "from": "Impressionism",
+   "to": "Realism"
+  },
+  {
+   "id": "cma-122979",
+   "title": "Saluting Protective Spirit",
+   "from": "Ancient Egyptian & Near Eastern art",
+   "to": "Neo-Assyrian art"
+  },
+  {
+   "id": "cma-123616",
+   "title": "Amphora Vase",
+   "from": "Chinese art",
+   "to": "Qing dynasty art"
+  },
+  {
+   "id": "cma-123985",
+   "title": "The Wade Cup with Animated Script",
+   "from": "Islamic art",
+   "to": "Seljuq art"
+  },
+  {
+   "id": "cma-124135",
+   "title": "Sleep and Death Cista Handle",
+   "from": "Ancient Greek & Roman art",
+   "to": "Etruscan art"
+  },
+  {
+   "id": "cma-127537",
+   "title": "A Hussar Officer on Horseback",
+   "from": "American Colonial",
+   "to": null
+  },
+  {
+   "id": "cma-128067",
+   "title": "Buddha of the Future (Miroku Bosatsu)",
+   "from": "Japanese art",
+   "to": "Asuka-period art"
+  },
+  {
+   "id": "cma-128808",
+   "title": "Sheet of Studies and Sketches",
+   "from": "Impressionism",
+   "to": "Realism"
+  },
+  {
+   "id": "cma-128876",
+   "title": "Roman Ruins, Villa Pamfili",
+   "from": "Rococo",
+   "to": null
+  },
+  {
+   "id": "cma-129862",
+   "title": "Swift Bull from the Ten Swift Bulls",
+   "from": "Japanese art",
+   "to": "Kamakura-period art"
+  },
+  {
+   "id": "cma-130133",
+   "title": "Head of Amenhotep III Wearing the Blue Crown",
+   "from": "Ancient Egyptian & Near Eastern art",
+   "to": "Egyptian art (New Kingdom)"
+  },
+  {
+   "id": "cma-130359",
+   "title": "Candelabrum Stand of a Dancing Maenad",
+   "from": "Ancient Greek & Roman art",
+   "to": "Etruscan art"
+  },
+  {
+   "id": "cma-130360",
+   "title": "Torso of a Kouros",
+   "from": "Ancient Greek & Roman art",
+   "to": "Archaic Greek art"
+  },
+  {
+   "id": "cma-130638",
+   "title": "The Story of Fukutomi",
+   "from": "Japanese art",
+   "to": "Muromachi-period art"
+  },
+  {
+   "id": "cma-134430",
+   "title": "The Illustrated Miraculous Origins of the Yūzū Nenbutsu School",
+   "from": "Japanese art",
+   "to": "Kamakura-period art"
+  },
+  {
+   "id": "cma-134843",
+   "title": "Brush Washer",
+   "from": "Chinese art",
+   "to": "Song dynasty art"
+  },
+  {
+   "id": "cma-135007",
+   "title": "Wine Cup with Children at Play",
+   "from": "Chinese art",
+   "to": "Ming dynasty art"
+  },
+  {
+   "id": "cma-135286",
+   "title": "Landscape with Wheelbarrow",
+   "from": "Post-Impressionism",
+   "to": "Realism"
+  },
+  {
+   "id": "cma-136482",
+   "title": "Statue of Amenemhat III",
+   "from": "Ancient Egyptian & Near Eastern art",
+   "to": "Egyptian art (Middle Kingdom)"
+  },
+  {
+   "id": "cma-136667",
+   "title": "Nome Gods Bearing Offerings",
+   "from": "Ancient Egyptian & Near Eastern art",
+   "to": "Egyptian art (New Kingdom)"
+  },
+  {
+   "id": "cma-136942",
+   "title": "Head of Amenhotep III Wearing the Round Wig",
+   "from": "Ancient Egyptian & Near Eastern art",
+   "to": "Egyptian art (New Kingdom)"
+  },
+  {
+   "id": "cma-137057",
+   "title": "Sun Bodhisattva (Nikkō Bosatsu)",
+   "from": "Japanese art",
+   "to": "Heian-period art"
+  },
+  {
+   "id": "cma-138880",
+   "title": "Satyress and Child",
+   "from": "Rococo",
+   "to": "Neoclassicism"
+  },
+  {
+   "id": "cma-138881",
+   "title": "Mural Fragment with Elite Male and Maguey Cactus Leaves",
+   "from": "Art of the Americas",
+   "to": "Teotihuacan art"
+  },
+  {
+   "id": "cma-141643",
+   "title": "Jonah Swallowed",
+   "from": "Medieval art",
+   "to": "Early Christian art"
+  },
+  {
+   "id": "cma-142311",
+   "title": "Portrait of Infante Don Luis de Borbon",
+   "from": "High Renaissance",
+   "to": "Neoclassicism"
+  },
+  {
+   "id": "cma-142647",
+   "title": "The Vicarello Goblet",
+   "from": "Ancient Greek & Roman art",
+   "to": "Roman art"
+  },
+  {
+   "id": "cma-143381",
+   "title": "Front Face of a Stela (Free-standing Stone with Relief)",
+   "from": "Art of the Americas",
+   "to": "Maya art"
+  },
+  {
+   "id": "cma-144058",
+   "title": "Standing Buddha",
+   "from": "Indian & Southeast Asian art",
+   "to": "Indian Buddhist art"
+  },
+  {
+   "id": "cma-145010",
+   "title": "Shakyamuni Emerging from the Mountains",
+   "from": "Chinese art",
+   "to": "Song dynasty art"
+  },
+  {
+   "id": "cma-145925",
+   "title": "Funerary Portrait of a Young Girl",
+   "from": "Ancient Egyptian & Near Eastern art",
+   "to": "Roman Egyptian art"
+  },
+  {
+   "id": "cma-145937",
+   "title": "Vase with Golden Pheasants",
+   "from": "Chinese art",
+   "to": "Qing dynasty art"
+  },
+  {
+   "id": "cma-146146",
+   "title": "Priest-King or Deity",
+   "from": "Ancient Egyptian & Near Eastern art",
+   "to": "Hittite art"
+  },
+  {
+   "id": "cma-147449",
+   "title": "Yoga Narashimha, Vishnu in his Man-Lion Avatar",
+   "from": "Indian & Southeast Asian art",
+   "to": "Chola art"
+  },
+  {
+   "id": "cma-147607",
+   "title": "Still Life with Herrings",
+   "from": "Rococo",
+   "to": null
+  },
+  {
+   "id": "cma-150115",
+   "title": "Kitchen Utensils with Leeks, Fish, and Eggs",
+   "from": "Rococo",
+   "to": null
+  },
+  {
+   "id": "cma-155499",
+   "title": "Memorial head (nsodie)",
+   "from": "African art",
+   "to": "Akan art"
+  },
+  {
+   "id": "cma-156646",
+   "title": "Hero and Leander",
+   "from": "Modern sculpture",
+   "to": null
+  },
+  {
+   "id": "cma-159234",
+   "title": "Crucifix with Scenes of the Passion",
+   "from": "Medieval art",
+   "to": "Medieval Italian painting"
+  },
+  {
+   "id": "cma-160078",
+   "title": "Wave",
+   "from": "Modern sculpture",
+   "to": null
+  },
+  {
+   "id": "cma-161427",
+   "title": "Tomb Guardian with Animal Head",
+   "from": "Chinese art",
+   "to": "Tang dynasty art"
+  },
+  {
+   "id": "cma-161695",
+   "title": "Statuette of Herakles",
+   "from": "Ancient Greek & Roman art",
+   "to": "Archaic Greek art"
+  },
+  {
+   "id": "cma-163543",
+   "title": "Staff of Office",
+   "from": "African art",
+   "to": "Luba art"
+  },
+  {
+   "id": "cma-163547",
+   "title": "Self-Portrait",
+   "from": "Impressionism",
+   "to": "Realism"
+  },
+  {
+   "id": "cma-168747",
+   "title": "Male Figure (nkishi)",
+   "from": "African art",
+   "to": "Songye art"
+  },
+  {
+   "id": "cma-93992",
+   "title": "Stele with Sakyamuni and Bodhisattvas",
+   "from": "Chinese art",
+   "to": "Northern Dynasties art"
+  },
+  {
+   "id": "cma-94676",
+   "title": "Seated Amitayus Buddha",
+   "from": "Chinese art",
+   "to": "Northern Dynasties art"
+  },
+  {
+   "id": "cma-94940",
+   "title": "Lamellophone (chisanji)",
+   "from": "African art",
+   "to": "Central African art"
+  },
+  {
+   "id": "cma-94963",
+   "title": "Luster Wall Tile with a Couple",
+   "from": "Islamic art",
+   "to": "Ilkhanid art"
+  },
+  {
+   "id": "cma-95149",
+   "title": "Gilded Dish with Flowers and Leaves",
+   "from": "Islamic art",
+   "to": "Ottoman art"
+  },
+  {
+   "id": "cma-97193",
+   "title": "Matchlock Musket",
+   "from": "Islamic art",
+   "to": "Ottoman art"
+  },
+  {
+   "id": "cma-98300",
+   "title": "Mina'i Beaker with Seated Princes",
+   "from": "Islamic art",
+   "to": "Seljuq art"
+  }
+ ],
+ "category": [
+  {
+   "id": "cma-148697",
+   "title": "People of Japan in Light Verse (Kyōka)",
+   "from": "decorative",
+   "to": "printmaking"
+  },
+  {
+   "id": "cma-173263",
+   "title": "Monsieur Boileau at the Café",
+   "from": "drawing",
+   "to": "painting"
+  }
+ ],
+ "difficulty": [
+  {
+   "id": "cma-100489",
+   "title": "Baron FitzGibbon",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-101646",
+   "title": "After the Bath",
+   "old": "easy",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-101854",
+   "title": "Courtesan Dreaming of her Childhood",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-102578",
+   "title": "Portrait of Dora Wheeler",
+   "old": "expert",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-103366",
+   "title": "Elizabeth Beltzhoover Mason",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-103898",
+   "title": "Peasant Returning from the Manure Heap",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-105105",
+   "title": "The Garden",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-105422",
+   "title": "The Last Supper",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-105540",
+   "title": "Black-Figure Neck-Amphora of Panathenaic Shape (Storage Vessel)",
+   "old": "intermediate",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-106088",
+   "title": "Early Morning After a Storm at Sea",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-106122",
+   "title": "Bacchanal with Silenus",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-106785",
+   "title": "Rue Transnonain, April 15, 1834",
+   "old": "expert",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-106841",
+   "title": "Table Fountain",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-106962",
+   "title": "Eight Views of Kanazawa at Night",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-107008",
+   "title": "The Presentation in the Temple",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-107161",
+   "title": "Adam and Eve in Paradise",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-107208",
+   "title": "Miss Loïe Fuller",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-107277",
+   "title": "Views: The Canal Lock at Dolo",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-108103",
+   "title": "St. Jerome Seated near a Pollard Willow",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-108356",
+   "title": "Maruru (Offerings of Gratitude)",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-108380",
+   "title": "The Last Supper",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-108401",
+   "title": "A Woman Clothed with the Sun",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-108541",
+   "title": "The Holy Family with Mary Magdalen",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-108544",
+   "title": "Orpheus",
+   "old": "expert",
+   "recog": 1.4,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-108555",
+   "title": "Nymphs and a Satyr (Amor Vincit Omnia)",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-108556",
+   "title": "Bacchanal with a Wine Vat",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-109239",
+   "title": "A Winter Sky",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-109295",
+   "title": "Madame Désiré Raoul-Rochette",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-109507",
+   "title": "Portrait of Agostino Barbarigo",
+   "old": "intermediate",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-110060",
+   "title": "Study for \"The Romancer\" (Le Conteur)",
+   "old": "intermediate",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-110232",
+   "title": "Sarcophagus",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-110597",
+   "title": "Dance of Death: The Miser",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-111470",
+   "title": "Outskirts of Paris",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-111654",
+   "title": "South Wind, Clear Sky, from Thirty-Six Views of Mount Fuji",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-111702",
+   "title": "Capriccio: A Palace with a Courtyard by the Lagoon",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-112062",
+   "title": "Le Sarcophage",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-112858",
+   "title": "Shri Raga, from a Ragamala",
+   "old": "expert",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-112877",
+   "title": "Portable Altar of Countess Gertrude",
+   "old": "intermediate",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-112900",
+   "title": "Return from Russia",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-112958",
+   "title": "Ceremonial Cross of Countess Gertrude",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-112971",
+   "title": "Monstrance with a Relic of Saint Sebastian",
+   "old": "intermediate",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-113026",
+   "title": "The heroine who waits anxiously for her absent lover (Utka Nayika)",
+   "old": "expert",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-113948",
+   "title": "Japanese Woman Painting a Fan (recto)",
+   "old": "intermediate",
+   "recog": 0.7,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-114751",
+   "title": "Self-Portrait Drawing at a Window",
+   "old": "easy",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-114776",
+   "title": "Horse Stable",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-114975",
+   "title": "Enthroned planetary deity",
+   "old": "expert",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-115405",
+   "title": "The Pigeon Tower at Bellevue",
+   "old": "easy",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-115987",
+   "title": "Bhima’s consultation with the astrologer, from a Nala-Damayanti",
+   "old": "expert",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-117715",
+   "title": "The Old Road to the Sea",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-117901",
+   "title": "Smelting Works at Denver",
+   "old": "expert",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-117908",
+   "title": "Albano, Italy",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-117915",
+   "title": "The Ruby Range, Nevada",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-118664",
+   "title": "Various Sketches of the Madonna and Child (recto)",
+   "old": "intermediate",
+   "recog": 0.3,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-119615",
+   "title": "Study for the Nude Youth over the Prophet Daniel (recto)",
+   "old": "easy",
+   "recog": 1.3,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-119616",
+   "title": "Figure Studies for the Sistine Ceiling (verso)",
+   "old": "easy",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-120238",
+   "title": "Nakahara in Sagami Province from Thirty-six Views of Mount Fuji",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-120435",
+   "title": "Prisoners on a Projecting Platform, Plate 10",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-121035",
+   "title": "In the Omnibus",
+   "old": "easy",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-121188",
+   "title": "Romaine Lacaux",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-121406",
+   "title": "The Army of the Potomac - A Sharpshooter on Picket Duty",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-122183",
+   "title": "Young Girl Carrying a Garland of Roses on a Platter",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-122340",
+   "title": "Travelers in Hilly Countryside",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-122345",
+   "title": "A Cottage in the Woods",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-122918",
+   "title": "Odalisque",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-122979",
+   "title": "Saluting Protective Spirit",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-123249",
+   "title": "Basket of Peonies",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-123431",
+   "title": "Invocation to Love",
+   "old": "intermediate",
+   "recog": 1.8,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-123490",
+   "title": "Portrait of Don Juan Antonio Cuervo",
+   "old": "easy",
+   "recog": 2.1,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-123616",
+   "title": "Amphora Vase",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-123730",
+   "title": "Lot and His Daughters",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-123965",
+   "title": "The Adoration of the Magi",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-123985",
+   "title": "The Wade Cup with Animated Script",
+   "old": "expert",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-124076",
+   "title": "Coronation of the Virgin",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-124080",
+   "title": "Portrait of Mary Wise",
+   "old": "intermediate",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-124092",
+   "title": "Portrait of a Woman",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-124135",
+   "title": "Sleep and Death Cista Handle",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-124814",
+   "title": "The Patio",
+   "old": "easy",
+   "recog": 1.8,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-125234",
+   "title": "Low Tide at Pourville, near Dieppe, 1882",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-125247",
+   "title": "Portrait of Isabella Brant",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-125249",
+   "title": "The Large Plane Trees (Road Menders at Saint-Rémy)",
+   "old": "easy",
+   "recog": 3.2,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-125895",
+   "title": "Portrait of a Woman, probably Aeltje Dircksdr. Pater",
+   "old": "intermediate",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-126085",
+   "title": "Dr. Gachet",
+   "old": "easy",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-126219",
+   "title": "Salome with the Head of St. John the Baptist",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-126769",
+   "title": "Fight Between a Tiger and a Buffalo",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-126772",
+   "title": "Pontifical Ceremony in Saints Giovanni e Paolo, Venice, 1782",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-127115",
+   "title": "Head of a Tahitian Woman",
+   "old": "easy",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-127224",
+   "title": "Mount Vesuvius at Midnight",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-127235",
+   "title": "Peasant Girl with Dog",
+   "old": "easy",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-127537",
+   "title": "A Hussar Officer on Horseback",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-127561",
+   "title": "The Holy Family (Christ in the Lap of Truth)",
+   "old": "expert",
+   "recog": 1.4,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-127571",
+   "title": "Portrait of a Man, Possibly Girolamo Rosati",
+   "old": "expert",
+   "recog": 1.4,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-128067",
+   "title": "Buddha of the Future (Miroku Bosatsu)",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-128072",
+   "title": "Reading",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-128364",
+   "title": "Young Woman Arranging Her Earring",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-128391",
+   "title": "Portrait of a Family Playing Music",
+   "old": "expert",
+   "recog": 0.4,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-128394",
+   "title": "Portrait of a Woman",
+   "old": "intermediate",
+   "recog": 1.4,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-128808",
+   "title": "Sheet of Studies and Sketches",
+   "old": "easy",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "easy",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-128842",
+   "title": "Saint Peter Repentant",
+   "old": "intermediate",
+   "recog": 2.1,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-128876",
+   "title": "Roman Ruins, Villa Pamfili",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-129219",
+   "title": "Saint Nicholas of Bari",
+   "old": "expert",
+   "recog": 1.2,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-129386",
+   "title": "Christ on the Cross",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-129862",
+   "title": "Swift Bull from the Ten Swift Bulls",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-130133",
+   "title": "Head of Amenhotep III Wearing the Blue Crown",
+   "old": "intermediate",
+   "recog": 1.2,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-130359",
+   "title": "Candelabrum Stand of a Dancing Maenad",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-130360",
+   "title": "Torso of a Kouros",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-130625",
+   "title": "Saint-Tropez: The Port",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-130638",
+   "title": "The Story of Fukutomi",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-130938",
+   "title": "Landscape with Two Pines",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-131337",
+   "title": "Boy with Anchor",
+   "old": "easy",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-131583",
+   "title": "The Feast of Herod (recto); Tomyris with the Head of Cyrus (verso)",
+   "old": "easy",
+   "recog": 1.7,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-131819",
+   "title": "A Genoese Lady with Her Child",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-133653",
+   "title": "They Have Flown, Plate 61",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-134236",
+   "title": "Claire Campbell",
+   "old": "easy",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-134430",
+   "title": "The Illustrated Miraculous Origins of the Yūzū Nenbutsu School",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-134843",
+   "title": "Brush Washer",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-135007",
+   "title": "Wine Cup with Children at Play",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-135185",
+   "title": "Mount Sainte-Victoire",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-135214",
+   "title": "The Troubadour",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-135286",
+   "title": "Landscape with Wheelbarrow",
+   "old": "easy",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-135299",
+   "title": "Adeline Ravoux",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-135311",
+   "title": "The Nativity",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-135336",
+   "title": "Berthe Morisot with a Muff",
+   "old": "easy",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-135341",
+   "title": "At the Concert Parisien",
+   "old": "easy",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-135382",
+   "title": "The Red Kerchief",
+   "old": "easy",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-135405",
+   "title": "Mademoiselle Louise Riesener in a Hat",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-135428",
+   "title": "Hunting near Hartenfels Castle",
+   "old": "intermediate",
+   "recog": 1.8,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-135512",
+   "title": "Study for \"Bathers at Asnières\"",
+   "old": "easy",
+   "recog": 2.1,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-135706",
+   "title": "Christ Crucified Between the Two Thieves: 'The Three Crosses'",
+   "old": "easy",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-135840",
+   "title": "View of Emmerich",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-135920",
+   "title": "Saint Lawrence",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-135931",
+   "title": "Saint Stephen",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-136154",
+   "title": "Evening, Melancholy I",
+   "old": "easy",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-136217",
+   "title": "Christ and the Virgin in the House at Nazareth",
+   "old": "intermediate",
+   "recog": 2.1,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-136482",
+   "title": "Statue of Amenemhat III",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-136510",
+   "title": "Water Lilies (Agapanthus)",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-136667",
+   "title": "Nome Gods Bearing Offerings",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-136680",
+   "title": "Saint Jerome",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-136760",
+   "title": "Saint-Mammès, Loing Canal",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-136911",
+   "title": "View of Florence",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-136942",
+   "title": "Head of Amenhotep III Wearing the Round Wig",
+   "old": "intermediate",
+   "recog": 1.2,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-137057",
+   "title": "Sun Bodhisattva (Nikkō Bosatsu)",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-137195",
+   "title": "Rest on the Flight into Egypt",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-138359",
+   "title": "Wineglass and a Bowl of Fruit",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-138464",
+   "title": "Cupid and Psyche",
+   "old": "easy",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-138515",
+   "title": "First Steps",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-138880",
+   "title": "Satyress and Child",
+   "old": "expert",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-138881",
+   "title": "Mural Fragment with Elite Male and Maguey Cactus Leaves",
+   "old": "expert",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-140078",
+   "title": "La Cervara, the Roman Campagna",
+   "old": "intermediate",
+   "recog": 1.8,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-140152",
+   "title": "Esther, Ahasuerus, and Haman",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-140325",
+   "title": "Sheet of Sketches (recto and verso)",
+   "old": "intermediate",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-140334",
+   "title": "Portrait of a Child (Anton Peschka Jr.)",
+   "old": "intermediate",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-141168",
+   "title": "Panoramic View of the Alps, Les Dents du Midi",
+   "old": "easy",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-141549",
+   "title": "Portrait of the Jester Calabazas",
+   "old": "easy",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-141639",
+   "title": "Twilight in the Wilderness",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-141641",
+   "title": "Memento Mori, \"To This Favour\"",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-141643",
+   "title": "Jonah Swallowed",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "expert",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-141929",
+   "title": "Laban Searching for His Stolen Household Gods",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-141931",
+   "title": "Arm of Eve",
+   "old": "easy",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-141936",
+   "title": "Portrait of Genio C. Scott",
+   "old": "expert",
+   "recog": 0.4,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-142291",
+   "title": "Silenus",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-142311",
+   "title": "Portrait of Infante Don Luis de Borbon",
+   "old": "easy",
+   "recog": 2.1,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-142647",
+   "title": "The Vicarello Goblet",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-143234",
+   "title": "Landscape with a Windmill",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-143381",
+   "title": "Front Face of a Stela (Free-standing Stone with Relief)",
+   "old": "expert",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-143602",
+   "title": "Low Waterfall in a Wooded Landscape with a Dead Beech Tree",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-143775",
+   "title": "Terpsichore Lyran (Muse of Lyric Poetry)",
+   "old": "intermediate",
+   "recog": 1.8,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-144058",
+   "title": "Standing Buddha",
+   "old": "expert",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-144216",
+   "title": "Madonna Nursing the Christ Child",
+   "old": "intermediate",
+   "recog": 1.8,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-144844",
+   "title": "Tobias Healing His Father's Blindness",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-144967",
+   "title": "Point Judith, Rhode Island",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-145010",
+   "title": "Shakyamuni Emerging from the Mountains",
+   "old": "intermediate",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-145925",
+   "title": "Funerary Portrait of a Young Girl",
+   "old": "intermediate",
+   "recog": 2.4,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "expert",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-145937",
+   "title": "Vase with Golden Pheasants",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-145960",
+   "title": "Terminus, the Device of Erasmus",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-146146",
+   "title": "Priest-King or Deity",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-146469",
+   "title": "Portrait of a Woman",
+   "old": "intermediate",
+   "recog": 1.4,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-146909",
+   "title": "Hermine Gallia",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-147017",
+   "title": "Branch Hill Pond, Hampstead",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-147018",
+   "title": "Bust of a Chinese",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-147410",
+   "title": "Summer Night; Winter Day",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-147449",
+   "title": "Yoga Narashimha, Vishnu in his Man-Lion Avatar",
+   "old": "expert",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-147607",
+   "title": "Still Life with Herrings",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-147982",
+   "title": "Matsumoto Koshiro IV as Gorobei, the Fish Seller from Sanya",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-148392",
+   "title": "Catching Fireflies Beneath a Willow Tree (center)",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-148697",
+   "title": "People of Japan in Light Verse (Kyōka)",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-148739",
+   "title": "Landscape with Large Trees",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-148758",
+   "title": "The Crucifixion of Saint Andrew",
+   "old": "easy",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-148759",
+   "title": "La Roche-Guyon",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-148774",
+   "title": "Niagara Falls by Moonlight",
+   "old": "intermediate",
+   "recog": 1.8,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-148811",
+   "title": "Mrs. Sarah Siddons",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-149378",
+   "title": "Shah Jahan",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-149536",
+   "title": "Woman with a Veil",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-149946",
+   "title": "The Fisherman (Le Pêcheur)",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-150051",
+   "title": "Alpine Landscape: The Handegg, Switzerland",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-150113",
+   "title": "Rue du Regard",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-150115",
+   "title": "Kitchen Utensils with Leeks, Fish, and Eggs",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-150389",
+   "title": "The Holy Family on the Steps",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-150699",
+   "title": "Pastoral Scene with Classical Figures",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-151078",
+   "title": "Plum Tree",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-151336",
+   "title": "Woman with Red Hair and Green Eyes (The Sin)",
+   "old": "easy",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-151356",
+   "title": "Alexandre Dumas père (1802–1870)",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-151839",
+   "title": "Julia Jackson Duckworth (1846-1895)",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-151840",
+   "title": "Queen of the May",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-151904",
+   "title": "The Biglin Brothers Turning the Stake",
+   "old": "intermediate",
+   "recog": 2.6,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-152223",
+   "title": "Versailles, Chaste Venus",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-152229",
+   "title": "Rue de la Montagne-Sainte-Geneviève",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-152472",
+   "title": "Daikoku and Ebisu, Two of the Seven Gods of Happiness",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-152484",
+   "title": "Righteousness, from The Five Virtues",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-153597",
+   "title": "The Bridge of Palalda (near Amelieles-Bains)",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-154246",
+   "title": "Portrait of Christoph Willibald Gluck",
+   "old": "intermediate",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-154893",
+   "title": "The Guilty and Repentant Daughter",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-155499",
+   "title": "Memorial head (nsodie)",
+   "old": "expert",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-155585",
+   "title": "The Miners' Bridge, on the Llugwy, North Wales",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-156167",
+   "title": "Group of Trees",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-156285",
+   "title": "Articles of Glass",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-156646",
+   "title": "Hero and Leander",
+   "old": "expert",
+   "recog": 0.6,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-157101",
+   "title": "Tiger Devouring a Gavial",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-157331",
+   "title": "Standing Officer Holding a Boar's Spear",
+   "old": "expert",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-157644",
+   "title": "Prostitute Soliciting a Fat, Ugly Man, Folio 49 (recto)",
+   "old": "easy",
+   "recog": 1.7,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-159234",
+   "title": "Crucifix with Scenes of the Passion",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-159988",
+   "title": "Studies of a Soldier Drinking, for Gassed (recto)",
+   "old": "easy",
+   "recog": 1.4,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-160078",
+   "title": "Wave",
+   "old": "expert",
+   "recog": 0.6,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-160289",
+   "title": "Portrait of Lisa Colt Curtis",
+   "old": "easy",
+   "recog": 2.1,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-160885",
+   "title": "Portrait of Tieleman Roosterman",
+   "old": "intermediate",
+   "recog": 1.4,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-161273",
+   "title": "Head of Caracalla",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-161427",
+   "title": "Tomb Guardian with Animal Head",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-161695",
+   "title": "Statuette of Herakles",
+   "old": "intermediate",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-162316",
+   "title": "Crowell Children at Avondale",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-163456",
+   "title": "Harbor of Boston, with the City in the Distance",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-163543",
+   "title": "Staff of Office",
+   "old": "expert",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-163547",
+   "title": "Self-Portrait",
+   "old": "easy",
+   "recog": 1.4,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-164940",
+   "title": "Winter Trees Reflected in a Pond",
+   "old": "expert",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-166522",
+   "title": "The Clothes are Italian",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-166693",
+   "title": "The Genius of the Sculptor",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-168747",
+   "title": "Male Figure (nkishi)",
+   "old": "expert",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-170456",
+   "title": "Bacchanales: Nymph Supported by Two Satyrs",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-170727",
+   "title": "Phryne before Her Judges",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-172659",
+   "title": "Dancer Looking at the Sole of her Right Foot",
+   "old": "easy",
+   "recog": 3.4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-172815",
+   "title": "Mount Starr King, Yosemite",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-173167",
+   "title": "Winding Yarn (Interior of a Nantucket Kitchen)",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-173263",
+   "title": "Monsieur Boileau at the Café",
+   "old": "easy",
+   "recog": 3.1,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-173480",
+   "title": "Apple Blossoms",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-294155",
+   "title": "St. Matthew",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-324444",
+   "title": "At the Café",
+   "old": "easy",
+   "recog": 2.8,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-325449",
+   "title": "The Steerage",
+   "old": "intermediate",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-396848",
+   "title": "Study of a Man with Hands in His Pockets",
+   "old": "intermediate",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-439504",
+   "title": "Gioachino Antonio Rossini",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-447789",
+   "title": "Footpath in the Woods",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-449527",
+   "title": "Lord Burghersh, Earl of Westmorland",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-452654",
+   "title": "View of Ste-Adrese Beach with the Dumont Baths",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-518719",
+   "title": "Portrait of Honoré Willsie Morrow",
+   "old": "expert",
+   "recog": 0.4,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-519100",
+   "title": "Italy",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-523229",
+   "title": "The Farnesian Hercules",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-74228",
+   "title": "Fishmarket",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-74601",
+   "title": "Two Boats at the Harbor of Dieppe",
+   "old": "easy",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-80329",
+   "title": "Luncheon (Annette and Her Grandmother)",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-83453",
+   "title": "The Beach at Saint-Jacut",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-86517",
+   "title": "Andromeda (Andromède)",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-87286",
+   "title": "Charon and the Souls of the Dead",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-91231",
+   "title": "Villas at Trouville",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-93014",
+   "title": "View of Schroon Mountain, Essex County, New York, After a Storm",
+   "old": "intermediate",
+   "recog": 1.8,
+   "guess": "intermediate",
+   "detail": "intermediate",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-93992",
+   "title": "Stele with Sakyamuni and Bodhisattvas",
+   "old": "intermediate",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-94676",
+   "title": "Seated Amitayus Buddha",
+   "old": "intermediate",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-94940",
+   "title": "Lamellophone (chisanji)",
+   "old": "expert",
+   "recog": 1.6,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-94963",
+   "title": "Luster Wall Tile with a Couple",
+   "old": "expert",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-94966",
+   "title": "Catherine Greene",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-95149",
+   "title": "Gilded Dish with Flowers and Leaves",
+   "old": "expert",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-95253",
+   "title": "Hampstead Heath, Looking Toward Harrow",
+   "old": "expert",
+   "recog": 0.8,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-95259",
+   "title": "Greek Cavalry Men Resting in Forest",
+   "old": "easy",
+   "recog": 1.4,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-95272",
+   "title": "Gardener's House at Antibes",
+   "old": "easy",
+   "recog": 2.5,
+   "guess": "easy",
+   "detail": "intermediate",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-95343",
+   "title": "A Low Tide Pentaptych",
+   "old": "intermediate",
+   "recog": 1.5,
+   "guess": "intermediate",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-97141",
+   "title": "Sketch for a Ceiling",
+   "old": "intermediate",
+   "recog": 1.1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "intermediate",
+   "timeline": "intermediate"
+  },
+  {
+   "id": "cma-97193",
+   "title": "Matchlock Musket",
+   "old": "expert",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-97797",
+   "title": "The Thinker",
+   "old": "easy",
+   "recog": 4,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  },
+  {
+   "id": "cma-98300",
+   "title": "Mina'i Beaker with Seated Princes",
+   "old": "expert",
+   "recog": 1,
+   "guess": "expert",
+   "detail": "expert",
+   "artist": "expert",
+   "timeline": "expert"
+  },
+  {
+   "id": "cma-98627",
+   "title": "The Age of Bronze",
+   "old": "easy",
+   "recog": 3,
+   "guess": "easy",
+   "detail": "easy",
+   "artist": "easy",
+   "timeline": "easy"
+  }
+ ],
+ "quizOff": [
+  {
+   "id": "cma-110232",
+   "title": "Sarcophagus",
+   "reason": "'Sarcophagus' – object type, not a title"
+  },
+  {
+   "id": "cma-114776",
+   "title": "Horse Stable",
+   "reason": "'Horse Stable' – subject, not a distinctive title"
+  },
+  {
+   "id": "cma-123616",
+   "title": "Amphora Vase",
+   "reason": "'Amphora Vase' – object type"
+  },
+  {
+   "id": "cma-134843",
+   "title": "Brush Washer",
+   "reason": "'Brush Washer' – object type"
+  },
+  {
+   "id": "cma-144058",
+   "title": "Standing Buddha",
+   "reason": "'Standing Buddha' – very many works share it"
+  },
+  {
+   "id": "cma-163543",
+   "title": "Staff of Office",
+   "reason": "'Staff of Office' – object type"
+  },
+  {
+   "id": "cma-163547",
+   "title": "Self-Portrait",
+   "reason": "'Self-Portrait' – many artists made one"
+  },
+  {
+   "id": "cma-97193",
+   "title": "Matchlock Musket",
+   "reason": "'Matchlock Musket' – object type"
+  }
+ ],
+ "dates": [
+  {
+   "id": "cma-106785",
+   "title": "Rue Transnonain, April 15, 1834",
+   "date": "1834",
+   "span": 0
+  },
+  {
+   "id": "cma-109507",
+   "title": "Portrait of Agostino Barbarigo",
+   "date": "after c. 1571",
+   "span": 10
+  },
+  {
+   "id": "cma-112877",
+   "title": "Portable Altar of Countess Gertrude",
+   "date": "shortly after 1038",
+   "span": 5
+  },
+  {
+   "id": "cma-112958",
+   "title": "Ceremonial Cross of Countess Gertrude",
+   "date": "1038 or shortly after",
+   "span": 5
+  },
+  {
+   "id": "cma-123249",
+   "title": "Basket of Peonies",
+   "date": "1810 or 1814",
+   "span": 4
+  },
+  {
+   "id": "cma-125234",
+   "title": "Low Tide at Pourville, near Dieppe, 1882",
+   "date": "1882",
+   "span": 0
+  },
+  {
+   "id": "cma-126772",
+   "title": "Pontifical Ceremony in Saints Giovanni e Paolo, Venice, 1782",
+   "date": "c. 1783",
+   "span": 10
+  },
+  {
+   "id": "cma-129862",
+   "title": "Swift Bull from the Ten Swift Bulls",
+   "date": "late 1200s–early 1300s",
+   "span": 58
+  },
+  {
+   "id": "cma-130133",
+   "title": "Head of Amenhotep III Wearing the Blue Crown",
+   "date": "c. 1391–1353 BCE",
+   "span": 38
+  },
+  {
+   "id": "cma-134430",
+   "title": "The Illustrated Miraculous Origins of the Yūzū Nenbutsu School",
+   "date": "early 1300s",
+   "span": 33
+  },
+  {
+   "id": "cma-134843",
+   "title": "Brush Washer",
+   "date": "late 1000s–1127",
+   "span": 52
+  },
+  {
+   "id": "cma-136482",
+   "title": "Statue of Amenemhat III",
+   "date": "c. 1859–1814 BCE",
+   "span": 45
+  },
+  {
+   "id": "cma-136667",
+   "title": "Nome Gods Bearing Offerings",
+   "date": "c. 1391–1353 BCE",
+   "span": 38
+  },
+  {
+   "id": "cma-136942",
+   "title": "Head of Amenhotep III Wearing the Round Wig",
+   "date": "c. 1391–1353 BCE",
+   "span": 38
+  },
+  {
+   "id": "cma-138881",
+   "title": "Mural Fragment with Elite Male and Maguey Cactus Leaves",
+   "date": "500–550",
+   "span": 50
+  },
+  {
+   "id": "cma-142647",
+   "title": "The Vicarello Goblet",
+   "date": "25 BCE–25 CE",
+   "span": 50
+  },
+  {
+   "id": "cma-145937",
+   "title": "Vase with Golden Pheasants",
+   "date": "1736–95",
+   "span": 59
+  },
+  {
+   "id": "cma-148774",
+   "title": "Niagara Falls by Moonlight",
+   "date": "probably 1856",
+   "span": 10
+  },
+  {
+   "id": "cma-151078",
+   "title": "Plum Tree",
+   "date": "c. 1700",
+   "span": 36
+  },
+  {
+   "id": "cma-151356",
+   "title": "Alexandre Dumas père (1802–1870)",
+   "date": "1855",
+   "span": 0
+  },
+  {
+   "id": "cma-151839",
+   "title": "Julia Jackson Duckworth (1846-1895)",
+   "date": "1874",
+   "span": 0
+  },
+  {
+   "id": "cma-155499",
+   "title": "Memorial head (nsodie)",
+   "date": "late 1600s–early 1700s",
+   "span": 50
+  },
+  {
+   "id": "cma-163543",
+   "title": "Staff of Office",
+   "date": "early to mid-1800s",
+   "span": 50
+  },
+  {
+   "id": "cma-168747",
+   "title": "Male Figure (nkishi)",
+   "date": "late 1800s–early 1900s",
+   "span": 40
+  },
+  {
+   "id": "cma-94676",
+   "title": "Seated Amitayus Buddha",
+   "date": "c. 570s",
+   "span": 40
+  },
+  {
+   "id": "cma-98300",
+   "title": "Mina'i Beaker with Seated Princes",
+   "date": "1180–1220",
+   "span": 40
+  }
+ ],
+ "crops": [],
+ "artistNames": [
+  {
+   "id": "cma-100489",
+   "from": "Gilbert Stuart (American, born The Thirteen Colonies, 1755–1828)",
+   "to": "Gilbert Stuart"
+  },
+  {
+   "id": "cma-103366",
+   "from": "Gilbert Stuart (American, born The Thirteen Colonies, 1755–1828)",
+   "to": "Gilbert Stuart"
+  },
+  {
+   "id": "cma-105422",
+   "from": "Lucas van Leyden (Netherlandish, 1494–about 1533)",
+   "to": "Lucas van Leyden"
+  },
+  {
+   "id": "cma-110597",
+   "from": "Hans Holbein the Younger (German, active England and Switzerland, 1497/98–1543)",
+   "to": "Hans Holbein the Younger"
+  },
+  {
+   "id": "cma-117901",
+   "from": "Thomas Moran (American, born England, 1837–1926)",
+   "to": "Thomas Moran"
+  },
+  {
+   "id": "cma-117915",
+   "from": "Thomas Moran (American, born England, 1837–1926)",
+   "to": "Thomas Moran"
+  },
+  {
+   "id": "cma-123730",
+   "from": "Lucas van Leyden (Netherlandish, 1494–about 1533)",
+   "to": "Lucas van Leyden"
+  },
+  {
+   "id": "cma-124814",
+   "from": "John Singer Sargent (American, born Italy, 1856–1925)",
+   "to": "John Singer Sargent"
+  },
+  {
+   "id": "cma-127224",
+   "from": "Albert Bierstadt (American, born Prussia [now Germany], 1830–1902)",
+   "to": "Albert Bierstadt"
+  },
+  {
+   "id": "cma-127537",
+   "from": "John Singleton Copley (American, born The Thirteen Colonies, 1738–1815)",
+   "to": "John Singleton Copley"
+  },
+  {
+   "id": "cma-129219",
+   "from": "Carlo Crivelli (Italian, 1430/35–1495)",
+   "to": "Carlo Crivelli"
+  },
+  {
+   "id": "cma-135311",
+   "from": "Gerard David (Netherlandish, 1450/60–1523)",
+   "to": "Gerard David"
+  },
+  {
+   "id": "cma-135920",
+   "from": "Tilman Riemenschneider (German, active Würzburg, c. 1460–1531)",
+   "to": "Tilman Riemenschneider"
+  },
+  {
+   "id": "cma-135931",
+   "from": "Tilman Riemenschneider (German, active Würzburg, c. 1460–1531)",
+   "to": "Tilman Riemenschneider"
+  },
+  {
+   "id": "cma-136911",
+   "from": "Thomas Cole (American, born England,1801–1848)",
+   "to": "Thomas Cole"
+  },
+  {
+   "id": "cma-143234",
+   "from": "Jacob van Ruisdael (Dutch, 1628/29–1682)",
+   "to": "Jacob van Ruisdael"
+  },
+  {
+   "id": "cma-143602",
+   "from": "Jacob van Ruisdael (Dutch, 1628/29–1682)",
+   "to": "Jacob van Ruisdael"
+  },
+  {
+   "id": "cma-145960",
+   "from": "Hans Holbein the Younger (German, active England and Switzerland, 1497/98–1543)",
+   "to": "Hans Holbein the Younger"
+  },
+  {
+   "id": "cma-147982",
+   "from": "Tōshūsai Sharaku (Japanese, active 1794–95)",
+   "to": "Tōshūsai Sharaku"
+  },
+  {
+   "id": "cma-159988",
+   "from": "John Singer Sargent (American, born Italy, 1856–1925)",
+   "to": "John Singer Sargent"
+  },
+  {
+   "id": "cma-160289",
+   "from": "John Singer Sargent (American, born Italy, 1856–1925)",
+   "to": "John Singer Sargent"
+  },
+  {
+   "id": "cma-172815",
+   "from": "Albert Bierstadt (American, born Prussia [now Germany], 1830–1902)",
+   "to": "Albert Bierstadt"
+  },
+  {
+   "id": "cma-93014",
+   "from": "Thomas Cole (American, born England,1801–1848)",
+   "to": "Thomas Cole"
+  },
+  {
+   "id": "cma-94966",
+   "from": "John Singleton Copley (American, born The Thirteen Colonies, 1738–1815)",
+   "to": "John Singleton Copley"
+  }
+ ]
+}

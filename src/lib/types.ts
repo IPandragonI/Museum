@@ -16,13 +16,25 @@ export interface SourceCredit {
   license: string;
 }
 
+export interface ImageVariant {
+  url: string;
+  /** Pixel width / height of this variant. */
+  w: number;
+  h: number;
+  bytes: number;
+}
+
 export interface DetailCrop {
-  imageUrl: string;
+  /** null when the crop was rejected in review (the artwork is then not offered in Mystery Detail). */
+  imageUrl: string | null;
   width: number;
   height: number;
-  /** Normalised rectangle (0..1) of the crop within the full artwork image. */
+  bytes?: number;
+  /** Normalised rectangle (0..1) of the crop within the full artwork image — ties the crop to its artwork. */
   rect: { x: number; y: number; w: number; h: number };
   source: string;
+  /** "reviewed": inspected by eye; "rejected": no suitable crop exists. */
+  status: "reviewed" | "rejected";
 }
 
 export interface Artwork {
@@ -41,14 +53,24 @@ export interface Artwork {
   yearSpan: number;
   dateDisplay: string;
   category: Category;
-  movement: string;
+  /** Work-level movement; null when no reliable label exists for this particular work. */
+  movement: string | null;
   period: string;
-  difficulty: Difficulty;
+  /** Difficulty is assessed per artwork AND per game mode. */
+  difficulty: Record<GameMode, Difficulty>;
+  /** Which modes may use this artwork (generic titles, imprecise dates, rejected crops are excluded). */
+  quiz: Record<GameMode, boolean>;
+  /** Editorial public-recognisability score 0–4 (see docs/audit/AUDIT.md). */
+  recognizability: number;
+  measurements: string | null;
   medium: string | null;
   culture: string | null;
+  /** Largest variant (kept for convenience / metadata). */
   imageUrl: string;
   imageWidth: number;
   imageHeight: number;
+  /** Responsive WebP variants, smallest first, plus facts about the original. */
+  images: { variants: ImageVariant[]; original: { w: number; h: number; format: string } };
   imageSource: string;
   detail: DetailCrop | null;
   description: string;
@@ -95,7 +117,9 @@ export interface QuestionResult {
   maxPoints: number;
   /** Selected option id, or the submitted order for timeline. */
   answer: string | string[];
-  /** Reveal stage used (guess mode only). */
+  /** Guess mode: whether the hint was used (it costs 25 points). */
+  hint?: boolean;
+  /** @deprecated reveal stage of the removed grid mechanic; only present in games saved before the redesign. */
   stage?: number;
 }
 
@@ -123,7 +147,9 @@ export type DailyModeStatus = "pending" | "in_progress" | "completed";
 export interface DailyModeProgress {
   status: DailyModeStatus;
   answers: QuestionResult[];
-  /** Current reveal stage of the in-flight "guess" question, so a reload can't reset it. */
+  /** Whether the hint was opened on the in-flight "guess" question, so a reload can't undo it. */
+  hint?: boolean;
+  /** @deprecated grid reveal stage of games saved before the redesign. */
   stage?: number;
   sessionId?: string;
   completedAt?: string;

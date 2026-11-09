@@ -58,14 +58,15 @@ async function mutateDaily(date: string, fn: (r: DailyRecord) => void): Promise<
   return rec;
 }
 
-/** Persist partial progress of a daily mode (answers so far and, for "guess", the reveal stage). */
-export function saveDailyProgress(date: string, mode: GameMode, answers: QuestionResult[], stage?: number): Promise<DailyRecord> {
+/** Persist partial progress of a daily mode (answers so far and, for "guess", whether the hint is open). */
+export function saveDailyProgress(date: string, mode: GameMode, answers: QuestionResult[], hint?: boolean): Promise<DailyRecord> {
   return mutateDaily(date, (r) => {
     const m = r.modes[mode];
     if (m.status === "completed") return; // completed modes are immutable
     m.status = "in_progress";
     m.answers = answers;
-    m.stage = stage;
+    m.hint = hint;
+    m.stage = undefined; // legacy field from the removed reveal grid
   });
 }
 
@@ -75,6 +76,7 @@ export function completeDailyMode(date: string, mode: GameMode, answers: Questio
     if (m.status === "completed") return;
     m.status = "completed";
     m.answers = answers;
+    m.hint = undefined;
     m.stage = undefined;
     m.sessionId = sessionId;
     m.completedAt = new Date().toISOString();

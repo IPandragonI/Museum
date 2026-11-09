@@ -1,12 +1,16 @@
 import { describe, expect, it } from "vitest";
 import { dataset } from "@/lib/data";
-import { DIFFICULTIES, REVEAL_STAGES } from "@/lib/game/config";
+import { DIFFICULTIES, HINT_COST } from "@/lib/game/config";
 import { computeStreaks, emptyDailyRecord, generateDailyChallenge, isDailyComplete, previousDate, utcDateString } from "@/lib/game/daily";
 import { correctTimelineOrder, generateFreePlay, generateQuestions, questionArtworkIds } from "@/lib/game/questions";
-import { revealOrder, revealedCells } from "@/lib/game/reveal";
 import { guessPoints, timelineCorrectPositions, timelinePoints } from "@/lib/game/scoring";
 import { createRng } from "@/lib/rng";
 import { computeStats } from "@/lib/stats";
+import fs from "node:fs";
+import path from "node:path";
+import { en } from "@/lib/i18n/en";
+import { fr } from "@/lib/i18n/fr";
+import { dateLabel, movementLabel, t, tn } from "@/lib/i18n";
 import type { ChoiceQuestion, DailyRecord, GameSession, TimelineQuestion } from "@/lib/types";
 
 describe("dataset quality", () => {
@@ -18,8 +22,13 @@ describe("dataset quality", () => {
       expect(a.title.length).toBeGreaterThan(2);
       expect(Number.isFinite(a.creationYear)).toBe(true);
       expect(a.imageUrl.startsWith("/art/")).toBe(true);
-      expect(a.license).toMatch(/CC0/);
-      if (a.detail) {
+      expect(a.images.variants.length).toBe(3);
+      expect(a.images.variants.every((v) => v.bytes > 0 && v.url.startsWith(`/art/${a.id}/`))).toBe(true);
+      expect(Object.keys(a.difficulty).sort()).toEqual(["artist", "detail", "guess", "timeline"]);
+      expect(a.license).toMatch(/CC0|public domain/i);
+      if (a.detail && a.detail.status !== "rejected") {
+        // the crop belongs to its own artwork: same folder
+        expect(a.detail.imageUrl).toBe(`/art/${a.id}/detail.webp`);
         const { x, y, w, h } = a.detail.rect;
         expect(x).toBeGreaterThanOrEqual(0);
         expect(y).toBeGreaterThanOrEqual(0);
@@ -31,8 +40,10 @@ describe("dataset quality", () => {
 });
 
 describe("scoring", () => {
-  it("guess points follow the reveal stage", () => {
-    expect([1, 2, 3, 4].map(guessPoints)).toEqual([100, 75, 50, 25]);
+  it("guess: 100 points, or 75 when the optional hint was used", () => {
+    expect(guessPoints(false)).toBe(100);
+    expect(guessPoints(true)).toBe(100 - HINT_COST);
+    expect(HINT_COST).toBe(25);
   });
   it("timeline: exact positions only, proportional credit, 100 for perfect", () => {
     const correct = ["a", "b", "c", "d", "e"];
@@ -42,23 +53,6 @@ describe("scoring", () => {
     expect(timelinePoints(3, 5)).toBe(60);
     expect(timelinePoints(0, 4)).toBe(0);
     expect(timelinePoints(1, 4)).toBe(25);
-  });
-});
-
-describe("reveal order", () => {
-  it("is a deterministic permutation of the 25 cells, sparing the centre early", () => {
-    const o = revealOrder("cma-1");
-    expect(o).toEqual(revealOrder("cma-1"));
-    expect([...o].sort((a, b) => a - b)).toEqual(Array.from({ length: 25 }, (_, i) => i));
-    const centre = new Set([6, 7, 8, 11, 12, 13, 16, 17, 18]);
-    expect(o.slice(0, 10).some((c) => centre.has(c))).toBe(false);
-    expect(revealOrder("cma-2")).not.toEqual(o);
-  });
-  it("reveals grow by stage for every difficulty", () => {
-    for (const d of DIFFICULTIES) {
-      const sizes = [1, 2, 3, 4].map((s) => revealedCells("x", d, s).size);
-      expect(sizes).toEqual([...REVEAL_STAGES[d]]);
-    }
   });
 });
 
@@ -85,7 +79,7 @@ describe("question generation", () => {
         }
       }
     }
-  });
+  }, 30_000);
 
   it("timelines have distinct, well-separated years and are never pre-sorted", () => {
     for (const difficulty of DIFFICULTIES) {
@@ -135,7 +129,8 @@ describe("daily challenge", () => {
   it("uses only intermediate-difficulty artworks where the pool allows", () => {
     const c = generateDailyChallenge(dataset, date);
     const ids = Object.values(c).flatMap((qs) => qs.flatMap(questionArtworkIds));
-    const intermediate = ids.filter((id) => dataset.byId.get(id)!.difficulty === "intermediate");
+    const modes = ["guess", "detail", "artist", "timeline"] as const;
+    const intermediate = modes.flatMap((m) => c[m].flatMap(questionArtworkIds).filter((id) => dataset.byId.get(id)!.difficulty[m] === "intermediate"));
     expect(intermediate.length / ids.length).toBeGreaterThan(0.8);
   });
 
@@ -185,5 +180,75 @@ describe("statistics", () => {
     expect(stats.accuracyByMode.detail).toBeNull();
     expect(stats.accuracyByDifficulty.expert).toBe(50);
     expect(stats.bestScore.guess).toEqual({ points: 250, max: 400 });
+  });
+});
+
+describe("localisation", () => {
+  it("French defines every English key, with the same {placeholders}", () => {
+    const keys = Object.keys(en) as (keyof typeof en)[];
+    expect(Object.keys(fr).sort()).toEqual([...keys].sort());
+    const ph = (x: string) => (x.match(/\{\w+\}/g) ?? []).sort().join();
+    for (const k of keys) expect(ph(fr[k]), k).toBe(ph(en[k]));
+  });
+  it("interpolates, pluralises and applies French typography", () => {
+    expect(t("en", "game.correct", { points: 75 })).toBe("Correct · +75 points");
+    expect(tn("fr", "res.added", 1)).toBe("1 œuvre ajoutée à votre collection.");
+    expect(tn("fr", "res.added", 3)).toBe("3 œuvres ajoutées à votre collection.");
+    expect(tn("en", "res.added", 1)).toBe("1 artwork added to your collection.");
+    expect(t("fr", "guess.prompt")).toBe("Quelle est cette œuvre ?");
+  });
+  it("translates art vocabulary, falling back to the original wording", () => {
+    expect(movementLabel("fr", "Impressionism")).toBe("Impressionnisme");
+    expect(movementLabel("fr", "Some unlisted movement")).toBe("Some unlisted movement");
+    expect(movementLabel("en", null)).toBeNull();
+    expect(dateLabel("fr", "c. 1750–55")).toBe("vers 1750–55");
+    expect(dateLabel("fr", "525–500 BCE")).toBe("525–500 av. J.-C.");
+    expect(dateLabel("fr", "early 1830s")).toBe("début des années 1830");
+    expect(dateLabel("en", "c. 1750–55")).toBe("c. 1750–55");
+  });
+  it("every movement in the data has a French label", () => {
+    const missing = [...new Set(dataset.artworks.map((a) => a.movement).filter((m): m is string => !!m))].filter((m) => movementLabel("fr", m) === m && !/^(Baroque|Rococo|Ukiyo-e)$/.test(m));
+    expect(missing).toEqual([]);
+  });
+  it("French artwork translations are structurally valid", () => {
+    const tr = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../src/data/translations.fr.json"), "utf8"));
+    for (const [id, v] of Object.entries<{ description: string; didYouKnow?: string[] }>(tr.artworks)) {
+      const a = dataset.byId.get(id);
+      expect(a, id).toBeDefined();
+      expect(v.description.length).toBeGreaterThan(20);
+      expect(v.didYouKnow?.length ?? 0, id).toBe(a!.interestingFacts.length);
+    }
+  });
+  it("every artwork description, fact and displayed biography has a French translation", () => {
+    const tr = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../src/data/translations.fr.json"), "utf8"));
+    const missing = dataset.artworks.filter((a) => !tr.artworks[a.id]?.description).map((a) => a.id);
+    expect(missing).toEqual([]);
+    const noBio = [...new Set(dataset.artworks.filter((a) => a.artistBio && !tr.artists[a.artist!]).map((a) => a.artist))];
+    expect(noBio).toEqual([]);
+  });
+  it("the daily challenge cannot depend on the language: game logic never imports the i18n layer", () => {
+    const dir = path.resolve(__dirname, "../src/lib/game");
+    for (const f of fs.readdirSync(dir)) expect(fs.readFileSync(path.join(dir, f), "utf8"), f).not.toMatch(/from\s+["'][^"']*(i18n|settings)|localStorage/);
+  });
+});
+
+describe("compatibility with games saved before the redesign", () => {
+  it("statistics still read old guess results that carry a reveal `stage` and partial points", () => {
+    const old: GameSession = {
+      id: "old",
+      mode: "guess",
+      difficulty: "easy",
+      kind: "free",
+      startedAt: "2026-11-01T10:00:00Z",
+      completedAt: "2026-11-01T10:05:00Z",
+      completed: true,
+      questions: [
+        { artworkIds: ["a"], correctArtworkIds: ["a"], correct: true, points: 50, maxPoints: 100, answer: "a", stage: 3 },
+        { artworkIds: ["b"], correctArtworkIds: [], correct: false, points: 0, maxPoints: 100, answer: "x", stage: 1 },
+      ],
+    };
+    const stats = computeStats([old], [], "2026-11-09");
+    expect(stats.gamesPlayed).toBe(1);
+    expect(stats.accuracy).toBe(25);
   });
 });

@@ -3,9 +3,10 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { dataset } from "@/lib/data";
-import { DAILY_DIFFICULTY, DIFFICULTY_INFO, MODE_INFO, isDifficulty, questionCount } from "@/lib/game/config";
+import { DAILY_DIFFICULTY, isDifficulty, questionCount } from "@/lib/game/config";
+import { useI18n } from "@/lib/i18n/useI18n";
 import { generateDailyChallenge, utcDateString } from "@/lib/game/daily";
-import { generateFreePlay } from "@/lib/game/questions";
+import { generateFreePlay, questionArtworkIds } from "@/lib/game/questions";
 import { randomSeed } from "@/lib/rng";
 import { addToCollection, completeDailyMode, getDaily, getRecent, listCollection, pushRecent, saveDailyProgress, saveSession } from "@/lib/storage/repo";
 import type { ChoiceQuestion, Difficulty, GameMode, GameSession, Question, QuestionResult, TimelineQuestion } from "@/lib/types";
@@ -20,12 +21,13 @@ type Phase =
   | { kind: "loading" }
   | { kind: "empty" }
   | { kind: "intro" }
-  | { kind: "playing"; questions: Question[]; initial: QuestionResult[]; stage?: number; seed: number }
+  | { kind: "playing"; questions: Question[]; initial: QuestionResult[]; hint?: boolean; seed: number }
   | { kind: "results"; results: QuestionResult[]; newIds: Set<string>; collection: Set<string> };
 
 const uuid = () => (typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `s-${Date.now()}-${Math.random().toString(36).slice(2)}`);
 
 export function GameRunner({ mode }: { mode: GameMode }) {
+  const { t } = useI18n();
   const params = useSearchParams();
   const router = useRouter();
   const daily = params.get("daily") === "1";
@@ -50,7 +52,10 @@ export function GameRunner({ mode }: { mode: GameMode }) {
       }
       const questions = generateDailyChallenge(dataset, date.current)[mode];
       if (!questions.length) return setPhase({ kind: "empty" });
-      setPhase({ kind: "playing", questions, initial: progress.answers, stage: progress.stage, seed: 0 });
+      // A saved game made against an older dataset may no longer match today's questions: keep it only if every
+      // saved answer still belongs to the question at the same position, otherwise start this mode afresh.
+      const consistent = progress.answers.every((ans, k) => questions[k] && [...ans.artworkIds].sort().join() === [...questionArtworkIds(questions[k])].sort().join());
+      setPhase({ kind: "playing", questions, initial: consistent ? progress.answers : [], hint: consistent ? progress.hint : false, seed: 0 });
     } else {
       const seed = randomSeed();
       const recent = new Set(await getRecent(mode));
@@ -84,8 +89,8 @@ export function GameRunner({ mode }: { mode: GameMode }) {
   };
 
   const onProgress = useCallback(
-    (answers: QuestionResult[], stage?: number) => {
-      if (daily) void saveDailyProgress(date.current, mode, answers, stage);
+    (answers: QuestionResult[], hint?: boolean) => {
+      if (daily) void saveDailyProgress(date.current, mode, answers, hint);
     },
     [daily, mode],
   );
@@ -123,13 +128,13 @@ export function GameRunner({ mode }: { mode: GameMode }) {
     void begin();
   };
 
-  if (phase.kind === "loading") return <p className="py-24 text-center text-sm text-muted" role="status">Hanging the artworks…</p>;
+  if (phase.kind === "loading") return <p className="py-24 text-center text-sm text-muted" role="status">{t("game.loading")}</p>;
   if (phase.kind === "empty")
     return (
       <div className="py-24 text-center">
-        <p className="display text-3xl">Not enough artworks for this game yet.</p>
+        <p className="display text-3xl">{t("game.empty.title")}</p>
         <button type="button" className="btn btn-ghost mt-6" onClick={() => router.push("/")}>
-          Back home
+          {t("game.empty.back")}
         </button>
       </div>
     );
@@ -152,12 +157,12 @@ export function GameRunner({ mode }: { mode: GameMode }) {
   const common = { exitHref, onComplete, initialAnswers: phase.initial };
   return (
     <div key={phase.seed}>
-      {mode === "guess" ? <GuessGame {...common} questions={phase.questions as ChoiceQuestion[]} difficulty={difficulty} initialStage={phase.stage} onProgress={onProgress} /> : null}
+      {mode === "guess" ? <GuessGame {...common} questions={phase.questions as ChoiceQuestion[]} initialHint={phase.hint} onProgress={onProgress} /> : null}
       {mode === "detail" ? <DetailGame {...common} questions={phase.questions as ChoiceQuestion[]} onProgress={onProgress} /> : null}
       {mode === "artist" ? <ArtistGame {...common} questions={phase.questions as ChoiceQuestion[]} onProgress={onProgress} /> : null}
       {mode === "timeline" ? <TimelineGame exitHref={exitHref} onComplete={onComplete} question={phase.questions[0] as TimelineQuestion} /> : null}
       <p className="sr-only">
-        {MODE_INFO[mode].name}, {daily ? "daily challenge" : DIFFICULTY_INFO[difficulty].name}
+        {t(`mode.${mode}.name`)}, {daily ? t("game.srKind.daily") : t(`diff.${difficulty}.name`)}
       </p>
     </div>
   );

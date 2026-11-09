@@ -18,28 +18,19 @@ export function mustArtwork(id: string): Artwork {
 
 /** A stable, representative artwork per game mode for illustration on the home page. */
 export function featuredArtwork(mode: GameMode): Artwork | undefined {
-  const pool = dataset.artworks.filter((a) => a.difficulty === "easy" && (mode !== "detail" || a.detail) && (mode === "artist" || mode === "timeline" ? true : a.category === "painting"));
+  const pool = dataset.artworks.filter((a) => a.difficulty[mode] === "easy" && a.quiz[mode] && (mode !== "detail" || a.detail?.imageUrl) && (mode === "artist" || mode === "timeline" ? true : a.category === "painting"));
   if (!pool.length) return dataset.artworks[0];
   const offset = { guess: 0, detail: 1, artist: 2, timeline: 3 }[mode];
   // spread picks apart so the four modes show four different works
   return pool[(offset * Math.max(1, Math.floor(pool.length / 4)) + 1) % pool.length];
 }
 
-export const CATEGORY_LABEL: Record<Artwork["category"], string> = {
-  painting: "Painting",
-  sculpture: "Sculpture",
-  photography: "Photography",
-  drawing: "Drawing",
-  architecture: "Architecture",
-  printmaking: "Print",
-  decorative: "Decorative arts",
-};
-
-export function formatYear(a: Pick<Artwork, "dateDisplay" | "creationYear">): string {
-  return a.dateDisplay || (a.creationYear < 0 ? `${-a.creationYear} BCE` : String(a.creationYear));
+/** `srcSet`/`sizes` for a responsive artwork <img>; smallest variant first. */
+export function artworkSrcSet(a: Artwork): string {
+  return a.images.variants.map((v) => `${v.url} ${v.w}w`).join(", ");
 }
 
-export function artistLine(a: Artwork): string {
-  if (!a.artist) return a.culture ? `${a.culture} (anonymous)` : "Unknown artist";
-  return a.artist;
+/** The variant that is small enough for thumbnails (≈ 480px long edge). */
+export function thumbUrl(a: Artwork): string {
+  return a.images.variants[0].url;
 }

@@ -1,10 +1,9 @@
-import { MAX_POINTS_PER_QUESTION, STAGE_POINTS } from "./config";
+import { HINT_COST, MAX_POINTS_PER_QUESTION } from "./config";
 import type { QuestionResult } from "@/lib/types";
 
-/** Guess the Artwork: points for a correct answer at the given reveal stage (1-based). */
-export function guessPoints(stage: number): number {
-  const i = Math.min(Math.max(stage, 1), STAGE_POINTS.length) - 1;
-  return STAGE_POINTS[i];
+/** Guess the Artwork: 100 points, or 75 if the hint was opened. A wrong answer scores 0 (see choicePoints). */
+export function guessPoints(hintUsed: boolean): number {
+  return MAX_POINTS_PER_QUESTION - (hintUsed ? HINT_COST : 0);
 }
 
 /** Detail & Artist modes: all or nothing. */

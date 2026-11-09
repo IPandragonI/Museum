@@ -1,16 +1,19 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { DEFAULT_LANG, isLang, type Lang } from "@/lib/i18n";
 
 export type ThemePref = "light" | "dark";
 
 export interface Settings {
   theme: ThemePref;
   sound: boolean;
+  /** Interface + artwork-text language. French by default for new users. */
+  lang: Lang;
 }
 
 const KEY = "museum:settings";
-const DEFAULTS: Settings = { theme: "light", sound: true };
+const DEFAULTS: Settings = { theme: "light", sound: true, lang: DEFAULT_LANG };
 const listeners = new Set<() => void>();
 let cache: Settings | null = null;
 
@@ -25,7 +28,10 @@ function systemTheme(): ThemePref {
 function read(): Settings {
   try {
     const raw = localStorage.getItem(KEY);
-    if (raw) return { ...DEFAULTS, ...JSON.parse(raw) };
+    if (raw) {
+      const saved = JSON.parse(raw);
+      return { ...DEFAULTS, ...saved, lang: isLang(saved.lang) ? saved.lang : DEFAULT_LANG };
+    }
   } catch {
     /* storage unavailable: fall through to defaults */
   }
@@ -57,6 +63,7 @@ export function updateSettings(patch: Partial<Settings>) {
     /* ignore */
   }
   if (patch.theme && patch.theme !== prev.theme) applyTheme(patch.theme, true);
+  if (patch.lang && patch.lang !== prev.lang) document.documentElement.lang = patch.lang;
   listeners.forEach((l) => l());
 }
 
@@ -71,4 +78,4 @@ export function useSettings(): Settings {
 }
 
 /** Inline script (runs before first paint) so there is no theme flash. */
-export const THEME_INIT_SCRIPT = `(function(){try{var s=JSON.parse(localStorage.getItem("${KEY}")||"null");var t=s&&s.theme;if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-theme",t)}catch(e){document.documentElement.setAttribute("data-theme","light")}})();`;
+export const THEME_INIT_SCRIPT = `(function(){try{var s=JSON.parse(localStorage.getItem("${KEY}")||"null");var t=s&&s.theme;if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-theme",t);if(s&&(s.lang==="fr"||s.lang==="en"))document.documentElement.lang=s.lang}catch(e){document.documentElement.setAttribute("data-theme","light")}})();`;

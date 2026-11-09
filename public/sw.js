@@ -3,13 +3,14 @@
  *  - install:   pre-cache every route's HTML plus the JS/CSS/font files it references,
  *               so the whole app (not just visited pages) works offline.
  *  - /art/*:    cache-first in a dedicated cache (images are immutable; Settings can
- *               pre-download all of them).
+ *               pre-download the offline package). Offline, a missing size is replaced by the nearest
+ *               cached size of the same artwork (e.g. 960 for a 1280 request).
  *  - other:     network-first with cache fallback; navigations fall back to /offline.html.
  *  Game progress lives in IndexedDB, so it is untouched by any of this.
  */
-const VERSION = "v1";
+const VERSION = "v2";
 const SHELL = "museum-shell-" + VERSION;
-const ART = "museum-art-v1";
+const ART = "museum-art-v2";
 const ROUTES = ["/", "/daily/", "/collection/", "/stats/", "/settings/", "/play/guess/", "/play/detail/", "/play/artist/", "/play/timeline/"];
 const EXTRA = ["/offline.html", "/manifest.webmanifest", "/icons/icon.svg", "/icons/icon-192.png", "/icons/icon-512.png"];
 
@@ -42,7 +43,8 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     (async () => {
       const keys = await caches.keys();
-      await Promise.all(keys.filter((k) => k.startsWith("museum-shell-") && k !== SHELL).map((k) => caches.delete(k)));
+      // drop old shell caches and the superseded v1 artwork cache (different file layout)
+      await Promise.all(keys.filter((k) => (k.startsWith("museum-shell-") && k !== SHELL) || k === "museum-art-v1").map((k) => caches.delete(k)));
       await self.clients.claim();
     })(),
   );
@@ -55,7 +57,7 @@ self.addEventListener("fetch", (event) => {
   if (url.origin !== self.location.origin) return;
 
   if (url.pathname.startsWith("/art/")) {
-    event.respondWith(cacheFirst(req, ART));
+    event.respondWith(artImage(req, url));
     return;
   }
   if (url.pathname.startsWith("/_next/static/") || url.pathname.startsWith("/icons/")) {
@@ -64,6 +66,32 @@ self.addEventListener("fetch", (event) => {
   }
   event.respondWith(networkFirst(req));
 });
+
+// /art/<id>/<size>.webp  →  try the exact file, then the network, then any cached size of that artwork.
+async function artImage(req, url) {
+  const cache = await caches.open(ART);
+  const hit = await cache.match(req);
+  if (hit) return hit;
+  try {
+    const res = await fetch(req);
+    if (res.ok) cache.put(req, res.clone());
+    return res;
+  } catch (e) {
+    const dir = url.pathname.slice(0, url.pathname.lastIndexOf("/") + 1);
+    const sameDetail = url.pathname.endsWith("/detail.webp");
+    const keys = await cache.keys();
+    const near = keys
+      .map((k) => new URL(k.url).pathname)
+      .filter((p) => p.startsWith(dir) && (sameDetail ? p.endsWith("/detail.webp") : !p.endsWith("/detail.webp")))
+      .sort((a, b) => Math.abs(size(a) - size(url.pathname)) - Math.abs(size(b) - size(url.pathname)));
+    if (near.length) return cache.match(near[0]);
+    return new Response("", { status: 504, statusText: "Offline" });
+  }
+}
+function size(path) {
+  const m = /\/(\d+)\.webp$/.exec(path);
+  return m ? Number(m[1]) : 0;
+}
 
 async function cacheFirst(req, cacheName) {
   const cache = await caches.open(cacheName);

@@ -5,13 +5,16 @@ import { THEME_INIT_SCRIPT } from "@/lib/settings";
 import { Header } from "@/components/ui/Header";
 import { BottomNav } from "@/components/ui/BottomNav";
 import { ServiceWorker } from "@/components/ui/ServiceWorker";
+import { SkipLink } from "@/components/ui/SkipLink";
+import { fr } from "@/lib/i18n/fr";
 
 const sans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const serif = Instrument_Serif({ variable: "--font-instrument-serif", subsets: ["latin"], weight: "400", style: ["normal", "italic"] });
 
 export const metadata: Metadata = {
-  title: { default: "MUSEUM — an art discovery game", template: "%s · MUSEUM" },
-  description: "Identify famous artworks, spot mysterious details, name the artists and order art history. A daily challenge and unlimited free play, entirely in your browser.",
+  // Static metadata is French (the default language); PageTitle updates the tab title for English readers.
+  title: { default: fr["app.metaTitle"], template: "%s · MUSEUM" },
+  description: fr["app.metaDescription"],
   manifest: "/manifest.webmanifest",
   applicationName: "MUSEUM",
   appleWebApp: { capable: true, title: "MUSEUM", statusBarStyle: "default" },
@@ -26,14 +29,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning className={`${sans.variable} ${serif.variable}`}>
+    <html lang="fr" data-theme="light" suppressHydrationWarning className={`${sans.variable} ${serif.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body className="min-h-dvh">
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-bg focus:p-3">
-          Skip to content
-        </a>
+        <SkipLink />
         <Header />
         <main id="main" className="mx-auto w-full max-w-6xl px-4 pb-28 sm:px-8 md:pb-24">
           {children}

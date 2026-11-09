@@ -10,11 +10,12 @@
   --ink: #1b1915;
   --muted: #6d675d;
   --line: rgba(27, 25, 21, 0.13);
+  /* control outlines: ≥ 3:1 against the background (WCAG 1.4.11); --line stays for decorative dividers */
+  --strong: rgba(27, 25, 21, 0.52);
   --accent: #a8482a;
   --accent-ink: #fbf7f0;
   --good: #3b6e4f;
   --bad: #a43a2a;
-  --veil: #d3c9b5;
   color-scheme: light;
 }
 
@@ -25,11 +26,11 @@
   --ink: #efe9de;
   --muted: #9b958a;
   --line: rgba(239, 233, 222, 0.14);
+  --strong: rgba(239, 233, 222, 0.5);
   --accent: #d98a64;
   --accent-ink: #1a1410;
   --good: #7fb594;
   --bad: #e08a78;
-  --veil: #2a2825;
   color-scheme: dark;
 }
 
@@ -40,6 +41,7 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-line: var(--line);
+  --color-strong: var(--strong);
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
   --color-good: var(--good);
@@ -100,7 +102,7 @@ html.theme-fade *::after {
     @apply border-t border-line;
   }
   .btn {
-    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] border border-line px-5 text-sm font-medium tracking-wide transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-45;
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] border border-strong px-5 text-sm font-medium tracking-wide transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-45;
   }
   .btn-primary {
     @apply border-transparent bg-ink text-bg hover:bg-accent hover:text-accent-ink;
@@ -112,7 +114,7 @@ html.theme-fade *::after {
     @apply underline decoration-line decoration-1 underline-offset-4 transition-colors hover:decoration-accent;
   }
   .chip {
-    @apply inline-flex items-center rounded-full border border-line px-3 py-1 text-xs text-muted;
+    @apply inline-flex items-center rounded-full border border-strong px-3 py-1 text-xs text-muted;
   }
 }
 
@@ -175,16 +177,6 @@ html.theme-fade *::after {
 }
 .shake {
   animation: shake 260ms ease-in-out 1;
-}
-
-/* reveal grid cells */
-.veil-cell {
-  background: var(--veil);
-  box-shadow: 0 0 0 0.6px var(--veil);
-  transition: opacity 650ms ease;
-}
-.veil-cell[data-open="true"] {
-  opacity: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

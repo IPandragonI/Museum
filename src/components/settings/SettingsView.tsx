@@ -1,15 +1,18 @@
 "use client";
 
-import { Download, Maximize, Trash2 } from "lucide-react";
+import { Maximize, Trash2 } from "lucide-react";
 import { useRef, useState } from "react";
-import { artworks } from "@/lib/data";
+import { LANGS } from "@/lib/i18n";
+import { useI18n } from "@/lib/i18n/useI18n";
 import { updateSettings, useSettings } from "@/lib/settings";
 import { playSound } from "@/lib/sound";
 import { clearAllData } from "@/lib/storage/db";
+import { InstallApp } from "./InstallApp";
+import { OfflineManager } from "./OfflineManager";
 
-function Row({ title, hint, children }: { title: string; hint?: string; children: React.ReactNode }) {
+function Row({ title, hint, children, stacked }: { title: string; hint?: string; children: React.ReactNode; stacked?: boolean }) {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-4 border-b border-line py-6">
+    <div className={`border-b border-line py-6 ${stacked ? "space-y-4" : "flex flex-wrap items-center justify-between gap-4"}`}>
       <div className="max-w-md">
         <h2 className="font-medium">{title}</h2>
         {hint ? <p className="mt-1 text-sm text-muted">{hint}</p> : null}
@@ -19,9 +22,21 @@ function Row({ title, hint, children }: { title: string; hint?: string; children
   );
 }
 
+function Segmented<T extends string>({ label, value, options, onChange }: { label: string; value: T; options: { id: T; label: string }[]; onChange: (v: T) => void }) {
+  return (
+    <div role="radiogroup" aria-label={label} className="inline-flex rounded-[3px] border border-strong p-0.5">
+      {options.map((o) => (
+        <button key={o.id} type="button" role="radio" aria-checked={value === o.id} tabIndex={value === o.id ? 0 : -1} onClick={() => onChange(o.id)} className={`min-h-11 rounded-[2px] px-5 text-sm ${value === o.id ? "bg-ink text-bg" : "text-muted hover:text-ink"}`}>
+          {o.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export function SettingsView() {
-  const { theme, sound } = useSettings();
-  const [offline, setOffline] = useState<{ state: "idle" | "working" | "done" | "error"; done: number }>({ state: "idle", done: 0 });
+  const { t } = useI18n();
+  const { theme, sound, lang } = useSettings();
   const [cleared, setCleared] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
 
@@ -34,28 +49,6 @@ export function SettingsView() {
     }
   };
 
-  const downloadForOffline = async () => {
-    if (!("caches" in window)) return setOffline({ state: "error", done: 0 });
-    setOffline({ state: "working", done: 0 });
-    try {
-      const cache = await caches.open("museum-art-v1");
-      const urls = artworks.flatMap((a) => [a.imageUrl, ...(a.detail ? [a.detail.imageUrl] : [])]);
-      let done = 0;
-      for (let i = 0; i < urls.length; i += 6) {
-        await Promise.all(
-          urls.slice(i, i + 6).map(async (u) => {
-            if (!(await cache.match(u))) await cache.add(u);
-            done++;
-          }),
-        );
-        setOffline({ state: "working", done });
-      }
-      setOffline({ state: "done", done });
-    } catch {
-      setOffline({ state: "error", done: 0 });
-    }
-  };
-
   const confirmClear = async () => {
     await clearAllData();
     dialog.current?.close();
@@ -64,78 +57,77 @@ export function SettingsView() {
 
   return (
     <div className="max-w-3xl pt-8 sm:pt-14">
-      <p className="eyebrow">Preferences</p>
-      <h1 className="display mt-3 text-5xl sm:text-7xl">Settings</h1>
+      <p className="eyebrow">{t("set.eyebrow")}</p>
+      <h1 className="display mt-3 text-5xl sm:text-7xl">{t("set.title")}</h1>
 
       <div className="mt-10 border-t border-line">
-        <Row title="Theme" hint="Light gallery wall or dark viewing room.">
-          <div role="radiogroup" aria-label="Theme" className="inline-flex rounded-[3px] border border-line p-0.5">
-            {(["light", "dark"] as const).map((t) => (
-              <button key={t} type="button" role="radio" aria-checked={theme === t} onClick={() => updateSettings({ theme: t })} className={`min-h-10 rounded-[2px] px-5 text-sm capitalize ${theme === t ? "bg-ink text-bg" : "text-muted hover:text-ink"}`}>
-                {t}
-              </button>
-            ))}
-          </div>
+        <Row title={t("set.language")} hint={t("set.language.hint")}>
+          <Segmented label={t("set.language")} value={lang} options={LANGS} onChange={(l) => updateSettings({ lang: l })} />
         </Row>
 
-        <Row title="Sound effects" hint="Soft chimes for answers and reveals. Never plays on its own.">
+        <Row title={t("set.theme")} hint={t("set.theme.hint")}>
+          <Segmented
+            label={t("set.theme")}
+            value={theme}
+            options={[
+              { id: "light", label: t("theme.light") },
+              { id: "dark", label: t("theme.dark") },
+            ]}
+            onChange={(v) => updateSettings({ theme: v })}
+          />
+        </Row>
+
+        <Row title={t("set.sound")} hint={t("set.sound.hint")}>
           <button
             type="button"
             role="switch"
             aria-checked={sound}
-            aria-label="Sound effects"
+            aria-label={t("set.sound")}
             onClick={() => {
               updateSettings({ sound: !sound });
               if (!sound) setTimeout(() => playSound("correct"), 30);
             }}
-            className={`relative h-7 w-12 rounded-full border transition-colors ${sound ? "border-accent bg-accent" : "border-line bg-surface"}`}
+            className={`relative h-8 w-14 rounded-full border transition-colors ${sound ? "border-accent bg-accent" : "border-strong bg-surface"}`}
           >
-            <span className={`absolute top-0.5 size-5 rounded-full bg-bg shadow transition-all ${sound ? "left-[1.6rem]" : "left-0.5 bg-muted"}`} />
+            <span className={`absolute top-1 size-6 rounded-full shadow transition-all ${sound ? "left-[1.7rem] bg-bg" : "left-1 bg-muted"}`} />
           </button>
         </Row>
 
-        <Row title="Fullscreen" hint="Give the artwork the whole screen (where your browser supports it).">
-            <button type="button" onClick={toggleFullscreen} className="btn btn-ghost">
-              <Maximize size={16} aria-hidden /> Toggle fullscreen
-            </button>
-          </Row>
-
-        <Row title="Language" hint="MUSEUM is currently available in English only.">
-          <span className="chip">English</span>
+        <Row title={t("set.fullscreen")} hint={t("set.fullscreen.hint")}>
+          <button type="button" onClick={toggleFullscreen} className="btn btn-ghost">
+            <Maximize size={16} aria-hidden /> {t("set.fullscreen.button")}
+          </button>
         </Row>
 
-        <Row title="Use offline" hint={`Save all ${artworks.length} artworks (about 50 MB) on this device so the game works without a connection. The app itself is cached automatically.`}>
-          <div className="text-right">
-            <button type="button" onClick={downloadForOffline} disabled={offline.state === "working"} className="btn btn-ghost">
-              <Download size={16} aria-hidden /> {offline.state === "working" ? `Saving… ${offline.done}` : "Download artworks"}
-            </button>
-            <p className="mt-2 text-xs text-muted" role="status">
-              {offline.state === "done" ? "All artworks are available offline." : offline.state === "error" ? "Couldn’t save for offline use in this browser." : ""}
-            </p>
-          </div>
+        <Row title={t("set.install")} hint={t("set.install.hint")}>
+          <InstallApp />
         </Row>
 
-        <Row title="Clear local game data" hint="Deletes your collection, statistics, game history and daily progress from this device. This cannot be undone.">
+        <Row title={t("off.title")} hint={t("off.hint")} stacked>
+          <OfflineManager />
+        </Row>
+
+        <Row title={t("set.clear")} hint={t("set.clear.hint")}>
           <button type="button" onClick={() => dialog.current?.showModal()} className="btn border-bad text-bad hover:bg-bad/10">
-            <Trash2 size={16} aria-hidden /> Clear data…
+            <Trash2 size={16} aria-hidden /> {t("set.clear.button")}
           </button>
         </Row>
       </div>
-      <p className="mt-4 text-sm text-good" role="status">
-        {cleared ? "All local game data was cleared." : ""}
+      <p className="mt-4 min-h-6 text-sm text-good" role="status">
+        {cleared ? t("set.clear.done") : ""}
       </p>
 
       <dialog ref={dialog} aria-labelledby="clear-title" className="m-auto w-[min(440px,92vw)] rounded-[4px] border border-line bg-bg p-7 backdrop:bg-black/60">
         <h2 id="clear-title" className="display text-3xl">
-          Clear everything?
+          {t("set.clear.dialogTitle")}
         </h2>
-        <p className="mt-3 text-sm text-muted">Your collection, statistics, history and today’s progress will be permanently deleted from this device.</p>
-        <div className="mt-7 flex justify-end gap-3">
+        <p className="mt-3 text-sm text-muted">{t("set.clear.dialogBody")}</p>
+        <div className="mt-7 flex flex-wrap justify-end gap-3">
           <button type="button" className="btn btn-ghost" onClick={() => dialog.current?.close()} autoFocus>
-            Keep my data
+            {t("set.clear.keep")}
           </button>
           <button type="button" className="btn bg-bad text-bg" onClick={confirmClear}>
-            Delete everything
+            {t("set.clear.delete")}
           </button>
         </div>
       </dialog>

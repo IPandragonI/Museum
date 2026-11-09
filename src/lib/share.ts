@@ -1,4 +1,5 @@
-import { MODES, MODE_INFO } from "@/lib/game/config";
+import { MODES } from "@/lib/game/config";
+import { t, type Lang } from "@/lib/i18n";
 import { sumMax, sumPoints } from "@/lib/game/scoring";
 import type { DailyRecord, GameMode, QuestionResult } from "@/lib/types";
 
@@ -18,18 +19,19 @@ export function dailyTotals(rec: DailyRecord): { points: number; max: number } {
   return { points: sumPoints(all), max: sumMax(all) };
 }
 
-export function buildShareText(rec: DailyRecord, url: string): string {
+/** Share text in the player's language. It never contains titles or answers: only squares per game. */
+export function buildShareText(rec: DailyRecord, url: string, lang: Lang): string {
   const { points, max } = dailyTotals(rec);
-  const lines = MODES.map((m) => `${MODE_INFO[m].name.padEnd(19, " ")} ${squares(m, rec.modes[m].answers)}`);
-  return [`MUSEUM · ${rec.date}`, `Daily challenge complete · ${points}/${max}`, "", ...lines, "", url].join("\n");
+  const lines = MODES.map((m) => `${t(lang, `mode.${m}.name`).padEnd(22, " ")} ${squares(m, rec.modes[m].answers)}`);
+  return [t(lang, "share.header", { date: rec.date }), t(lang, "share.complete", { points, max }), "", ...lines, "", url].join("\n");
 }
 
 export type ShareOutcome = "shared" | "copied" | "failed";
 
-export async function shareText(text: string, url: string): Promise<ShareOutcome> {
+export async function shareText(text: string, url: string, title: string): Promise<ShareOutcome> {
   try {
     if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
-      await navigator.share({ title: "MUSEUM — Daily challenge", text: text.replace(url, "").trim(), url });
+      await navigator.share({ title, text: text.replace(url, "").trim(), url });
       return "shared";
     }
   } catch (e) {
